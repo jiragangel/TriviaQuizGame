@@ -1,4 +1,5 @@
 db.Questions.insertMany([
+<<<<<<< HEAD
   {
     Category: "Entertainment",
     Difficulty: {
@@ -14,6 +15,50 @@ db.Questions.insertMany([
     }
   }
  ]);
+=======
+	{
+		Category: "Entertainment",
+		Difficulty:[{
+				Level: "Easy",
+				Questions:[{
+					Question:	"Who played the character of Edward Scissorhands?",
+					Answer: "Johnny Depp",
+					choiceA: "Andrew Garfield",
+				   	choiceB: "Johnny Depp",
+					choiceC: "Morgan Freeman",
+		    		choiceD: "Hugh Ackman"
+				},
+				{
+					Question:	"The 2014 film Maleficent is based on which story?",
+					Answer: "Sleeping Beauty",
+					choiceA: "Snow White and The Seven Dwarves",
+				   	choiceB: "Thumbelina",
+					choiceC: "Sleeping Beauty",
+		    		choiceD: "The Little Mermaid"
+				}]
+			},
+			{
+				Level: "Medium",
+				Questions:[{
+					Question:	"What US president did Forrest Gump not meet?",
+					Answer: "Eisenhower",
+					choiceA: "Eisenhower",
+				   	choiceB: "Washington",
+					choiceC: "Adams",
+		    		choiceD: "Jefferson"
+				},
+				{
+					Question:	"With whom of the following was Michael Jackson married to?",
+					Answer: "Lisa Marie Presley",
+					choiceA: "Eliza Maria Presley",
+				   	choiceB: "Lisa Marie Presley",
+					choiceC: "Jira Angel",
+		    		choiceD: "Dannah Esperanze"
+				}]			
+			}]
+	}	
+]);
+>>>>>>> d26ff8d2ad800d0a3a9019df1288de45229c49a0
 
 db.HighScores.insertMany([
 	{
