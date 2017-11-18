@@ -1,23 +1,6 @@
 db.Questions.insertMany([
 {
 Category: "Entertainment",
-<<<<<<< HEAD
-=======
-Difficulty: {
-Level:"Easy",
-Questions:{
-Question:"Who played the character of Edward Scissorhands?",
-Answer:"Johnny Depp",
-choiceA:"Andrew Garfield",
-choiceB:"Johnny Depp",
-choiceC:"Morgan Freeman",
-choiceD:"Jackie Chan"
-}
-}
-},
-{
-Category: "Entertainment",
->>>>>>> 3d6f04315f87a4edc420a82a9ba2afacffb1e255
 Difficulty:[{
 Level: "Easy",
 Questions:[{
@@ -35,7 +18,6 @@ choiceA: "Snow White and The Seven Dwarves",
 choiceB: "Thumbelina",
 choiceC: "Sleeping Beauty",
 choiceD: "The Little Mermaid"
-<<<<<<< HEAD
 },
 {
 Question:	"Who wrote the famous opera-rock song ‘ Bohemian Rhapsody’?",
@@ -44,8 +26,6 @@ choiceA: "Snow White and The Seven Dwarves",
 choiceB: "Thumbelina",
 choiceC: "Sleeping Beauty",
 choiceD: "The Little Mermaid"
-=======
->>>>>>> 3d6f04315f87a4edc420a82a9ba2afacffb1e255
 }]
 },
 {
@@ -55,13 +35,8 @@ Question:	"What US president did Forrest Gump not meet?",
 Answer: "Eisenhower",
 choiceA: "Eisenhower",
 choiceB: "Washington",
-<<<<<<< HEAD
 choiceC: "Johnson",
 choiceD: "Hoover"
-=======
-choiceC: "Adams",
-choiceD: "Jefferson"
->>>>>>> 3d6f04315f87a4edc420a82a9ba2afacffb1e255
 },
 {
 Question:	"With whom of the following was Michael Jackson married to?",
@@ -70,7 +45,6 @@ choiceA: "Eliza Maria Presley",
 choiceB: "Lisa Marie Presley",
 choiceC: "Jira Angel",
 choiceD: "Dannah Esperanze"
-<<<<<<< HEAD
 },
 {
 Question:	"With whom of the following was Michael Jackson married to?",
@@ -82,19 +56,14 @@ choiceD: "Dannah Esperanze"
 }]			
 }]
 }	
-=======
-}]
-}]
-}
->>>>>>> 3d6f04315f87a4edc420a82a9ba2afacffb1e255
 ]);
 
 db.HighScores.insertMany([
-{
-Category:"Science".
-Scorers:{
-Name:"Angel",
-Score: 9999999
-}
-}
-]);
+	{
+		Category:"Science".
+		Scorers:{
+			Name:"Angel",
+			Score: 9999999
+		}
+	}
+])
