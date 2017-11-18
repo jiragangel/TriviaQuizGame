@@ -1,0 +1,8 @@
+Science Category:
+  Easy:
+    Question: What does a glaucoma provoke if its not treated?
+    Answer: Blindness
+  Medium:
+  Difficult:
+    Question: What’s the name of the chronic mood disorder that alternates periods of hypomanic symptoms with periods of mild depression?
+    Answer: Cyclothymia
