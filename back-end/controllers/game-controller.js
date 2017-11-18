@@ -3,6 +3,6 @@ const HighScores = require('mongoose').model('HighScores');
 
 exports.showQuestions = (req, res) => {
   Questions.find({}, (err, movies) => {
-    res.send("Working")
+    res.send(movies)
   });
 }

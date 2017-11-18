@@ -3,16 +3,16 @@ const Schema = mongoose.Schema;
 
 const QuestionsSchema = new Schema({
   Category: {type: String, default: ''},
-  Difficulty: { 
+  Difficulty: {
 	Level: {type: String, default: ''},
   	Questions: {
-		Question: {type: String, default: ''},    
-		Answer: { type: String, default: '' },
-	   	choiceA: { type: String, default: '' },
-	   	choiceB: { type: String, default: '' },
-		choiceC: { type: String, default: '' },
-	    	choiceD: { type: String, default: '' },
- 	} 
+      Question: {type: String, default: ''},
+      Answer: { type: String, default: '' },
+      choiceA: { type: String, default: '' },
+      choiceB: { type: String, default: '' },
+      choiceC: { type: String, default: '' },
+      choiceD: { type: String, default: '' },
+ 	  }
   }
 });
 

@@ -2,17 +2,17 @@ db.Questions.insertMany([
   {
     Category: "Entertainment",
     Difficulty: {
-		Level:"Easy",
-		Questions:{
-			Question:"Who played the character of Edward Scissorhands?",
-			Answer:"Johnny Depp",
-			choiceA:"Andrew Garfield".
-			choiceB:"Johnny Depp".
-			choiceC:"Morgan Freeman".
-			choiceD:"Jackie Chan"		
-		}
+      Level:"Easy",
+      Questions:{
+  			Question:"Who played the character of Edward Scissorhands?",
+  			Answer:"Johnny Depp",
+  			choiceA:"Andrew Garfield",
+  			choiceB:"Johnny Depp",
+  			choiceC:"Morgan Freeman",
+  			choiceD:"Jackie Chan"
+		  }
     }
-  },
+  }
  ]);
 
 db.HighScores.insertMany([
