@@ -26,8 +26,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 require('./models/index');
 
 // Setup Routes
-const MovieRouter = require('./routes/game-router');
-app.use('/movie', MovieRouter);
+const GameRouter = require('./routes/game-router');
+app.use('/game', GameRouter);
 
 // Homepage message
 app.get('/', (req, res) => {
