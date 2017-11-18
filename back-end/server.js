@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 const mongoose = require('mongoose');
-const DB_URL = 'mongodb://localhost/Movies';
+const DB_URL = 'mongodb://localhost/TriviaQuizGame';
 mongoose.Promise = global.Promise;
 mongoose.connect(DB_URL);
 
@@ -26,7 +26,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 require('./models/index');
 
 // Setup Routes
-const MovieRouter = require('./routes/movie-router');
+const MovieRouter = require('./routes/game-router');
 app.use('/movie', MovieRouter);
 
 // Homepage message
@@ -38,4 +38,3 @@ app.listen(3001, (err) => {
   if (err) { console.log(err); }
   else { console.log('\nMovie server is running at http://localhost:3001'); }
 });
-
