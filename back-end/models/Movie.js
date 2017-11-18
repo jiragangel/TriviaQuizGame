@@ -7,4 +7,6 @@ const Questions = new Schema({
   Difficult: { Array: Number }
 });
 
+
+
 mongoose.model('Questions', MovieSchema);
