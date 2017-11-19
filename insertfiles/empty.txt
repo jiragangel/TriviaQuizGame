@@ -1,0 +1,26 @@
+db.question.insertMany([{
+Entertainment:{
+	Easy:[
+		{Question:"",Answer: "",choiceA: "",choiceB: "",choiceC: "",choiceD: ""},
+		{Question:"",Answer: "",choiceA: "",choiceB: "",choiceC: "",choiceD: ""},
+		{Question:"",Answer: "",choiceA: "",choiceB: "",choiceC: "",choiceD: ""},
+		{Question:"",Answer: "",choiceA: "",choiceB: "",choiceC: "",choiceD: ""},
+		{Question:"",Answer: "",choiceA: "",choiceB: "",choiceC: "",choiceD: ""},
+  ],
+	Medium:[
+		{Question:"",Answer: "",choiceA: "",choiceB: "",choiceC: "",choiceD: ""},
+		{Question:"",Answer: "",choiceA: "",choiceB: "",choiceC: "",choiceD: ""},
+		{Question:"",Answer: "",choiceA: "",choiceB: "",choiceC: "",choiceD: ""},
+		{Question:"",Answer: "",choiceA: "",choiceB: "",choiceC: "",choiceD: ""},
+		{Question:"",Answer: "",choiceA: "",choiceB: "",choiceC: "",choiceD: ""},
+  ],
+	Difficult:[
+		{Question:"",Answer: "",choiceA: "",choiceB: "",choiceC: "",choiceD: ""},
+		{Question:"",Answer: "",choiceA: "",choiceB: "",choiceC: "",choiceD: ""},
+		{Question:"",Answer: "",choiceA: "",choiceB: "",choiceC: "",choiceD: ""},
+		{Question:"",Answer: "",choiceA: "",choiceB: "",choiceC: "",choiceD: ""},
+		{Question:"",Answer: "",choiceA: "",choiceB: "",choiceC: "",choiceD: ""},
+  ]
+  }
+}])
+e

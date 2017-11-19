@@ -1,0 +1,25 @@
+db.question.insertMany([{
+Entertainment:{
+	Easy:[
+		{Question:"Who founded Playboy magazine?",Answer: "Hugh Hefner",choiceA: "Hugh Hefner",choiceB: "Henry Hudson",choiceC: "John Muir",choiceD: "Kit Carson"},
+		{Question:"Who held the famous I have a dream speech in 1963?",Answer: "Martin Luther King",choiceA: "Abraham Lincoln",choiceB: "Thomas Jefferson",choiceC: "Martin Luther King",choiceD: "Franklin Roosevelt"},
+		{Question:"Who was Britain’s longest-reigning monarch?",Answer: "Victoria",choiceA: "Anne",choiceB: "William",choiceC: "George",choiceD: "Victoria"},
+		{Question:"Which was the weapon of choice for Samurais?",Answer: "Katana",choiceA: "Kama",choiceB: "Katana",choiceC: "Kiseru",choiceD: "Tekkan and Hachiwari"},
+		{Question:"Who was the first president of the United States?",Answer: "George Washington",choiceA: "George Washington",choiceB: "Abraham Lincoln",choiceC: "George Bush",choiceD: "Theodore Roosevelt"},
+  ],
+	Medium:[
+		{Question:"What was Sally Ride the first American woman to do?",Answer: "Go into outer space",choiceA: "Win an olympic medal",choiceB: "Go into outer space",choiceC: "Fly solo around the world.",choiceD: "Receive a pilot's license."},
+		{Question:"What year did the Titanic sink?",Answer: "1912",choiceA: "1911",choiceB: "1910",choiceC: "1913",choiceD: "1912"},
+		{Question:"What Wonder of the Ancient World was in what is Iraq today?",Answer: "Hanging gardens of Babylon",choiceA: "The Abbasid Palace",choiceB: "Ziggurat of Ur",choiceC: "Aqar Quf/ Dur-Kurigalzu",choiceD: "Hanging gardens of babylon"},
+		{Question:"Where was Pearl Harbor, the military based attacked by the Japanese army was located?",Answer: "Hawaii",choiceA: "Israel",choiceB: "Philippines",choiceC: "Hawaii",choiceD: "America"},
+		{Question:"What starts with ‘Four score and seven years ago?",Answer: "Gettsburg Address",choiceA: "Gettsburg Address",choiceB: "We Shall Fight on the Beaches",choiceC: "Surrender Speech",choiceD: "Farewell to Baseball Address"},
+  ],
+	Difficult:[
+		{Question:"What country did USA purchase Alaska from?",Answer: "Russia",choiceA: "Cuba",choiceB: "Russia",choiceC: "Argentina",choiceD: "Venezuela"},
+		{Question:"What was one of the names given to the atomic bombs of Hiroshima and Nagasaki?",Answer: "Little Boy",choiceA: "Little Boy",choiceB: "Little Man",choiceC: "Little Guy",choiceD: "Fat Boy"},
+		{Question:"Who discovered the sea route to India?",Answer: "Vasco Da Gama",choiceA: "Narendra Modi",choiceB: "Vasco Da Gama",choiceC: "Aamir Khan",choiceD: "Virat Kohli"},
+		{Question:"What was the name of Adolf Hitler’s wife?",Answer: "Eva",choiceA: "Evie",choiceB: "Eve",choiceC: "Evelyn",choiceD: "Eva"},
+		{Question:"The Philippines was discovered by Europeans in what year?",Answer: "1521",choiceA: "1521",choiceB: "1522",choiceC: "1523",choiceD: "1524"},
+  ]
+  }
+}]);

@@ -1,3 +1,6 @@
+db.questions.insertMany({
+
+});
 Science Category:
   Easy:
     Question: What does a glaucoma provoke if its not treated?

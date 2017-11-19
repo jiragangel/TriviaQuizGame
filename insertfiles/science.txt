@@ -1,0 +1,130 @@
+db.questions.insertMany([
+{
+Science: {
+Easy:[
+{
+Question:	"What does a glaucoma provoke if its not treated?",
+Answer: "Blindness",
+choiceA: "Deafness",
+choiceB: "Tremors",
+choiceC: "Nausea",
+choiceD: "Blindness"
+},
+{
+Question:	"Which two common household items have a violent chemical reaction when combined?",
+Answer: "Sodium bicarbonate and vinegar",
+choiceA: "Sodium bicarbonate and Ethanol",
+choiceB: "Vinegar and Sodium Hydroxide",
+choiceC: "Sodium bicarbonate and vinegar",
+choiceD: "Calcium carbonate and Sodium bicarbonate"
+},
+{
+Question:	"Au is an abbreviation for which chemical element?",
+Answer: "Gold",
+choiceA: "Gold",
+choiceB: "Silver",
+choiceC: "Copper",
+choiceD: "Iron"
+},
+{
+Question:	"How is tooth cavity usually fixed?",
+Answer: "By filling it",
+choiceA: "By extracting it",
+choiceB: "By cleaning it",
+choiceC: "By replacing it with dentures",
+choiceD: "By filling it"
+},
+{
+Question:	"Which is the name of the most extended artery of the human body?",
+Answer: "Aorta",
+choiceA: "Aorta",
+choiceB: "Axilla",
+choiceC: "Arteria Dorsalis",
+choiceD: "Thoracic"
+}
+],
+Medium: [{
+Question:	"When are young elephants considered to be adults?",
+Answer: "12 to 15 years old",
+choiceA: "12 to 15 years old",
+choiceB: "13 to 16 years old",
+choiceC: "11 to 14 years old",
+choiceD: "10 to 13 years old"
+},
+{
+Question:	"Which part of the eye responds to light?",
+Answer: "Retina",
+choiceA: "Sclera",
+choiceB: "Cornea",
+choiceC: "Retina",
+choiceD: "Iris"
+},
+{
+Question:	"What's the colostrum?",
+Answer: "The first breast milk",
+choiceA: "The first period",
+choiceB: "The first breast milk",
+choiceC: "The first pregnancy",
+choiceD: "The first..."
+},
+{
+Question:	"What is plastic made of?",
+Answer: "Oil",
+choiceA: "Leaves",
+choiceB: "Oil",
+choiceC: "Rocks",
+choiceD: "Wood"
+},
+{
+Question:	"What does vexillology study?",
+Answer: "",
+choiceA: "Study of Glands",
+choiceB: "Study of Worms",
+choiceC: "Study of Tides",
+choiceD: "Study of Flags"
+}
+],
+Hard: [{
+Question:	"What's the name of the chronic mood disorder that alternates periods of hypomanic symptoms with periods of mild depression?",
+Answer: "Cyclothymia",
+choiceA: "Bipolar disorder",
+choiceB: "Major Depression",
+choiceC: "Cyclothymia",
+choiceD: "Dysthymia"
+},
+{
+Question:	"What prevents virus replication?",
+Answer: "Interferons",
+choiceA: "Algesia",
+choiceB: "Anodonta",
+choiceC: "Dorsalon",
+choiceD: "Interferons"
+},
+{
+Question:	"What does a speleologist study?",
+Answer: "Caves",
+choiceA: "Sun",
+choiceB: "Caves",
+choiceC: "Flags",
+choiceD: "Waves"
+},
+{
+Question:	"What is aboulia?",
+Answer: "A decrease of motivation",
+choiceA: "A decrease of emotion",
+choiceB: "A decrease of motivation",
+choiceC: "A sudden decrease of happiness",
+choiceD: "A decrease of energy"
+},
+{
+Question:	"The Statue of Liberty is covered in what material?",
+Answer: "Copper",
+choiceA: "Lead",
+choiceB: "Cadium",
+choiceD: "Scandium"
+choiceC: "Copper",
+}
+]
+}
+}
+]);

@@ -54,13 +54,3 @@ db.questions.insertMany([
     }
   }
 ]);
-
-db.highscores.insertMany([
-{
-Category:"Science",
-Scorers:{
-Name:"Angel",
-Score: 9999999
-}
-}
-]);
