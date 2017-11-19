@@ -18,18 +18,32 @@ html {
 }
 
 .choices {
-    margin-top: 20px;
+    margin-top: 10px;
     margin-right: 30px;
     height: 15px;
-    width: auto;
+    width: 500px;
     background-color: red;
     border: 2px solid #E87177;
+    border-radius: 10px;
+    background: #fff;
+    padding: 12px;
+    font-family: monospace;
+    font-size: 16px;
+    color: #353535;
+    float: left;
+}
+
+.manage {
+    height: 200px;
+    width: 350px;
+    border: 1px solid white;
     border-radius: 15px;
     background: #fff;
     padding: 20px;
     font-family: monospace;
     font-size: 16px;
     color: #353535;
+    line-height: 1.5em;
     float: left;
 }
 
@@ -75,6 +89,9 @@ h2 {
 h3 {
     font-size: 18px;
     margin: 15px 0 10px;
+    color: #E87177;
+    font-family: monospace;
+    text-align: center;
 }
 h4 {
     font-size: 16px;
@@ -101,7 +118,9 @@ h6 {
     margin-left: 300px;
     float: left;
 }
-.button:hover {
+.button:hover, .submit:hover, 
+.manage-btn:hover, .home-btn:hover,
+.next-btn:hover{
     background-color: #e34f57;
 }
 
@@ -128,4 +147,80 @@ th {
 
 table {
     width: 100%;
+    margin-bottom: 50px;
+}
+
+.tCategory {
+    text-align: center;
+}
+
+.grade {
+    margin-top: 100px;
+    font-size: 80px;
+    color: #E87177;
+    font-family: monospace;
+    text-align: center;
+}
+
+input[type=text], select {
+    width: 24%;
+    padding: 12px 20px;
+    margin-top: 75px;
+    margin-left: 300px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.submit {
+    width: 150px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    color:#ffffff;
+    text-align: center;
+    background-color:#E87177;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: 300px;
+    float: left;
+}
+
+.manage-btn {
+    width: 150px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    color:#ffffff;
+    text-align: center;
+    background-color:#E87177;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: 75px;
+    float: left;
+}
+
+.home-btn {
+    width: auto;
+    margin-top: 60px;
+    padding: 10px 20px;
+    color:#ffffff;
+    text-align: center;
+    background-color:#E87177;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: 10px;
+    float: left;
+}
+
+.next-btn {
+    width: auto;
+    margin-top: 20px;
+    padding: 10px 20px;
+    color:#ffffff;
+    text-align: center;
+    background-color:#E87177;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: 10px;
+    float: right;
 }

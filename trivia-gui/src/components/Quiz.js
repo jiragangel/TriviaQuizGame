@@ -53,6 +53,7 @@ class Quiz extends Component{
 				                	<input type="radio" name="A" value="a" />     A. {this.state.questions[0].Difficulty[0].Questions[0].choiceA}
 				                </div>
 				                <div className="choices">
+<<<<<<< HEAD
 				                	<input type="radio" name="A" value="c" />     C. {this.state.questions[0].Difficulty[0].Questions[0].choiceB}
 				                </div>
 				                <div className="choices">
@@ -60,8 +61,17 @@ class Quiz extends Component{
 				                </div>
 				                <div className="choices">
 				                	<input type="radio" name="A" value="d" />     D. {this.state.questions[0].Difficulty[0].Questions[0].choiceD}
+=======
+				                	<input type="radio" name="B" value="b" />     B. {this.state.questions[0].Entertainment.Difficult[0].choiceB}
 				                </div>
-
+				                <div className="choices">
+				                	<input type="radio" name="C" value="c" />     C. {this.state.questions[0].Entertainment.Difficult[0].choiceC}
+				                </div>
+				                <div className="choices">
+				                	<input type="radio" name="D" value="d" />     D. {this.state.questions[0].Entertainment.Difficult[0].choiceD}
+>>>>>>> 556e45c29c49845592764ef73593ea57210dfc49
+				                </div>
+				                <a class="next-btn" href="/">>></a>
 			                </div>
 			            </div>
 			        </div>
