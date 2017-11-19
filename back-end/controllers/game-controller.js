@@ -2,14 +2,13 @@ const Question = require('mongoose').model('Question');
 const HighScore = require('mongoose').model('HighScore');
 
 exports.showQuestions = (req, res) => {
-  Question.find({},{_id:0}).exec(function(err, models) {
+  Question.find({},{}).exec(function(err, models) {
       if (err) {
-          res.render('error', {
+          res.send('error', {
               status: 500
           });
       } else {
-          console.log(models[0]);
-          res.json(models);
+          res.send(models);
       }
   });
 }
