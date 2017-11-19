@@ -1,4 +1,3 @@
-/*
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
@@ -27,11 +26,8 @@ const HSSchema = new Schema({
 
 mongoose.model('Question', QuestionsSchema);
 mongoose.model('HighScore', HSSchema);
-*/
 
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
-
+/*
 const QuestionsSchema = new Schema({
   Sports: {
     Easy: [{
@@ -187,6 +183,4 @@ const HSSchema = new Schema({
     Score: { type: Number, default: 0 }
   }
 });
-
-mongoose.model('Question', QuestionsSchema);
-mongoose.model('HighScore',HSSchema)
+*/
