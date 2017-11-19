@@ -6,13 +6,9 @@ class Grade extends Component{
 			<div className="App">
 		        <body className="container">
 		           <h1>Result</h1>
-		            <div class="quizArea">
-		                <div class="quizHeader">
-		                    <a class="button" href="/">Start Game</a>
-		                    <a class="button" href="/">High Scores</a>
-		                    <a class="button" href="/">Questions</a>
+		                <div class="grade">
+		                    15/15
 		                </div>
-		            </div>
 		        </body>
 		    </div>
 		);

@@ -9,7 +9,7 @@ class Home extends Component{
 		            <div class="quizArea">
 		                <div class="quizHeader">
 		                    <a class="button" href="/">Start Game</a>
-		                    <a class="button" href="/">High Scores</a>
+		                    <a class="button" href="/highscore">High Scores</a>
 		                    <a class="button" href="/">Questions</a>
 		                </div>
 		            </div>
