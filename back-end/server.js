@@ -34,7 +34,7 @@ app.get('/', (req, res) => {
   res.send('API is working!');
 });
 
-app.listen(3002, (err) => {
+app.listen(3001, (err) => {
   if (err) { console.log(err); }
   else { console.log('\nMovie server is running at http://localhost:3001'); }
 });
