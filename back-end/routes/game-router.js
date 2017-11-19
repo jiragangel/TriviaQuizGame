@@ -9,4 +9,5 @@ const GameController = require('../controllers/game-controller');
  */
 
 router.get('/showQuestions', GameController.showQuestions);
+router.get('/showHighScores', GameController.showHighScores);
 module.exports = router;

@@ -1,69 +1,66 @@
-db.Questions.insertMany([
-{
-Category: "Entertainment",
-Difficulty:[{
-Level: "Easy",
-Questions:[{
-Question:	"Who played the character of Edward Scissorhands?",
-Answer: "Johnny Depp",
-choiceA: "Andrew Garfield",
-choiceB: "Johnny Depp",
-choiceC: "Morgan Freeman",
-choiceD: "Hugh Ackman"
-},
-{
-Question:	"The 2014 film Maleficent is based on which story?",
-Answer: "Sleeping Beauty",
-choiceA: "Snow White and The Seven Dwarves",
-choiceB: "Thumbelina",
-choiceC: "Sleeping Beauty",
-choiceD: "The Little Mermaid"
-},
-{
-Question:	"Who wrote the famous opera-rock song ‘ Bohemian Rhapsody’?",
-Answer: "Freddy Mercury",
-choiceA: "Snow White and The Seven Dwarves",
-choiceB: "Thumbelina",
-choiceC: "Sleeping Beauty",
-choiceD: "The Little Mermaid"
-}]
-},
-{
-Level: "Medium",
-Questions:[{
-Question:	"What US president did Forrest Gump not meet?",
-Answer: "Eisenhower",
-choiceA: "Eisenhower",
-choiceB: "Washington",
-choiceC: "Johnson",
-choiceD: "Hoover"
-},
-{
-Question:	"With whom of the following was Michael Jackson married to?",
-Answer: "Lisa Marie Presley",
-choiceA: "Eliza Maria Presley",
-choiceB: "Lisa Marie Presley",
-choiceC: "Jira Angel",
-choiceD: "Dannah Esperanze"
-},
-{
-Question:	"With whom of the following was Michael Jackson married to?",
-Answer: "Lisa Marie Presley",
-choiceA: "Eliza Maria Presley",
-choiceB: "Lisa Marie Presley",
-choiceC: "Jira Angel",
-choiceD: "Dannah Esperanze"
-}]			
-}]
-}	
+db.questions.insertMany([
+  {
+    Entertainment: {
+      Easy:[{
+        Question:	"Who played the character of Edward Scissorhands?",
+        Answer: "Johnny Depp",
+        choiceA: "Andrew Garfield",
+        choiceB: "Johnny Depp",
+        choiceC: "Morgan Freeman",
+        choiceD: "Hugh Ackman"
+      },
+      {
+        Question:	"The 2014 film Maleficent is based on which story?",
+        Answer: "Sleeping Beauty",
+        choiceA: "Snow White and The Seven Dwarves",
+        choiceB: "Thumbelina",
+        choiceC: "Sleeping Beauty",
+        choiceD: "The Little Mermaid"
+      },
+      {
+        Question:	"Who wrote the famous opera-rock song ‘ Bohemian Rhapsody’?",
+        Answer: "Freddy Mercury",
+        choiceA: "Snow White and The Seven Dwarves",
+        choiceB: "Thumbelina",
+        choiceC: "Sleeping Beauty",
+        choiceD: "The Little Mermaid"
+      }],
+    },
+    Medium: {
+        Questions:[{
+          Question:	"What US president did Forrest Gump not meet?",
+          Answer: "Eisenhower",
+          choiceA: "Eisenhower",
+          choiceB: "Washington",
+          choiceC: "Johnson",
+          choiceD: "Hoover"
+        },
+        {
+          Question:	"With whom of the following was Michael Jackson married to?",
+          Answer: "Lisa Marie Presley",
+          choiceA: "Eliza Maria Presley",
+          choiceB: "Lisa Marie Presley",
+          choiceC: "Jira Angel",
+          choiceD: "Dannah Esperanza"
+        },
+      {
+        Question:	"With whom of the following was Michael Jackson married to?",
+        Answer: "Lisa Marie Presley",
+        choiceA: "Eliza Maria Presley",
+        choiceB: "Lisa Marie Presley",
+        choiceC: "Jira Angel",
+        choiceD: "Dannah Esperanze"
+      }]
+    }
+  }
 ]);
 
-db.HighScores.insertMany([
-	{
-		Category:"Science".
-		Scorers:{
-			Name:"Angel",
-			Score: 9999999
-		}
-	}
-])
+db.highscores.insertMany([
+{
+Category:"Science",
+Scorers:{
+Name:"Angel",
+Score: 9999999
+}
+}
+]);

@@ -1,8 +1,27 @@
-const Questions = require('mongoose').model('Questions');
-const HighScores = require('mongoose').model('HighScores');
+const Question = require('mongoose').model('Question');
+const HighScore = require('mongoose').model('HighScore');
 
 exports.showQuestions = (req, res) => {
-  Questions.find({}, (err, movies) => {
-    res.send(movies)
+  Question.find({},{_id:0}).exec(function(err, models) {
+      if (err) {
+          res.render('error', {
+              status: 500
+          });
+      } else {
+          console.log(models[0]);
+          res.json(models);
+      }
+  });
+}
+
+exports.showHighScores = (req, res) => {
+  HighScore.find({},{_id:0}).exec(function(err, models) {
+      if (err) {
+          res.render('error', {
+              status: 500
+          });
+      } else {
+          res.json(models);
+      }
   });
 }
