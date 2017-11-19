@@ -111,3 +111,7 @@ th {
 table {
     width: 100%;
 }
+
+.tCategory {
+    text-align: center;
+}

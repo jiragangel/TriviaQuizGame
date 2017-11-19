@@ -7,21 +7,23 @@ class Highscore extends Component{
 		        <body className="container">
 		           <h1 class="quizName">High Scores</h1>
 		           		<div className="tables">
+		           			<div className="tCategory">Entertainment</div>
 			            	<table>
-							  <tr>
-							    <th>Name</th>
-							    <th>Score</th>
-							  </tr>
-							  <tr>
-							    <td>Pusheen</td>
-							    <td>94</td>
-							  </tr>
-							  <tr>
-							    <td>Woem</td>
-							    <td>99</td>
-							  </tr>
+
+								<tr>
+									<th>Name</th>
+							 		<th>Score</th>
+							  	</tr>
+							  	<tr>
+								    <td>Pusheen</td>
+								    <td>94</td>
+							  	</tr>
+							  	<tr>
+								    <td>Woem</td>
+								    <td>99</td>
+								</tr>
 							</table>
-							
+
 						</div>
 		        </body>
 		    </div>
