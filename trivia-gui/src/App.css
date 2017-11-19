@@ -16,6 +16,20 @@ html {
     line-height: 1.5em;
 }
 
+.containerCategories {
+    height: 700px;
+    width: 800px;
+    margin: 135px auto;
+    border: 2px solid white;
+    border-radius: 15px;
+    background: #fff;
+    padding: 20px;
+    font-family: monospace;
+    font-size: 16px;
+    color: #353535;
+    line-height: 1.5em;
+}
+
 h1,h2,h3,h4,h5,h6 {font-weight: bold;}
 
 h1 {
@@ -60,4 +74,8 @@ h6 {
 }
 .button:hover {
     background-color: #e34f57;
+}
+
+.button::placeholder {
+  color:white;
 }
