@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
-class Home extends Component{
+class Grade extends Component{
 	render(){
 		return(
 			<div className="App">
 		        <body className="container">
-		           <h1>Trivia Quiz</h1>
+		           <h1>Result</h1>
 		            <div class="quizArea">
 		                <div class="quizHeader">
 		                    <a class="button" href="/">Start Game</a>
@@ -19,4 +19,4 @@ class Home extends Component{
 	}
 }
 
-export default Home;
+export default Grade;
