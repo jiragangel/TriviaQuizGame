@@ -162,11 +162,80 @@ const QuestionsSchema = new Schema({
       choiceC: { type: String, default: '' },
       choiceD: { type: String, default: '' }
     }]
-  },
+  }
 });
 
 const HSSchema = new Schema({
-
+  Sports: {
+    Easy: [{
+      Name: {type: String, default: ''},
+      choiceA: { type: Number, default: 0 }
+    }],
+    Medium: [{
+      Name: {type: String, default: ''},
+      choiceA: { type: Number, default: 0 }
+    }],
+    Hard: [{
+      Name: {type: String, default: ''},
+      choiceA: { type: Number, default: 0 }
+    }]
+  },
+  Entertainment: {
+    Easy: [{
+      Name: {type: String, default: ''},
+      choiceA: { type: Number, default: 0 }
+    }],
+    Medium: [{
+      Name: {type: String, default: ''},
+      choiceA: { type: Number, default: 0 }
+    }],
+    Hard: [{
+      Name: {type: String, default: ''},
+      choiceA: { type: Number, default: 0 }
+    }]
+  },
+  Science: {
+    Easy: [{
+      Name: {type: String, default: ''},
+      choiceA: { type: Number, default: 0 }
+    }],
+    Medium: [{
+      Name: {type: String, default: ''},
+      choiceA: { type: Number, default: 0 }
+    }],
+    Hard: [{
+      Name: {type: String, default: ''},
+      choiceA: { type: Number, default: 0 }
+    }]
+  },
+  Geography: {
+    Easy: [{
+      Name: {type: String, default: ''},
+      choiceA: { type: Number, default: 0 }
+    }],
+    Medium: [{
+      Name: {type: String, default: ''},
+      choiceA: { type: Number, default: 0 }
+    }],
+    Hard: [{
+      Name: {type: String, default: ''},
+      choiceA: { type: Number, default: 0 }
+    }]
+  },
+  Histo: {
+    Easy: [{
+      Name: {type: String, default: ''},
+      choiceA: { type: Number, default: 0 }
+    }],
+    Medium: [{
+      Name: {type: String, default: ''},
+      choiceA: { type: Number, default: 0 }
+    }],
+    Hard: [{
+      Name: {type: String, default: ''},
+      choiceA: { type: Number, default: 0 }
+    }]
+  }
 });
 
 mongoose.model('Question', QuestionsSchema);
