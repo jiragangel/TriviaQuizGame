@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+
 const getRandom = (min, max) => {
   console.log("Max: " + max);
   console.log("Min: " + min);
   let num = Math.floor(Math.random() * (max - min) + min);
-  console.log("Num: " + num);
+  console.log("Num: " + num)
   return num;
 }
 
@@ -23,8 +24,20 @@ class Quiz extends Component{
           }]
         }]
       }],
-      itemNo: 0
+      itemNo: 0,
+      passed: 1
     };
+
+    this.handleAnswers = this.handleAnswers.bind(this)
+  }
+
+  handleAnswers(){
+    this.setState({
+      itemNo: getRandom(0,this.state.questions[0].Difficulty[0].Questions.length),
+      passed: this.state.passed + 1
+    });
+
+    this.forceUpdate();
   }
 
   componentDidMount(){
@@ -43,35 +56,24 @@ class Quiz extends Component{
 		return(
 			<form action="">
 				<div className="App">
-            <h1>{this.state.itemNo}</h1>
 			        <div className="container">
 			            <div className="quizArea">
 			                <div className="quizHeader">
-			                	<h2 className="itemNo">1</h2>
-			                	<div className="question">{this.state.questions[0].Difficulty[0].Questions[0].Question}</div>
+			                	<h2 className="itemNo">{this.state.passed}</h2>
+			                	<div className="question">{this.state.questions[0].Difficulty[0].Questions[this.state.itemNo].Question}</div>
 			                	<div className="choices">
-				                	<input type="radio" name="A" value="a" />     A. {this.state.questions[0].Difficulty[0].Questions[0].choiceA}
+				                	<input type="radio" name="A" value="a" />     A. {this.state.questions[0].Difficulty[0].Questions[this.state.itemNo].Question.choiceA}
 				                </div>
 				                <div className="choices">
-<<<<<<< HEAD
-				                	<input type="radio" name="A" value="c" />     C. {this.state.questions[0].Difficulty[0].Questions[0].choiceB}
+				                	<input type="radio" name="B" value="b" />     B. {this.state.questions[0].Difficulty[0].Questions[this.state.itemNo].Question.choiceB}
 				                </div>
 				                <div className="choices">
-				                	<input type="radio" name="A" value="b" />     B. {this.state.questions[0].Difficulty[0].Questions[0].choiceC}
+				                	<input type="radio" name="C" value="c" />     C. {this.state.questions[0].Difficulty[0].Questions[this.state.itemNo].Question.choiceC}
 				                </div>
 				                <div className="choices">
-				                	<input type="radio" name="A" value="d" />     D. {this.state.questions[0].Difficulty[0].Questions[0].choiceD}
-=======
-				                	<input type="radio" name="B" value="b" />     B. {this.state.questions[0].Entertainment.Difficult[0].choiceB}
+				                	<input type="radio" name="D" value="d" />     D. {this.state.questions[0].Difficulty[0].Questions[this.state.itemNo].Question.choiceD}
 				                </div>
-				                <div className="choices">
-				                	<input type="radio" name="C" value="c" />     C. {this.state.questions[0].Entertainment.Difficult[0].choiceC}
-				                </div>
-				                <div className="choices">
-				                	<input type="radio" name="D" value="d" />     D. {this.state.questions[0].Entertainment.Difficult[0].choiceD}
->>>>>>> 556e45c29c49845592764ef73593ea57210dfc49
-				                </div>
-				                <a class="next-btn" href="/">>></a>
+				                <input type="button" onClick={this.handleAnswers} value="Submit Answer" class="next-btn"/>
 			                </div>
 			            </div>
 			        </div>
