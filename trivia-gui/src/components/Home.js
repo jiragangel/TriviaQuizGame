@@ -8,9 +8,9 @@ class Home extends Component{
 		           <h1>Trivia Quiz</h1>
 		            <div class="quizArea">
 		                <div class="quizHeader">
-		                    <a class="button" href="/">Start Game</a>
-		                    <a class="button" href="/highscore">High Scores</a>
-		                    <a class="button" href="/">Questions</a>
+		                    <a class="button" href="/categories">Start Game</a>
+		                    <a class="button" href="/HighScore">High Scores</a>
+		                    <a class="button" href="/manage">Manage</a>
 		                </div>
 		            </div>
 		        </body>

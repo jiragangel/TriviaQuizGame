@@ -9,6 +9,10 @@ class Grade extends Component{
 		                <div class="grade">
 		                    15/15
 		                </div>
+		                <form action="">
+		                	<input type="text" id="name" name="name" placeholder="Enter name" />
+		                </form>
+		                <a class="submit" href="/highscore">Submit</a>
 		        </body>
 		    </div>
 		);
