@@ -5,14 +5,35 @@ class View extends Component{
 		return(
 			<div className="App">
 		        <body className="container">
-		           <h1>Trivia Quiz</h1>
-		            <div class="quizArea">
-		                <div class="quizHeader">
-		                    <a class="button" href="/categories">Start Game</a>
-		                    <a class="button" href="/HighScore">High Scores</a>
-		                    <a class="button" href="/manage">Manage</a>
+		           <h1>Questions</h1>
+		                <div className="question-text">
+		                	<p>1. How are you?</p>
+		                	<div className="choices-text">
+		                		<p>a. Okay lang.</p>
+		                		<p>b. Haa</p>
+		                		<p>c. Aucoe na.</p>
+		                		<p>d. Meep.</p>
+		                	</div>
 		                </div>
-		            </div>
+		                <div className="question-text">
+		                	<p>2. How are you?</p>
+		                	<div className="choices-text">
+		                		<p>a. Okay lang.</p>
+		                		<p>b. Haa</p>
+		                		<p>c. Aucoe na.</p>
+		                		<p>d. Meep.</p>
+		                	</div>
+		                </div>
+		                <div className="question-text">
+		                	<p>3. How are you?</p>
+		                	<div className="choices-text">
+		                		<p>a. Okay lang.</p>
+		                		<p>b. Haa</p>
+		                		<p>c. Aucoe na.</p>
+		                		<p>d. Meep.</p>
+		                	</div>
+		                </div>
+		            <a class="home-btn" href="/manage">Back</a>
 		        </body>
 		    </div>
 		);
