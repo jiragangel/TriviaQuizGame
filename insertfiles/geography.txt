@@ -1,0 +1,22 @@
+db.question.insertMany([{
+Geography:{
+	Easy:[
+		{Question:"What are the colors of the Philippines flag?",Answer:"Blue, Red, Yellow and White",choiceA:"Red and White",choiceB:"Red, White and Black",choiceC:"Blue, Red, Yellow and White",choiceD:"Red, Blue, and White"},
+		{Question:"What country is famous for the maple tree?",Answer:"Canada",choiceA:"USA",choiceB:"UK",choiceC:"Philippines",choiceD:"Canada"},
+		{Question:"What’s the meaning of D.C in Washington D.C?",Answer: "District of Columbia",choiceA:"District of Columbia",choiceB:"District of Cambodia",choiceC:"District of Canada",choiceD:"District of Caine"},
+		{Question:"What is the color of the Japanese Flag?",Answer:"White and Red",choiceA:"Red and Yellow",choiceB: "White and Red",choiceC:"Red and Black",choiceD: "White and Black"},{Question:"When is the Spring in the Southern Hemisphere?",Answer:"September to December",choiceA:"December to March",choiceB:"March to June",choiceC:"June to September",choiceD:"September to December"}
+	],
+	Medium:[
+		{Question:"Which of the following countries has the highest life expectancy?",Answer:"Japan",choiceA:"China",choiceB:"Japan",choiceC:"South Korea",choiceD:"North Korea"},
+		{Question:"Where can you find the largest flower, Rafflesia?",Answer:"Malaysia",choiceA: "Indonesia",choiceB:"Singapore",choiceC:"Hong Kong",choiceD:"Malaysia"},
+		{Question:"Taiwan is also known as?",Answer:"Formosa Island",choiceA:"Formosa Island",choiceB:"Fragrant Harbour",choiceC:"Spice Island",choiceD:"Insulinde"},
+		{Question:"Which of the following countries does NOT have red in its flag?",Answer:"Saudi Arabia",choiceA:"China",choiceB:"Nepal",choiceC:"Saudi Arabia",choiceD:"Philippines"},
+		{Question:"Which of these is NOT one of the ‘New Wonders of the World’?",Answer:"Eiffel Tower",choiceA:"Eiffel Tower",choiceB:"Christ the Redeemer Statue",choiceC:"Machu Picchu",choiceD:"Taj Majal"}
+	], 
+	Difficult:[
+		{Question:"What country is the last to see the sun set?",Answer:"Samoa",choiceA:"Hawaii",choiceB:"New Zealand",choiceC:"Ecuador",choiceD:"Samoa"},
+		{Question:"What element does Argentina owe its name to?",Answer:"Silver",choiceA:"Silver",choiceB:"Gold",choiceC:"Arsenic",choiceD:"Astatine"},
+		{Question:"What is the real name of the Japanese Cat Island, famous for its huge cat population?",Answer:"Tashirojima",choiceA:"Inujima",choiceB:"Okunoshima",choiceC:"Tashirojima",choiceD:"Miyagi Zao"},
+		{Question:"Where is the Capoeira dance from?",Answer: "Mafia Hitman",choiceA:"Brazil",choiceB:"Africa",choiceC:"India",choiceD:"Hawaii"},
+		{Question:"Which is the most populated city of Turkey?",Answer:"Istanbul",choiceA:"Ankara",choiceB:"Izmir",choiceC:"Antalya",choiceD: "Istanbul"}
+	]}}])

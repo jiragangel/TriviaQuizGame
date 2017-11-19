@@ -162,11 +162,30 @@ const QuestionsSchema = new Schema({
       choiceC: { type: String, default: '' },
       choiceD: { type: String, default: '' }
     }]
-  },
+  }
 });
 
 const HSSchema = new Schema({
-
+  Sports: {
+      Name: {type: String, default: ''},
+      Score: { type: Number, default: 0 }
+  },
+  Entertainment: {
+    Name: {type: String, default: ''},
+    Score: { type: Number, default: 0 }
+  },
+  Science: {
+    Name: {type: String, default: ''},
+    Score: { type: Number, default: 0 }
+  },
+  Geography: {
+    Name: {type: String, default: ''},
+    Score: { type: Number, default: 0 }
+  },
+  Histo: {
+    Name: {type: String, default: ''},
+    Score: { type: Number, default: 0 }
+  }
 });
 
 mongoose.model('Question', QuestionsSchema);
