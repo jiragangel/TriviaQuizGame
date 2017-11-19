@@ -26,8 +26,11 @@ h1 {
     text-align: center;
 }
 h2 {
-    font-size: 22px;
-    margin: 15px 0;
+    font-size: 50px;
+    margin: 0 0 20px;
+    color: #E87177;
+    font-family: monospace;
+    text-align: left;
 }
 h3 {
     font-size: 18px;
