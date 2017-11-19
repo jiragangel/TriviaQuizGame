@@ -6,11 +6,11 @@ class Home extends Component{
 			<div className="App">
 		        <body className="container">
 		           <h1>Trivia Quiz</h1>
-		            <div class="quizArea">
-		                <div class="quizHeader">
-		                    <a class="button" href="/categories">Start Game</a>
-		                    <a class="button" href="/HighScore">High Scores</a>
-		                    <a class="button" href="/manage">Manage</a>
+		            <div className="quizArea">
+		                <div className="quizHeader">
+		                    <a className="button" href="/categories">Start Game</a>
+		                    <a className="button" href="/HighScore">High Scores</a>
+		                    <a className="button" href="/manage">Manage</a>
 		                </div>
 		            </div>
 		        </body>
