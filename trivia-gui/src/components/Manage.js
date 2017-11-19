@@ -7,15 +7,15 @@ class Manage extends Component{
 		        <body className="container">
 		        	<div className="manage">
 			            <h3>Questions</h3>
-		                <a className="manage-btn" href="/">View/Edit</a>
+		                <a className="manage-btn" href="/">View</a>
 		                <a className="manage-btn" href="/">Add</a>
-		                <a className="manage-btn" href="/">Delete</a>
+		                <a className="manage-btn" href="/">Edit/Delete</a>
 		            </div>
 		            <div className="manage">
 			            <h3>Categories</h3>
-		                <a className="manage-btn" href="/">View/Edit</a>
+		                <a className="manage-btn" href="/">View</a>
 		                <a className="manage-btn" href="/">Add</a>
-		                <a className="manage-btn" href="/">Delete</a>
+		                <a className="manage-btn" href="/">Edit/Delete</a>
 		            </div>
 		            <a class="home-btn" href="/">Back</a>
 		        </body>
