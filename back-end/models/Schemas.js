@@ -59,7 +59,7 @@ const QuestionsSchema = new Schema({
       choiceD: { type: String, default: '' }
     }]
   },
-  Arts: {
+  Entertainment: {
     Easy: [{
       Question: {type: String, default: ''},
       Answer: { type: String, default: '' },
