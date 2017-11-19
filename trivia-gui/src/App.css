@@ -105,11 +105,10 @@ h6 {
     background-color: #e34f57;
 }
 
-<<<<<<< HEAD
 .button::placeholder {
   color:white;
 }
-=======
+
 .choices:hover {
     background-color: #e34f57;
     color: #ffffff;
@@ -130,4 +129,3 @@ th {
 table {
     width: 100%;
 }
->>>>>>> f69c0fb27fe6af2c7301262c3a5435bad430a547
