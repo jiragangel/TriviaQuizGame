@@ -1,66 +1,99 @@
-db.questions.insertMany([
-  {
-    Entertainment: {
-      Easy:[{
-        Question:	"Who played the character of Edward Scissorhands?",
-        Answer: "Johnny Depp",
-        choiceA: "Andrew Garfield",
-        choiceB: "Johnny Depp",
-        choiceC: "Morgan Freeman",
-        choiceD: "Hugh Ackman"
-      },
-      {
-        Question:	"The 2014 film Maleficent is based on which story?",
-        Answer: "Sleeping Beauty",
-        choiceA: "Snow White and The Seven Dwarves",
-        choiceB: "Thumbelina",
-        choiceC: "Sleeping Beauty",
-        choiceD: "The Little Mermaid"
-      },
-      {
-        Question:	"Who wrote the famous opera-rock song ‘ Bohemian Rhapsody’?",
-        Answer: "Freddy Mercury",
-        choiceA: "Snow White and The Seven Dwarves",
-        choiceB: "Thumbelina",
-        choiceC: "Sleeping Beauty",
-        choiceD: "The Little Mermaid"
-      }],
-    },
-    Medium: {
-        Questions:[{
-          Question:	"What US president did Forrest Gump not meet?",
-          Answer: "Eisenhower",
-          choiceA: "Eisenhower",
-          choiceB: "Washington",
-          choiceC: "Johnson",
-          choiceD: "Hoover"
-        },
-        {
-          Question:	"With whom of the following was Michael Jackson married to?",
-          Answer: "Lisa Marie Presley",
-          choiceA: "Eliza Maria Presley",
-          choiceB: "Lisa Marie Presley",
-          choiceC: "Jira Angel",
-          choiceD: "Dannah Esperanza"
-        },
-      {
-        Question:	"With whom of the following was Michael Jackson married to?",
-        Answer: "Lisa Marie Presley",
-        choiceA: "Eliza Maria Presley",
-        choiceB: "Lisa Marie Presley",
-        choiceC: "Jira Angel",
-        choiceD: "Dannah Esperanze"
-      }]
-    }
-  }
-]);
-
-db.highscores.insertMany([
+db.Questions.insertMany([{Category: "Entertainment",Difficulty:[{Level: "Easy",Questions:[{Question:"Who played the character of Edward Scissorhands?",Answer: "Johnny Depp",choiceA: "Andrew Garfield",choiceB: "Johnny Depp",choiceC: "Morgan Freeman",choiceD: "Hugh Ackman"},{Question:	"The 2014 film Maleficent is based on which story?",Answer: "Sleeping Beauty",choiceA: "Snow White and The Seven Dwarves",choiceB: "Thumbelina",choiceC: "Sleeping Beauty",choiceD: "The Little Mermaid"},{Question:	"Who wrote the famous opera-rock song ‘ Bohemian Rhapsody’?",Answer: "Freddy Mercury",choiceA: "Paul Rogers",choiceB: "Freddy Mercury",choiceC: "Bryan Myers",choiceD: "Led Zeppelin"},{Question:	"Who was Naruto's first sensei?",Answer: "Iruka",choiceA: "Kakashi",choiceB: "Jiraya",choiceC: "Guy",choiceD: "Iruka"},{
+Question:	"What color is the Little Mermaid's tail?",Answer: "Green",choiceA: "Violet",choiceB: "Green",choiceC: "Pink",choiceD: "Blue"}]},{
+Level: "Medium",
+Questions:[{
+Question:	"What US president did Forrest Gump not meet?",
+Answer: "Eisenhower",
+choiceA: "Eisenhower",
+choiceB: "Washington",
+choiceC: "Johnson",
+choiceD: "Hoover"
+},
 {
-Category:"Science",
-Scorers:{
-Name:"Angel",
-Score: 9999999
-}
-}
-]);
+Question:	"With whom of the following was Michael Jackson married to?",
+Answer: "Lisa Marie Presley",
+choiceA: "Eliza Maria Presley",
+choiceB: "Lisa Marie Presley",
+choiceC: "Jira Angel",
+choiceD: "Dannah Esperanza"
+},
+{
+Question:	"What year did ‘Thriller’ come out?",
+Answer: "1982",
+choiceA: "1980",
+choiceB: "1981",
+choiceC: "1982",
+choiceD: "1983"
+},
+{
+Question:	"What year did the Red Hot Chili Peppers release their first album?",
+Answer: "1984",
+choiceA: "1984",
+choiceB: "1985",
+choiceC: "1986",
+choiceD: "1987"
+},
+{
+Question:	"What’s the name of the cat that wants to eat the smurfs?",
+Answer: "Azrael",
+choiceA: "Lux",
+choiceB: "Azrael",
+choiceC: "Ezikiel",
+choiceD: "Bob"
+}]			
+},
+{
+Level: "Difficult",
+Questions:[{
+Question:	"What was the address Dori was looking for on Finding Nemo?",
+Answer: "P Sherman 42 Wallaby Way Sidney",
+choiceA: "P Shermen 43 Wallaby Way Sidney",
+choiceB: "P Shermen 42 Wallaby Way Sidney",
+choiceC: "P Sherman 42 Wallaby Way Sidney",
+choiceD: "P Sherman 43 Wallaby Way Sidney"
+},
+{
+Question:	"How many letters did Noah write to Allie in The Notebook?",
+Answer: "365",
+choiceA: "361",
+choiceB: "363",
+choiceC: "365",
+choiceD: "367"
+},
+{
+Question:	"Who won the Academy Award for Best Actor in a Supporting Role in 2004?",
+Answer: "Morgan Freeman",
+choiceA: "Hugh Ackman",
+choiceB: "Morgan Freeman",
+choiceC: "Robert Downey Jr.",
+choiceD: "Jackie Chan"
+},
+{
+Question:	"What did Jack Nicholson play in the film ‘Prizzi’s Honour’?",
+Answer: "Mafia Hitman",
+choiceA: "Mafia Hitman",
+choiceB: "Information Broker",
+choiceC: "Boxer",
+choiceD: "Assasin"
+},
+{
+Question:	"Which actor portrayed Clark Kent in the movie ‘Man of Steel’?",
+Answer: "Henry Cavill",
+choiceA: "Dean Cain",
+choiceB: "Channing Tatum",
+choiceC: "Tim Daly",
+choiceD: "Henry Cavill"
+}]			
+}]
+}	
+])
+
+db.HighScores.insertMany([
+	{
+		Category:"Science",
+		Scorers:{
+			Name:"Angel",
+			Score: 9999999
+		}
+	}
+])
