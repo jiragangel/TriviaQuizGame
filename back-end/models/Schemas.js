@@ -5,6 +5,7 @@ const QuestionsSchema = new Schema({
   Category: String,
   Difficulty: String,
   Question: String,
+  Type: String,
   Answer: String,
   choiceA: String,
   choiceB: String,

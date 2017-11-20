@@ -61,6 +61,8 @@ class Quiz extends Component{
     this.setState({
       selectedOption: e.target.value
     });
+
+    console.log("Option: " + e.target.value);
   }
 
   handleAnswers(){
@@ -135,10 +137,12 @@ class Quiz extends Component{
 	render(){
     if (this.state.passed > this.state.noOfQuestions * 3){
       let total = 0;
-      total = parseInt(this.state.noOfQuestions) + parseInt(this.state.noOfQuestions*2) + parseInt(this.state.noOfQuestions*3);
+      total = parseInt(this.state.noOfQuestions,10) + parseInt(this.state.noOfQuestions*2,10) + parseInt(this.state.noOfQuestions*3,10);
       return (<Redirect to={`/quiz/grade/${this.state.score}/${total}`} />)
     };
-		return(
+    //MULTIPLE CHOICE
+    if (this.state.curQuestions[this.state.itemNo].Type === 'Multiple Choice'){
+      return(
 			<form action="">
 				<div className="App">
 			        <div className="containerQuiz">
@@ -190,7 +194,66 @@ class Quiz extends Component{
 			        </div>
 			    </div>
 		    </form>
-		);
+		)}else if (this.state.curQuestions[this.state.itemNo].Type === 'True or False'){
+      return(
+        <form action="">
+          <div className="App">
+                <div className="containerQuiz">
+                    <div className="quizArea">
+                        <div className="quizHeader">
+                          <h2 className="itemNo">{this.state.passed}</h2>
+                          <h6>{this.state.curQuestions[this.state.itemNo].Category}</h6>
+                          <h6>{this.state.curQuestions[this.state.itemNo].Difficulty}</h6>
+                          <div className="question">{this.state.curQuestions[this.state.itemNo].Question}</div>
+                          <div className="choices">
+                            <input
+                              type="radio"
+                              name="Choices"
+                              value={this.state.curQuestions[this.state.itemNo].choiceA}
+                              checked={this.state.selectedOption === this.state.curQuestions[this.state.itemNo].choiceA}
+                              onChange={this.handleOptionChange}
+                            />     {this.state.curQuestions[this.state.itemNo].choiceA}
+                          </div>
+                          <div className="choices">
+                            <input
+                              type="radio"
+                              name="Choices"
+                              value={this.state.curQuestions[this.state.itemNo].choiceB}
+                              checked={this.state.selectedOption === this.state.curQuestions[this.state.itemNo].choiceB}
+                              onChange={this.handleOptionChange}
+                            />     {this.state.curQuestions[this.state.itemNo].choiceB}
+                          </div>
+                          <input type="button" onClick={this.handleAnswers} value="Submit Answer" className="next-btn"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </form>
+        )
+    }else {//Identification
+      return(
+        <form action="">
+          <div className="App">
+                <div className="containerQuiz">
+                    <div className="quizArea">
+                        <div className="quizHeader">
+                          <h2 className="itemNo">{this.state.passed}</h2>
+                          <h6>{this.state.curQuestions[this.state.itemNo].Category}</h6>
+                          <h6>{this.state.curQuestions[this.state.itemNo].Difficulty}</h6>
+                          <div className="question">{this.state.curQuestions[this.state.itemNo].Question}</div>
+                            <input
+                              className="choices"
+                              placeholder="Answer"
+                              onChange={this.handleOptionChange}
+                            />
+                          <input type="button" onClick={this.handleAnswers} value="Submit Answer" className="next-btn"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </form>
+        )
+    }
 	}
 }
 
