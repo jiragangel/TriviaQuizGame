@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 
 const getRandom = (min, max) => {
-  console.log("Max: " + max);
-  console.log("Min: " + min);
   let num = Math.floor(Math.random() * (max - min) + min);
-  console.log("Num: " + num)
   return num;
 }
 
@@ -20,24 +17,36 @@ class Quiz extends Component{
       questions: [{
         Difficulty: [{
           Questions: [{
-            Question: ''
+            Question: '',
+            Answer: ''
           }]
         }]
       }],
       itemNo: 0,
-      passed: 1
+      passed: 1,
+      selectedOption: ''
     };
 
-    this.handleAnswers = this.handleAnswers.bind(this)
+    this.handleAnswers = this.handleAnswers.bind(this);
+    this.handleOptionChange = this.handleOptionChange.bind(this);
+  }
+  handleOptionChange(e) {
+    this.setState({
+      selectedOption: e.target.value
+    });
   }
 
   handleAnswers(){
+    if (this.state.questions[0].Difficulty[0].Questions[this.state.itemNo].Answer === this.state.selectedOption){
+      //Correct
+    }else{
+      //Wrong
+    };
+
     this.setState({
       itemNo: getRandom(0,this.state.questions[0].Difficulty[0].Questions.length),
       passed: this.state.passed + 1
     });
-
-    this.forceUpdate();
   }
 
   componentDidMount(){
@@ -62,18 +71,42 @@ class Quiz extends Component{
 			                	<h2 className="itemNo">{this.state.passed}</h2>
 			                	<div className="question">{this.state.questions[0].Difficulty[0].Questions[this.state.itemNo].Question}</div>
 			                	<div className="choices">
-				                	<input type="radio" name="A" value="a" />     A. {this.state.questions[0].Difficulty[0].Questions[this.state.itemNo].Question.choiceA}
+				                	<input
+                            type="radio"
+                            name="Choices"
+                            value={this.state.questions[0].Difficulty[0].Questions[this.state.itemNo].choiceA}
+                            checked={this.state.selectedOption === this.state.questions[0].Difficulty[0].Questions[this.state.itemNo].choiceA}
+                            onChange={this.handleOptionChange}
+                          />     A. {this.state.questions[0].Difficulty[0].Questions[this.state.itemNo].choiceA}
 				                </div>
 				                <div className="choices">
-				                	<input type="radio" name="B" value="b" />     B. {this.state.questions[0].Difficulty[0].Questions[this.state.itemNo].Question.choiceB}
+				                	<input
+                            type="radio"
+                            name="Choices"
+                            value={this.state.questions[0].Difficulty[0].Questions[this.state.itemNo].choiceB}
+                            checked={this.state.selectedOption === this.state.questions[0].Difficulty[0].Questions[this.state.itemNo].choiceB}
+                            onChange={this.handleOptionChange}
+                          />     B. {this.state.questions[0].Difficulty[0].Questions[this.state.itemNo].choiceB}
 				                </div>
 				                <div className="choices">
-				                	<input type="radio" name="C" value="c" />     C. {this.state.questions[0].Difficulty[0].Questions[this.state.itemNo].Question.choiceC}
+				                	<input
+                            type="radio"
+                            name="Choices"
+                            value={this.state.questions[0].Difficulty[0].Questions[this.state.itemNo].choiceC}
+                            checked={this.state.selectedOption === this.state.questions[0].Difficulty[0].Questions[this.state.itemNo].choiceC}
+                            onChange={this.handleOptionChange}
+                          />     C. {this.state.questions[0].Difficulty[0].Questions[this.state.itemNo].choiceC}
 				                </div>
 				                <div className="choices">
-				                	<input type="radio" name="D" value="d" />     D. {this.state.questions[0].Difficulty[0].Questions[this.state.itemNo].Question.choiceD}
+				                	<input
+                            type="radio"
+                            name="Choices"
+                            value={this.state.questions[0].Difficulty[0].Questions[this.state.itemNo].choiceD}
+                            checked={this.state.selectedOption === this.state.questions[0].Difficulty[0].Questions[this.state.itemNo].choiceD}
+                            onChange={this.handleOptionChange}
+                          />     D. {this.state.questions[0].Difficulty[0].Questions[this.state.itemNo].choiceD}
 				                </div>
-				                <input type="button" onClick={this.handleAnswers} value="Submit Answer" class="next-btn"/>
+				                <input type="button" onClick={this.handleAnswers} value="Submit Answer" className="next-btn"/>
 			                </div>
 			            </div>
 			        </div>
