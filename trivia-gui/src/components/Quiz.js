@@ -81,11 +81,11 @@ class Quiz extends Component{
     };
     console.log("Passed: " + this.state.passed);
     console.log("No Of Questions: " + this.state.noOfQuestions);
-    if (this.state.passed > this.state.noOfQuestions * 2){//easy level
+    if (this.state.passed >= this.state.noOfQuestions * 2){//easy level
       this.setState({
         curQuestions: this.state.hard
       })
-    }else if (this.state.passed > this.state.noOfQuestions * 1){//medium
+    }else if (this.state.passed >= this.state.noOfQuestions * 1){//medium
       this.setState({
         curQuestions: this.state.medium
       })
@@ -133,20 +133,19 @@ class Quiz extends Component{
   }
 
 	render(){
-    if (this.state.passed-1 > this.state.noOfQuestions * 3){
-      let total = this.state.noOfQuestions*3;
-      total = total + (this.state.noOfQuestions*2);
-      total = total + (this.state.noOfQuestions*3);
+    if (this.state.passed > this.state.noOfQuestions * 3){
+      let total = 0;
+      total = parseInt(this.state.noOfQuestions) + parseInt(this.state.noOfQuestions*2) + parseInt(this.state.noOfQuestions*3);
       return (<Redirect to={`/quiz/grade/${this.state.score}/${total}`} />)
     };
 		return(
 			<form action="">
 				<div className="App">
-			        <div className="container">
+			        <div className="containerQuiz">
 			            <div className="quizArea">
 			                <div className="quizHeader">
 			                	<h2 className="itemNo">{this.state.passed}</h2>
-                        <h6>{this.state.score}</h6>
+                        <h6>{this.state.curQuestions[this.state.itemNo].Category}</h6>
                         <h6>{this.state.curQuestions[this.state.itemNo].Difficulty}</h6>
 			                	<div className="question">{this.state.curQuestions[this.state.itemNo].Question}</div>
 			                	<div className="choices">
