@@ -14,17 +14,43 @@ class Quiz extends Component{
       two: this.props.match.params.two,
       three: this.props.match.params.three,
       noOfQuestions: this.props.match.params.noOfQuestions,
-      questions: [{
-        Difficulty: [{
-          Questions: [{
-            Question: '',
-            Answer: ''
-          }]
-        }]
+      easy: [{
+        Question: '',
+        Difficulty: '',
+        choiceA: '',
+        choiceB: '',
+        choiceC: '',
+        choiceD: ''
+      }],
+      medium: [{
+        Question: '',
+        Difficulty: '',
+        choiceA: '',
+        choiceB: '',
+        choiceC: '',
+        choiceD: ''
+      }],
+      hard: [{
+        Question: '',
+        Difficulty: '',
+        choiceA: '',
+        choiceB: '',
+        choiceC: '',
+        choiceD: ''
+      }],
+      curQuestions: [{
+        Question: '',
+        Difficulty: '',
+        choiceA: '',
+        choiceB: '',
+        choiceC: '',
+        choiceD: ''
       }],
       itemNo: 0,
       passed: 1,
-      selectedOption: ''
+      selectedOption: '',
+      score: 0,
+      questionCount: 0,
     };
 
     this.handleAnswers = this.handleAnswers.bind(this);
@@ -37,14 +63,38 @@ class Quiz extends Component{
   }
 
   handleAnswers(){
-    if (this.state.questions[0].Difficulty[0].Questions[this.state.itemNo].Answer === this.state.selectedOption){
-      //Correct
-    }else{
-      //Wrong
+    if (this.state.curQuestions[this.state.itemNo].Answer === this.state.selectedOption){
+      if (this.state.curQuestions[this.state.itemNo].Difficulty === 'Easy'){
+        this.setState({
+          score: this.state.score + 1
+        });
+      }else if (this.state.curQuestions[this.state.itemNo].Difficulty === 'Medium'){
+        this.setState({
+          score: this.state.score + 2
+        });
+      }else {
+        this.setState({
+          score: this.state.score + 3
+        });
+      }
     };
-
+    console.log("Passed: " + this.state.passed);
+    console.log("No Of Questions: " + this.state.noOfQuestions);
+    if (this.state.passed > this.state.noOfQuestions * 2){//easy level
+      this.setState({
+        curQuestions: this.state.hard
+      })
+    }else if (this.state.passed > this.state.noOfQuestions * 1){//medium
+      this.setState({
+        curQuestions: this.state.medium
+      })
+    }else {//hard
+      this.setState({
+        curQuestions: this.state.easy
+      })
+    }
     this.setState({
-      itemNo: getRandom(0,this.state.questions[0].Difficulty[0].Questions.length),
+      itemNo: getRandom(0,this.state.curQuestions.length),
       passed: this.state.passed + 1
     });
   }
@@ -53,10 +103,30 @@ class Quiz extends Component{
   	fetch(`http://localhost:3001/game/showQuestions`)
   	.then((response) => { return response.json() })
   		.then((result) => {
+        let counter = 0;
+        for (let i = 0; i < result.length ; i++){
+          if (result[i].Category === this.state.one || result[i].Category === this.state.two || result[i].Category === this.state.three){
+            if (result[i].Difficulty === 'Easy'){
+                this.state.easy.push(result[i]);
+            }else if (result[i].Difficulty === 'Medium'){
+                this.state.medium.push(result[i]);
+            }else {
+                this.state.hard.push(result[i]);
+            }
+          }
+        };
   			this.setState({
+          easy: this.state.easy.slice(1),
+          medium: this.state.medium.slice(1),
+          hard: this.state.hard.slice(1),
+          questionCount: counter,
     			questions:result,
-          itemNo: getRandom(0,result[0].Difficulty[0].Questions.length)
     		});
+
+        this.setState({
+          curQuestions: this.state.easy,
+          itemNo: getRandom(0,this.state.easy.length)
+        })
   	})
   	.catch((e) => {console.log(e)});
   }
@@ -69,42 +139,44 @@ class Quiz extends Component{
 			            <div className="quizArea">
 			                <div className="quizHeader">
 			                	<h2 className="itemNo">{this.state.passed}</h2>
-			                	<div className="question">{this.state.questions[0].Difficulty[0].Questions[this.state.itemNo].Question}</div>
+                        <h6>{this.state.score}</h6>
+                        <h6>{this.state.curQuestions[this.state.itemNo].Difficulty}</h6>
+			                	<div className="question">{this.state.curQuestions[this.state.itemNo].Question}</div>
 			                	<div className="choices">
 				                	<input
                             type="radio"
                             name="Choices"
-                            value={this.state.questions[0].Difficulty[0].Questions[this.state.itemNo].choiceA}
-                            checked={this.state.selectedOption === this.state.questions[0].Difficulty[0].Questions[this.state.itemNo].choiceA}
+                            value={this.state.curQuestions[this.state.itemNo].choiceA}
+                            checked={this.state.selectedOption === this.state.curQuestions[this.state.itemNo].choiceA}
                             onChange={this.handleOptionChange}
-                          />     A. {this.state.questions[0].Difficulty[0].Questions[this.state.itemNo].choiceA}
+                          />     A. {this.state.curQuestions[this.state.itemNo].choiceA}
 				                </div>
 				                <div className="choices">
 				                	<input
                             type="radio"
                             name="Choices"
-                            value={this.state.questions[0].Difficulty[0].Questions[this.state.itemNo].choiceB}
-                            checked={this.state.selectedOption === this.state.questions[0].Difficulty[0].Questions[this.state.itemNo].choiceB}
+                            value={this.state.curQuestions[this.state.itemNo].choiceB}
+                            checked={this.state.selectedOption === this.state.curQuestions[this.state.itemNo].choiceB}
                             onChange={this.handleOptionChange}
-                          />     B. {this.state.questions[0].Difficulty[0].Questions[this.state.itemNo].choiceB}
+                          />     B. {this.state.curQuestions[this.state.itemNo].choiceB}
 				                </div>
 				                <div className="choices">
 				                	<input
                             type="radio"
                             name="Choices"
-                            value={this.state.questions[0].Difficulty[0].Questions[this.state.itemNo].choiceC}
-                            checked={this.state.selectedOption === this.state.questions[0].Difficulty[0].Questions[this.state.itemNo].choiceC}
+                            value={this.state.curQuestions[this.state.itemNo].choiceC}
+                            checked={this.state.selectedOption === this.state.curQuestions[this.state.itemNo].choiceC}
                             onChange={this.handleOptionChange}
-                          />     C. {this.state.questions[0].Difficulty[0].Questions[this.state.itemNo].choiceC}
+                          />     C. {this.state.curQuestions[this.state.itemNo].choiceC}
 				                </div>
 				                <div className="choices">
 				                	<input
                             type="radio"
                             name="Choices"
-                            value={this.state.questions[0].Difficulty[0].Questions[this.state.itemNo].choiceD}
-                            checked={this.state.selectedOption === this.state.questions[0].Difficulty[0].Questions[this.state.itemNo].choiceD}
+                            value={this.state.curQuestions[this.state.itemNo].choiceD}
+                            checked={this.state.selectedOption === this.state.curQuestions[this.state.itemNo].choiceD}
                             onChange={this.handleOptionChange}
-                          />     D. {this.state.questions[0].Difficulty[0].Questions[this.state.itemNo].choiceD}
+                          />     D. {this.state.curQuestions[this.state.itemNo].choiceD}
 				                </div>
 				                <input type="button" onClick={this.handleAnswers} value="Submit Answer" className="next-btn"/>
 			                </div>

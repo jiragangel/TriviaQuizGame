@@ -4,7 +4,7 @@ const app = express();
 const mongoose = require('mongoose');
 const DB_URL = 'mongodb://localhost/TriviaQuizGame';
 mongoose.Promise = global.Promise;
-mongoose.connect(DB_URL);
+mongoose.connect(DB_URL,{useMongoClient: true});
 
 // for CORS
 app.use(function(req, res, next) {
@@ -36,5 +36,5 @@ app.get('/', (req, res) => {
 
 app.listen(3001, (err) => {
   if (err) { console.log(err); }
-  else { console.log('\nMovie server is running at http://localhost:3001'); }
+  else { console.log('Game Server is running at http://localhost:3001'); }
 });
