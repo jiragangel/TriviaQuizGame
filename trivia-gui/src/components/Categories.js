@@ -71,7 +71,7 @@ class Categories extends Component {
         <div className="quizArea">
           <div className="quizHeader">
             <form onSubmit={this.handleFormSubmit}>
-              <input className="button" onChange={this.handleNoChange} placeholder="Enter number of questions"/>
+              <input className="button" required onChange={this.handleNoChange} placeholder="Enter number of questions"/>
               {this.createCheckboxes()}
               <a href={`/quiz/${getQueryString(this.selectedCheckboxes)}${this.state.noOfQuestions}`} className="button">
                 Start Game

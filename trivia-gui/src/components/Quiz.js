@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import  { Redirect } from 'react-router-dom'
 
 const getRandom = (min, max) => {
   let num = Math.floor(Math.random() * (max - min) + min);
@@ -132,6 +133,12 @@ class Quiz extends Component{
   }
 
 	render(){
+    if (this.state.passed-1 > this.state.noOfQuestions * 3){
+      let total = this.state.noOfQuestions*3;
+      total = total + (this.state.noOfQuestions*2);
+      total = total + (this.state.noOfQuestions*3);
+      return (<Redirect to={`/quiz/grade/${this.state.score}/${total}`} />)
+    };
 		return(
 			<form action="">
 				<div className="App">
