@@ -12,6 +12,19 @@ db.questions.insertMany([
   }
 ]);
 
+db.highscores.insertMany([
+  {
+    Category: "Science",
+    Name: "Jira Angel",
+    Score: 25
+  },
+  {
+    Category: "Science",
+    Name: "Jira Angel",
+    Score: 23
+  },
+]);
+
 db.questions.insertMany([{
   Category: "Science",
   Difficulty: "Easy",

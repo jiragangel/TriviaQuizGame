@@ -188,7 +188,9 @@ class Quiz extends Component{
                             onChange={this.handleOptionChange}
                           />     D. {this.state.curQuestions[this.state.itemNo].choiceD}
 				                </div>
-				                <input type="button" onClick={this.handleAnswers} value="Submit Answer" className="next-btn"/>
+                        <div>
+				                    <input type="button" onClick={this.handleAnswers} value="Submit Answer" className="next-btn"/>
+                        </div>
 			                </div>
 			            </div>
 			        </div>
@@ -230,7 +232,7 @@ class Quiz extends Component{
             </div>
           </form>
         )
-    }else {//Identification
+    }else if (this.state.curQuestions[this.state.itemNo].Type === 'Identification'){//Identification
       return(
         <form action="">
           <div className="App">
@@ -242,6 +244,30 @@ class Quiz extends Component{
                           <h6>{this.state.curQuestions[this.state.itemNo].Difficulty}</h6>
                           <div className="question">{this.state.curQuestions[this.state.itemNo].Question}</div>
                             <input
+                              className="choices"
+                              placeholder="Answer"
+                              onChange={this.handleOptionChange}
+                            />
+                          <input type="button" onClick={this.handleAnswers} value="Submit Answer" className="next-btn"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </form>
+        )
+    }else{//Number
+      return(
+        <form action="">
+          <div className="App">
+                <div className="containerQuiz">
+                    <div className="quizArea">
+                        <div className="quizHeader">
+                          <h2 className="itemNo">{this.state.passed}</h2>
+                          <h6>{this.state.curQuestions[this.state.itemNo].Category}</h6>
+                          <h6>{this.state.curQuestions[this.state.itemNo].Difficulty}</h6>
+                          <div className="question">{this.state.curQuestions[this.state.itemNo].Question}</div>
+                            <input
+                              type="Number"
                               className="choices"
                               placeholder="Answer"
                               onChange={this.handleOptionChange}
