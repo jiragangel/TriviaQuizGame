@@ -1,14 +1,28 @@
 db.questions.insertMany([
   {
-  Category:"Sports",
+  Category:"History",
   Difficulty: "Easy",
   Type: "Identification",
-  Question: "How many players per team are there in court in handball?",
-  Answer: "7",
-  choiceA: "6",
-  choiceB: "7",
-  choiceC: "8",
-  choiceD: "9"
+  Question: "Who is the Philippines' national hero?",
+  Answer: "Jose Rizal",
+  choiceA: "",
+  choiceB: "",
+  choiceC: "",
+  choiceD: ""
+  }
+]);
+
+db.questions.insertMany([
+  {
+    Category: "Math",
+    Difficulty: "Easy",
+    Type: "Number",
+    Question: "1+1",
+    Answer: "2",
+    choiceA: "",
+    choiceB: "",
+    choiceC: "",
+    choiceD: ""
   }
 ]);
 
@@ -25,40 +39,53 @@ db.highscores.insertMany([
   },
 ]);
 
-db.questions.insertMany([{
-  Category: "Science",
-  Difficulty: "Easy",
-  Type: "True or False",
-  Question: "Is this true?",
-  Answer: 'True',
-  choiceA: 'True',
-  choiceB: 'False',
-  choiceC: '',
-  choiceD: ''
-}]);
+db.questions.insertMany([
+  {
+    Category:"Science",
+    Difficulty: "Easy",
+    Type: "True or False",
+    Question: "The dolphin hears ultrasound with its jaw.",
+    Answer: "True",
+    choiceA: "True",
+    choiceB: "False",
+    choiceC: "",
+    choiceD: ""
+  },
+  {
+    Category:"Science",
+    Difficulty: "Easy",
+    Type: "True or False",
+    Question: "The spinner dolphin and the killer whale are both able to jump more than 23 ft. (7 m) out of the water.",
+    Answer: "True",
+    choiceA: "True",
+    choiceB: "False",
+    choiceC: "",
+    choiceD: ""
+  }
+]);
 
 db.questions.insertMany([
 {
 Category:"Sports",
 Difficulty: "Easy",
-Type: "Multiple Choice",
+Type: "Number",
 Question: "How many players per team are there in court in handball?",
 Answer: "7",
-choiceA: "6",
-choiceB: "7",
-choiceC: "8",
-choiceD: "9"
+choiceA: "",
+choiceB: "",
+choiceC: "",
+choiceD: ""
 },
 {
 Category: "Sports",
 Difficulty: "Easy",
-Type: "Multiple Choice",
+Type: "Number",
 Question:"How many squares are there in a chess board?",
 Answer: "64",
-choiceA: "48",
-choiceB: "56",
-choiceC: "64",
-choiceD: "72"
+choiceA: "",
+choiceB: "",
+choiceC: "",
+choiceD: ""
 },
 {
 Category: "Sports",
@@ -173,24 +200,24 @@ choiceD: "Martina Hingos"
 {
 Category: "Sports",
 Difficulty: "Difficult",
-Type: "Multiple Choice",
+Type: "Number",
 Question:"How many goals did Germany score in the 2014 World Cup Against Brazil?",
 Answer: "7",
-choiceA: "4",
-choiceB: "5",
-choiceC: "6",
-choiceD: "7"
+choiceA: "",
+choiceB: "",
+choiceC: "",
+choiceD: ""
 },
 {
 Category: "Sports",
 Difficulty: "Difficult",
-Type: "Multiple Choice",
+Type: "Number",
 Question:"How many games were disputed in the longest match in the history of Wimbledon?",
 Answer: "183",
-choiceA: "183",
-choiceB: "184",
-choiceC: "185",
-choiceD: "186"
+choiceA: "",
+choiceB: "",
+choiceC: "",
+choiceD: ""
 },
 {
 Category: "Sports",
@@ -326,13 +353,13 @@ choiceD: "P Sherman 43 Wallaby Way Sidney"},
 {
 Category: "Entertainment",
 Difficulty: "Difficult",
-Type: "Multiple Choice",
+Type: "Number",
 Question:	"How many letters did Noah write to Allie in The Notebook?",
 Answer: "365",
-choiceA: "361",
-choiceB: "363",
-choiceC: "365",
-choiceD: "367"
+choiceA: "",
+choiceB: "",
+choiceC: "",
+choiceD: ""
 },
 {
 Category: "Entertainment",
@@ -369,7 +396,7 @@ choiceC: "Tim Daly",
 choiceD: "Henry Cavill"
 },
 {
-Category:"Science:",
+Category:"Science",
 Difficulty: "Easy",
 Type: "Multiple Choice",
 Question:"What does a glaucoma provoke if its not treated?",
@@ -380,7 +407,7 @@ choiceC: "Nausea",
 choiceD: "Blindness"
 },
 {
-Category:"Science:",
+Category:"Science",
 Difficulty: "Easy",
 Type: "Multiple Choice",
 Question:	"Which two common household items have a violent chemical reaction when combined?",
@@ -391,19 +418,19 @@ choiceC: "Sodium bicarbonate and vinegar",
 choiceD: "Calcium carbonate and Sodium bicarbonate"
 },
 {
-Category:"Science:",
+Category:"Science",
 Difficulty: "Easy",
 Type: "Multiple Choice",
 Question:	"Au is an abbreviation for which chemical element?",Answer: "Gold",choiceA: "Gold",choiceB: "Silver",choiceC: "Copper",choiceD: "Iron"
 },
 {
-Category:"Science:",
+Category:"Science",
 Difficulty: "Easy",
 Type: "Multiple Choice",
 Question:	"How is tooth cavity usually fixed?",Answer: "By filling it",choiceA: "By extracting it",choiceB: "By cleaning it",choiceC: "By replacing it with dentures",choiceD: "By filling it"
 },
 {
-Category:"Science:",
+Category:"Science",
 Difficulty: "Easy",
 Type: "Multiple Choice",
 Question:	"Which is the name of the most extended artery of the human body?",Answer: "Aorta",choiceA: "Aorta",choiceB: "Axilla",choiceC: "Arteria Dorsalis",choiceD: "Thoracic"
@@ -468,7 +495,7 @@ Type: "Multiple Choice",
 Question:	"The Statue of Liberty is covered in what material?",Answer: "Copper",choiceA: "Lead",choiceB: "Cadium",choiceC: "Copper",choiceD: "Scandium"
 },
 {
-Category:"Geography:",
+Category:"Geography",
 Difficulty: "Easy",
 Type: "Multiple Choice",
 Question:"What are the colors of the Philippines flag?",Answer:"Blue, Red, Yellow and White",choiceA:"Red and White",choiceB:"Red, White and Black",choiceC:"Blue, Red, Yellow and White",choiceD:"Red, Blue, and White"
@@ -555,31 +582,31 @@ Type: "Multiple Choice",
 Question:"Which is the most populated city of Turkey?",Answer:"Istanbul",choiceA:"Ankara",choiceB:"Izmir",choiceC:"Antalya",choiceD: "Istanbul"
 },
 {
-Category:"History:",
+Category:"History",
 Difficulty: "Easy",
 Type: "Multiple Choice",
 Question:"Who founded Playboy magazine?",Answer: "Hugh Hefner",choiceA: "Hugh Hefner",choiceB: "Henry Hudson",choiceC: "John Muir",choiceD: "Kit Carson"
 },
 {
-Category:"History:",
+Category:"History",
 Difficulty: "Easy",
 Type: "Multiple Choice",
 Question:"Who held the famous I have a dream speech in 1963?",Answer: "Martin Luther King",choiceA: "Abraham Lincoln",choiceB: "Thomas Jefferson",choiceC: "Martin Luther King",choiceD: "Franklin Roosevelt"
 },
 {
-Category:"History:",
+Category:"History",
 Difficulty: "Easy",
 Type: "Multiple Choice",
 Question:"Who was Britain’s longest-reigning monarch?",Answer: "Victoria",choiceA: "Anne",choiceB: "William",choiceC: "George",choiceD: "Victoria"
 },
 {
-Category:"History:",
+Category:"History",
 Difficulty: "Easy",
 Type: "Multiple Choice",
 Question:"Which was the weapon of choice for Samurais?",Answer: "Katana",choiceA: "Kama",choiceB: "Katana",choiceC: "Kiseru",choiceD: "Tekkan and Hachiwari"
 },
 {
-Category:"History:",
+Category:"History",
 Difficulty: "Easy",
 Type: "Multiple Choice",
 Question:"Who was the first president of the United States?",Answer: "George Washington",choiceA: "George Washington",choiceB: "Abraham Lincoln",choiceC: "George Bush",choiceD: "Theodore Roosevelt"

@@ -19,8 +19,18 @@ exports.showHighScores = (req, res) => {
           res.render('error', {
               status: 500
           });
-      } else {
+      }else {
           res.send(models);
       }
+  });
+}
+
+exports.showCategories = (req,res) => {
+  Question.aggregate([ {"$group" : {_id:"$Category"}}]).exec(function(err, models){
+    let array = [];
+    for (let i = 0 ; i < models.length ; i++){
+      array.push (models[i]._id);
+    }
+    res.send(array);
   });
 }

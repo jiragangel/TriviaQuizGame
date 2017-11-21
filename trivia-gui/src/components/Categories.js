@@ -1,14 +1,6 @@
 import React, { Component } from 'react';
 import Checkbox from './Checkbox';
 
-const items = [
-  'Science',
-  'Entertainment',
-  'Geography',
-  'History',
-  'Sports'
-];
-
 const getQueryString = (selectedCheckboxes) => {
   let query = '';
   for (const checkbox of selectedCheckboxes) {
@@ -26,13 +18,25 @@ class Categories extends Component {
     this.state = {
       checked: [],
       noOfQuestions: 3,
-      query: ''
+      query: '',
+      categories: []
     }
 
     this.handleNoChange = this.handleNoChange.bind(this);
   }
   componentWillMount = () => {
     this.selectedCheckboxes = new Set();
+  }
+
+  componentDidMount = () => {
+    fetch(`http://localhost:3001/game/showCategories`)
+    .then((response) => { return response.json() })
+    .then((result) => {
+      console.log(result);
+      this.setState({
+        categories: result
+      })
+    }).catch((e) => {console.log(e)});
   }
 
   toggleCheckbox = label => {
@@ -61,7 +65,7 @@ class Categories extends Component {
   )
 
   createCheckboxes = () => (
-    items.map(this.createCheckbox)
+    this.state.categories.map(this.createCheckbox)
   )
 
   render() {
