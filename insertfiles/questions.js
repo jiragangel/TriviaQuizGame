@@ -14,6 +14,45 @@ db.questions.insertMany([
 
 db.questions.insertMany([
   {
+  Category:"Arts",
+  Difficulty: "Easy",
+  Type: "Identification",
+  Question: "What important piece of art was stolen and kept under a bed until it was returned to the Louvre Museum?",
+  Answer: "Mona Lisa",
+  choiceA: "",
+  choiceB: "",
+  choiceC: "",
+  choiceD: ""
+  },
+  {
+  Category:"Arts",
+  Difficulty: "Medium",
+  Type: "Number",
+  Question: "How many times was Julius Caesar stabbed?",
+  Answer: "Mona Lisa",
+  choiceA: "",
+  choiceB: "",
+  choiceC: "",
+  choiceD: ""
+  }
+]);
+
+db.questions.insertMany([
+  {
+  Category:"Computer Science",
+  Difficulty: "Easy",
+  Type: "True or False",
+  Question: "Java is an Object-Oriented Programming Language.",
+  Answer: "True",
+  choiceA: "True",
+  choiceB: "False",
+  choiceC: "",
+  choiceD: ""
+  }
+]);
+
+db.questions.insertMany([
+  {
     Category: "Math",
     Difficulty: "Easy",
     Type: "Number",

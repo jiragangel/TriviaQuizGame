@@ -68,6 +68,7 @@ html {
     font-size: 16px;
     color: #353535;
     line-height: 1.5em;
+    overflow-y:auto;
 }
 
 .containerQuiz {

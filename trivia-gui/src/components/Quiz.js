@@ -61,8 +61,6 @@ class Quiz extends Component{
     this.setState({
       selectedOption: e.target.value
     });
-
-    console.log("Option: " + e.target.value);
   }
 
   handleAnswers(){
@@ -81,8 +79,6 @@ class Quiz extends Component{
         });
       }
     };
-    console.log("Passed: " + this.state.passed);
-    console.log("No Of Questions: " + this.state.noOfQuestions);
     if (this.state.passed >= this.state.noOfQuestions * 2){//easy level
       this.setState({
         curQuestions: this.state.hard
@@ -100,6 +96,9 @@ class Quiz extends Component{
       itemNo: getRandom(0,this.state.curQuestions.length),
       passed: this.state.passed + 1
     });
+    this.setState({
+      selectedOption: ""
+    })
   }
 
   componentDidMount(){
