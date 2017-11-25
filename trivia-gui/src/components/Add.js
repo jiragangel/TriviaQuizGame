@@ -126,23 +126,9 @@ class Add extends Component{
 			<div className="App">
 		        <div className="container">
 		           <h1>Add Questions</h1>
-<<<<<<< HEAD
-		            <div class="quizArea">
-		                <div class="quizHeader">
-		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Category"/>
-		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Difficulty"/>
-		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Type"/>
-		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Question"/>
-		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Answer"/>
-		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Choice A"/>
-		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Choice B"/>
-		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Choice C"/>
-		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Choice D"/>
-											<input onClick={this.handleSubmit} type="button" className="submit" value="Submit"/>
-=======
+
 		            <div className="quizArea">
 		                <div className="quizHeader">
->>>>>>> a636e94c9f6c9869a699635fb741052e93c3ad94
 		                	<select className="dropdown" onChange={this.handleTypeChange}>
 			                	<option selected disabled> Type </option>
 			                	<option value="Multiple Choice"> Multiple Choice </option>
