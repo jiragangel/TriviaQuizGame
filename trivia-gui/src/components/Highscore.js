@@ -33,6 +33,7 @@ class Highscore extends Component{
 							<table>
 								<tbody>
 								<tr>
+									<th>Rank</th>
 									<th>Name</th>
 									<th>Score</th>
 								</tr>
@@ -40,6 +41,7 @@ class Highscore extends Component{
 										this.state.hs.map((scores) => {
 											return(
 												<tr key={this.state.hs.indexOf(scores)}>
+												<td>{this.state.hs.indexOf(scores)+1}</td>
 												<td>{scores.Name}</td>
 												<td>{scores.Score}</td>
 												</tr>
