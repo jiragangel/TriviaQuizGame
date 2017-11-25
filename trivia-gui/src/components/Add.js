@@ -8,11 +8,6 @@ const showField = (type) => {
                 	<input onChange={this.handleChoiceCChange} className="inputField" type="text" id="name" name="name" placeholder="Choice C"/>
                 	<input onChange={this.handleChoiceDChange} className="inputField" type="text" id="name" name="name" placeholder="Choice D"/>
     			</div>
-	}else if (type === "True or False"){
-		return <div>
-    				<input onChange={this.handleChoiceAChange} className="inputField" type="text" id="name" name="name" placeholder="Choice A"/>
-                	<input onChange={this.handleChoiceBChange} className="inputField" type="text" id="name" name="name" placeholder="Choice B"/>
-    			</div>
 	}else{
 		return <div> </div>
 	}
@@ -80,6 +75,13 @@ class Add extends Component{
 		this.setState({
 			type: e.target.value
 		})
+		if (e.target.value === "True or False"){
+			console.log("In here");
+			this.setState({
+				choiceA: "True",
+				choiceB: "False"
+			})
+		}
 	}
 
 	handleQuestionChange(e){
@@ -124,8 +126,8 @@ class Add extends Component{
 			<div className="App">
 		        <div className="container">
 		           <h1>Add Questions</h1>
-		            <div class="quizArea">
-		                <div class="quizHeader">
+		            <div className="quizArea">
+		                <div className="quizHeader">
 		                	<select className="dropdown" onChange={this.handleTypeChange}>
 			                	<option selected disabled> Type </option>
 			                	<option value="Multiple Choice"> Multiple Choice </option>
@@ -140,7 +142,7 @@ class Add extends Component{
 		                	{showField(this.state.type)}
 							<input onClick={this.handleSubmit} type="button" className="submit" value="Submit"/>
 							<p className="prompt">{this.state.prompt}</p>
-							<a href='/manage' className="back-btn">Back</a>
+							<a className="home-btn" href="/">Back</a>
 		                </div>
 		            </div>
 		        </div>
