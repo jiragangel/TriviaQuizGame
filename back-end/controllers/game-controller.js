@@ -34,3 +34,11 @@ exports.showCategories = (req,res) => {
     res.send(array);
   });
 }
+
+exports.addhs = (req,res) => {
+  console.log("EXPORT");
+  HighScore.insertMany([{Name: req.body.name, Score: req.body.score}]);
+  HighScore.remove({Name: req.body.todelete}).exec(function(err, models){
+    if (!err) res.send("Not error");
+  });
+}
