@@ -5,18 +5,102 @@ class Add extends Component{
 		super(props);
 
 		this.state = {
-			score: this.props.match.params.score,
-			total: this.props.match.params.total,
-			name: '',
-			redirect: false,
-			hs:[],
-			todelete: ''
+			category: '',
+			difficulty: '',
+			type: '',
+			question: '',
+			answer: '',
+			choiceA: '',
+			choiceB: '',
+			choiceC: '',
+			choiceD: ''
 		}
 
-		this.handleNameChange = this.handleNameChange.bind(this);
+		this.handleCategoryChange = this.handleCategoryChange.bind(this);
+		this.handleDifficultyChange = this.handleDifficultyChange.bind(this);
+		this.handleTypeChange = this.handleTypeChange.bind(this);
+		this.handleQuestionChange = this.handleQuestionChange.bind(this);
+		this.handleAnswerChange = this.handleAnswerChange.bind(this);
+		this.handleChoiceAChange = this.handleChoiceAChange.bind(this);
+		this.handleChoiceBChange = this.handleChoiceBChange.bind(this);
+		this.handleChoiceCChange = this.handleChoiceCChange.bind(this);
+		this.handleChoiceDChange = this.handleChoiceDChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
+<<<<<<< HEAD
+=======
+	handleSubmit(e){
+		console.log("State: " + this.state.todelete);
+			fetch('http://www.localhost:3001/game/addQuestions',{
+				method:'POST',
+				headers:{
+					"Content-Type":"application/json"
+				},
+					body:JSON.stringify(this.state)
+				})
+				.catch(function(error){
+					console.log('Request failure: ',error);
+			});
+		this.forceUpdate();
+	}
+
+	handleCategoryChange(e){
+		this.setState({
+			category: e.target.value
+		})
+	}
+
+	handleDifficultyChange(e){
+		this.setState({
+			difficulty: e.target.value
+		})
+	}
+
+	handleTypeChange(e){
+		this.setState({
+			type: e.target.value
+		})
+	}
+
+	handleQuestionChange(e){
+		this.setState({
+			question: e.target.value
+		})
+	}
+
+	handleAnswerChange(e){
+		this.setState({
+			answer: e.target.value
+		})
+	}
+
+	handleChoiceAChange(e){
+		this.setState({
+			choiceA: e.target.value
+		})
+	}
+
+	handleChoiceBChange(e){
+		this.setState({
+			choiceB: e.target.value
+		})
+	}
+
+	handleChoiceCChange(e){
+		this.setState({
+			choiceC: e.target.value
+		})
+	}
+
+	handleChoiceDChange(e){
+		this.setState({
+			choiceD: e.target.value
+		})
+	}
+
+
+>>>>>>> bd82bb45da131251c93113eec20a60a15755e58f
 	render(){
 		return(
 			<div className="App">
@@ -24,6 +108,7 @@ class Add extends Component{
 		           <h1>Add Questions</h1>
 		            <div class="quizArea">
 		                <div class="quizHeader">
+<<<<<<< HEAD
 		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Category"/>
 		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Difficulty"/>
 		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Type"/>
@@ -34,6 +119,18 @@ class Add extends Component{
 		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Choice C"/>
 		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Choice D"/>
 											<input onClick={this.handleSubmit} type="button" className="submit" value="Submit"/>
+=======
+		                	<input onChange={this.handleCategoryChange} className="inputField" type="text" id="name" name="name" placeholder="Category"/>
+		                	<input onChange={this.handleDifficultyChange} className="inputField" type="text" id="name" name="name" placeholder="Difficulty"/>
+		                	<input onChange={this.handleTypeChange} className="inputField" type="text" id="name" name="name" placeholder="Type"/>
+		                	<input onChange={this.handleQuestionChange} className="inputField" type="text" id="name" name="name" placeholder="Question"/>
+		                	<input onChange={this.handleAnswerChange} className="inputField" type="text" id="name" name="name" placeholder="Answer"/>
+		                	<input onChange={this.handleChoiceAChange} className="inputField" type="text" id="name" name="name" placeholder="Choice A"/>
+		                	<input onChange={this.handleChoiceBChange} className="inputField" type="text" id="name" name="name" placeholder="Choice B"/>
+		                	<input onChange={this.handleChoiceCChange} className="inputField" type="text" id="name" name="name" placeholder="Choice C"/>
+		                	<input onChange={this.handleChoiceDChange} className="inputField" type="text" id="name" name="name" placeholder="Choice D"/>
+							<input onClick={this.handleSubmit} type="button" className="submit" value="Submit"/>
+>>>>>>> bd82bb45da131251c93113eec20a60a15755e58f
 		                </div>
 		            </div>
 		        </div>

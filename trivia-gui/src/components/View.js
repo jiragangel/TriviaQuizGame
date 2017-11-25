@@ -55,21 +55,23 @@ class View extends Component{
 			    				if(item.Category===cmp){
 			    					return(
 			    						<div>
-			    						{this.state.questions.map((item)=>{
-			    							if(item.Difficulty==="Easy"){
-			    								<p>{item.Question}</p>
+
+			    						{this.state.questions.map((easy)=>{
+			    							console.log(easy.Difficulty);
+			    							if(easy.Difficulty=="Easy"){
+			    								<p>{easy.Question}</p>
 			    							}
 
 			    						})}
-			    						{this.state.questions.map((item)=>{
-			    							if(item.Difficulty==="Medium"){
-			    								<p>{item.Question}</p>
+			    						{this.state.questions.map((med)=>{
+			    							if(med.Difficulty=="Medium"){
+			    								<p>{med.Question}</p>
 			    							}
 
 			    						})}
-			    						{this.state.questions.map((item)=>{
-			    							if(item.Difficulty==="Difficult"){
-			    								<p>{item.Question}</p>
+			    						{this.state.questions.map((hard)=>{
+			    							if(hard.Difficulty=="Difficult"){
+			    								<p>{hard.Question}</p>
 			    							}
 
 			    						})}
