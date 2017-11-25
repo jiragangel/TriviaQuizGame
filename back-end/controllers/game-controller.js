@@ -36,9 +36,11 @@ exports.showCategories = (req,res) => {
 }
 
 exports.addhs = (req,res) => {
-  console.log("EXPORT");
-  HighScore.insertMany([{Name: req.body.name, Score: req.body.score}]);
-  HighScore.remove({Name: req.body.todelete}).exec(function(err, models){
+  console.log("TO DELETE: " + req.body.todelete);
+  console.log("NAME: " + req.body.name);
+  console.log("PERCENTILE: " + req.body.percentile);
+  HighScore.insertMany([{Name: req.body.name, Score: req.body.percentile}]);
+  HighScore.remove({_id: req.body.todelete}).exec(function(err, models){
     if (!err) res.send("Not error");
   });
 }
