@@ -14,7 +14,6 @@ const QuestionsSchema = new Schema({
 });
 
 const HSSchema = new Schema({
-  Category: {type: String, default: ''},
   Name: {type: String, default: ''},
   Score: {type: Number, default: 0}
 });
