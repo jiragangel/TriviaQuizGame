@@ -115,6 +115,7 @@ h4 {
 h5 {
     font-size: 14px;
     margin: 10px 0 5px;
+    text-decoration: underline
 }
 h6 {
     font-size: 12px;
@@ -256,4 +257,10 @@ input[type=text], select {
     text-decoration: none;
     margin-left: 10px;
     float: right;
+}
+
+.answer {
+  font-weight: bold;
+  color:red;
+  margin-left:10px
 }
