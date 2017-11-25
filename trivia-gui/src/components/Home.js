@@ -10,7 +10,7 @@ class Home extends Component{
 		                <div className="quizHeader">
 		                    <a className="button" href="/categories">Start Game</a>
 		                    <a className="button" href="/HighScore">High Scores</a>
-		                    <a className="button" href="/manage">Manage</a>
+		                    <a className="button" href="/Manage">Manage</a>
 		                </div>
 		            </div>
 		        </body>
