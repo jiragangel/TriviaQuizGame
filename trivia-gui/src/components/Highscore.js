@@ -13,7 +13,7 @@ class Highscore extends Component{
 		}
   }
 
-	componentDidMount = () => {
+	componentWillMount = () => {
     fetch(`http://localhost:3001/game/showHighScores`)
     .then((response) => { return response.json() })
     .then((result) => {

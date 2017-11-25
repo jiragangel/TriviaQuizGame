@@ -11,7 +11,8 @@ class Grade extends Component{
 			name: '',
 			redirect: false,
 			hs:[],
-			todelete: ''
+			todelete: '',
+			percentile: (this.props.match.params.score/this.props.match.params.total)*100
 		}
 
 		this.handleNameChange = this.handleNameChange.bind(this);
@@ -22,19 +23,21 @@ class Grade extends Component{
 		fetch(`http://localhost:3001/game/showHighScores`)
 		.then((response) => { return response.json() })
 		.then((result) => {
-			console.log(result);
+			if ( result[result.length-1].Score < this.state.percentile && result.length >= 10 ){
+				console.log("Lowest" + result[result.length-1]._id);
+					this.setState({
+						todelete: result[result.length-1]._id
+					})
+				}
 			this.setState({
 				hs: result
 			})
 		}).catch((e) => {console.log(e)});
+		this.forceUpdate();
 	}
 
 	handleSubmit(e){
-		if ( this.state.hs[this.state.hs.length-1] < this.state.score ){
-			this.setState({
-				todelete: this.state.hs.Name
-			})
-		}
+		console.log("State: " + this.state.todelete);
 			fetch('http://www.localhost:3001/game/addhs',{
 				method:'POST',
 				headers:{
@@ -42,16 +45,12 @@ class Grade extends Component{
 				},
 					body:JSON.stringify(this.state)
 				})
-				.then(function (data){
-					console.log('Request success',data);
-				})
 				.catch(function(error){
 					console.log('Request failure: ',error);
 			});
 		this.setState({
 			redirect: true
 		})
-
 		this.forceUpdate();
 	}
 
@@ -63,7 +62,7 @@ class Grade extends Component{
 
 	render(){
 		if (this.state.redirect){
-			return (<Redirect to={`/HighScore`} />)
+			return (<Redirect to={`/Congrats`} />)
 		}else{
 			return(
 				<div className="App">
