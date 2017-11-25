@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Checkbox from './Checkbox';
+import  { Redirect } from 'react-router-dom'
 
 const getQueryString = (selectedCheckboxes) => {
   let query = '';
@@ -19,10 +20,12 @@ class Categories extends Component {
       checked: [],
       noOfQuestions: 3,
       query: '',
+      redirect: false,
       categories: []
     }
 
     this.handleNoChange = this.handleNoChange.bind(this);
+    this.checkCategories = this.checkCategories.bind(this);
   }
   componentWillMount = () => {
     this.selectedCheckboxes = new Set();
@@ -58,34 +61,47 @@ class Categories extends Component {
 
   createCheckbox = label => (
     <Checkbox
-            label={label}
-            handleCheckboxChange={this.toggleCheckbox}
-            key={label}
-        />
+      label={label}
+      handleCheckboxChange={this.toggleCheckbox}
+      key={label}
+    />
   )
 
   createCheckboxes = () => (
     this.state.categories.map(this.createCheckbox)
   )
 
-  render(){
-    return (
-      <div className="containerCategories">
-        <h1 className="quizName">Categories</h1>
-        <div className="quizArea">
-          <div className="quizHeader">
-            <form onSubmit={this.handleFormSubmit}>
-              <input className="button" type="number" onChange={this.handleNoChange} min="3" placeholder="Number of questions"/>
-              {this.createCheckboxes()}
-              <a href={`/quiz/${getQueryString(this.selectedCheckboxes)}${this.state.noOfQuestions}`} className="button">
-                Start Game
-              </a>
-            </form>
+  checkCategories(e){
+    console.log(this.selectedCheckboxes.size);
+    console.log(this.state.noOfQuestions);
+    if (this.selectedCheckboxes.size === 3 && this.state.noOfQuestions >= 3) {
+      this.setState({
+        redirect: true
+      });
+    }
+    this.forceUpdate();
+  }
 
+  render(){
+    if (this.state.redirect){
+      return (<Redirect to={`/quiz/${getQueryString(this.selectedCheckboxes)}${this.state.noOfQuestions}`} />)
+    }else{
+      return (
+        <div className="containerCategories">
+          <h1 className="quizName">Categories</h1>
+          <div className="quizArea">
+            <div className="quizHeader">
+              <form onSubmit={this.handleFormSubmit}>
+                <input className="button" type="number" onChange={this.handleNoChange} min="3" placeholder="Number of questions"/>
+                <input className="button" type="button" onClick={this.checkCategories} value="Start Game"/>
+                {this.createCheckboxes()}
+              </form>
+
+            </div>
           </div>
         </div>
-      </div>
-    );
+      );
+    }
   }
 }
 
