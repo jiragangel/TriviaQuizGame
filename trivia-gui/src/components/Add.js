@@ -31,7 +31,8 @@ class Add extends Component{
 			choiceA: '',
 			choiceB: '',
 			choiceC: '',
-			choiceD: ''
+			choiceD: '',
+			prompt: ''
 		}
 
 		this.handleCategoryChange = this.handleCategoryChange.bind(this);
@@ -47,17 +48,19 @@ class Add extends Component{
 	}
 
 	handleSubmit(e){
-		console.log("State: " + this.state.todelete);
-			fetch('http://www.localhost:3001/game/addQuestions',{
-				method:'POST',
-				headers:{
-					"Content-Type":"application/json"
-				},
-					body:JSON.stringify(this.state)
-				})
-				.catch(function(error){
-					console.log('Request failure: ',error);
-			});
+		fetch('http://www.localhost:3001/game/addQuestions',{
+			method:'POST',
+			headers:{
+				"Content-Type":"application/json"
+			},
+				body:JSON.stringify(this.state)
+			})
+			.catch(function(error){
+				console.log('Request failure: ',error);
+		});
+		this.setState({
+			prompt: 'Successfully added!'
+		})
 		this.forceUpdate();
 	}
 
@@ -123,7 +126,6 @@ class Add extends Component{
 		           <h1>Add Questions</h1>
 		            <div class="quizArea">
 		                <div class="quizHeader">
-<<<<<<< HEAD
 		                	<select className="dropdown" onChange={this.handleTypeChange}>
 			                	<option selected disabled> Type </option>
 			                	<option value="Multiple Choice"> Multiple Choice </option>
@@ -131,25 +133,14 @@ class Add extends Component{
 			                	<option value="Identification"> Identification </option>
 			                	<option value="Number"> Number </option>
 		                	</select>
-=======
-		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Category"/>
-		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Difficulty"/>
-		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Type"/>
-		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Question"/>
-		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Answer"/>
-		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Choice A"/>
-		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Choice B"/>
-		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Choice C"/>
-		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Choice D"/>
-											<input onClick={this.handleSubmit} type="button" className="submit" value="Submit"/>
-
->>>>>>> 4feee16ecc3a9a320a7fc40395f1abd4786a510b
 		                	<input onChange={this.handleCategoryChange} className="inputField" type="text" id="name" name="name" placeholder="Category"/>
 		                	<input onChange={this.handleDifficultyChange} className="inputField" type="text" id="name" name="name" placeholder="Difficulty"/>
 		                	<input onChange={this.handleQuestionChange} className="inputField" type="text" id="name" name="name" placeholder="Question"/>
 		                	<input onChange={this.handleAnswerChange} className="inputField" type="text" id="name" name="name" placeholder="Answer"/>
 		                	{showField(this.state.type)}
 							<input onClick={this.handleSubmit} type="button" className="submit" value="Submit"/>
+							<p className="prompt">{this.state.prompt}</p>
+							<a href='/manage' className="back-btn">Back</a>
 		                </div>
 		            </div>
 		        </div>
