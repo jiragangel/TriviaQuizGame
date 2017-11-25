@@ -68,7 +68,7 @@ class Categories extends Component {
     this.state.categories.map(this.createCheckbox)
   )
 
-  render() {
+  render(){
     return (
       <div className="containerCategories">
         <h1 className="quizName">Categories</h1>

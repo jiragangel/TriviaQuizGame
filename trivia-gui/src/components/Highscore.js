@@ -1,108 +1,59 @@
 import React, { Component } from 'react';
 
 class Highscore extends Component{
+  constructor(props){
+    super(props);
+
+    this.state = {
+      hs: [{
+				Category: "",
+				Name: "",
+				Score: ""
+			}]
+		}
+  }
+
+	componentDidMount = () => {
+    fetch(`http://localhost:3001/game/showHighScores`)
+    .then((response) => { return response.json() })
+    .then((result) => {
+      console.log(result);
+      this.setState({
+        hs: result
+      })
+    }).catch((e) => {console.log(e)});
+  }
+
 	render(){
 		return(
 			<div className="App">
-		        <body className="container">
-		           <h1 class="quizName">High Scores</h1>
-		           		<div className="tables">
-		           			<div className="tCategory">Entertainment</div>
-			            	<table>
-
+				<div className="container">
+					<h1>High Scores</h1>
+					<div className="tables">
+							<table>
+								<tbody>
 								<tr>
+									<th>Rank</th>
 									<th>Name</th>
-							 		<th>Score</th>
-							  	</tr>
-							  	<tr>
-								    <td>Pusheen</td>
-								    <td>94</td>
-							  	</tr>
-							  	<tr>
-								    <td>Woem</td>
-								    <td>99</td>
+									<th>Score</th>
 								</tr>
+									{
+										this.state.hs.map((scores) => {
+											return(
+												<tr key={this.state.hs.indexOf(scores)}>
+												<td>{this.state.hs.indexOf(scores)+1}</td>
+												<td>{scores.Name}</td>
+												<td>{scores.Score}</td>
+												</tr>
+											)
+										})
+									}
+									</tbody>
 							</table>
-						</div>
-						<div className="tables">
-		           			<div className="tCategory">Sports</div>
-			            	<table>
-
-								<tr>
-									<th>Name</th>
-							 		<th>Score</th>
-							  	</tr>
-							  	<tr>
-								    <td>Pusheen</td>
-								    <td>94</td>
-							  	</tr>
-							  	<tr>
-								    <td>Woem</td>
-								    <td>99</td>
-								</tr>
-							</table>
-
-						</div>
-						<div className="tables">
-		           			<div className="tCategory">History</div>
-			            	<table>
-
-								<tr>
-									<th>Name</th>
-							 		<th>Score</th>
-							  	</tr>
-							  	<tr>
-								    <td>Pusheen</td>
-								    <td>94</td>
-							  	</tr>
-							  	<tr>
-								    <td>Woem</td>
-								    <td>99</td>
-								</tr>
-							</table>
-
-						</div>
-						<div className="tables">
-		           			<div className="tCategory">Science</div>
-			            	<table>
-
-								<tr>
-									<th>Name</th>
-							 		<th>Score</th>
-							  	</tr>
-							  	<tr>
-								    <td>Pusheen</td>
-								    <td>94</td>
-							  	</tr>
-							  	<tr>
-								    <td>Woem</td>
-								    <td>99</td>
-								</tr>
-							</table>
-
-						</div>
-						<div className="tables">
-		           			<div className="tCategory">Geography</div>
-			            	<table>
-
-								<tr>
-									<th>Name</th>
-							 		<th>Score</th>
-							  	</tr>
-							  	<tr>
-								    <td>Pusheen</td>
-								    <td>94</td>
-							  	</tr>
-							  	<tr>
-								    <td>Woem</td>
-								    <td>99</td>
-								</tr>
-							</table>
-						</div>
-						<a class="button" href="/">Back to Home</a>
-		        </body>
-		    </div>
-		);
+					</div>
+				</div>
+			</div>
+		)
 	}
 }
 

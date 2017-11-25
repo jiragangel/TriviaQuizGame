@@ -14,7 +14,7 @@ exports.showQuestions = (req, res) => {
 }
 
 exports.showHighScores = (req, res) => {
-  HighScore.find({},{}).sort({Score: 1}).exec(function(err, models) {
+  HighScore.find({},{}).sort({Score: -1}).exec(function(err, models) {
       if (err) {
           res.render('error', {
               status: 500
@@ -32,5 +32,13 @@ exports.showCategories = (req,res) => {
       array.push (models[i]._id);
     }
     res.send(array);
+  });
+}
+
+exports.addhs = (req,res) => {
+  console.log("EXPORT");
+  HighScore.insertMany([{Name: req.body.name, Score: req.body.score}]);
+  HighScore.remove({Name: req.body.todelete}).exec(function(err, models){
+    if (!err) res.send("Not error");
   });
 }
