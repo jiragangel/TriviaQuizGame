@@ -16,7 +16,7 @@ class Add extends Component{
 		this.handleNameChange = this.handleNameChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
-	
+
 	render(){
 		return(
 			<div className="App">
@@ -33,7 +33,7 @@ class Add extends Component{
 		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Choice B"/>
 		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Choice C"/>
 		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Choice D"/>
-							<input onClick={this.handleSubmit} type="button" className="submit" value="Submit"/>
+											<input onClick={this.handleSubmit} type="button" className="submit" value="Submit"/>
 		                </div>
 		            </div>
 		        </div>
