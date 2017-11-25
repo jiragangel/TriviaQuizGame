@@ -14,7 +14,7 @@ exports.showQuestions = (req, res) => {
 }
 
 exports.showHighScores = (req, res) => {
-  HighScore.find({},{}).sort({Score: 1}).exec(function(err, models) {
+  HighScore.find({},{}).sort({Score: -1}).exec(function(err, models) {
       if (err) {
           res.render('error', {
               status: 500
