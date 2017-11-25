@@ -51,6 +51,7 @@ class Highscore extends Component{
 									</tbody>
 							</table>
 					</div>
+					<a className="home-btn" href="/">Back</a>
 				</div>
 			</div>
 		)
