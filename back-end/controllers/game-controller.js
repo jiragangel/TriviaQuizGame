@@ -35,6 +35,7 @@ exports.showCategories = (req,res) => {
   });
 }
 
+
 exports.addhs = (req,res) => {
   console.log("TO DELETE: " + req.body.todelete);
   console.log("NAME: " + req.body.name);

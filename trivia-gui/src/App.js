@@ -9,6 +9,9 @@ import Categories from './components/Categories'
 import View from './components/View'
 import Add from './components/Add'
 import Congrats from './components/Congrats'
+import ViewCategories from './components/ViewCategories'
+import AddCategories from './components/AddCategories'
+import DeleteCategories from './components/DeleteCategories'
 
 import  { BrowserRouter as Router, Route} from 'react-router-dom'
 
@@ -27,6 +30,9 @@ class App extends Component {
             <Route exact={true} path="/manage/view" component={View} />
             <Route exact={true} path="/manage/add" component={Add} />
             <Route exact={true} path="/Congrats" component={Congrats} />
+            <Route exact={true} path="/viewCategories" component={ViewCategories} />
+            <Route exact={true} path="/addCategories" component={AddCategories} />
+            <Route exact={true} path="/DeleteCategories" component={DeleteCategories} />
           </div>
         </Router>
       </div>

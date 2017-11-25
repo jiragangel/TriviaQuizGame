@@ -123,6 +123,7 @@ class Add extends Component{
 		           <h1>Add Questions</h1>
 		            <div class="quizArea">
 		                <div class="quizHeader">
+<<<<<<< HEAD
 		                	<select className="dropdown" onChange={this.handleTypeChange}>
 			                	<option selected disabled> Type </option>
 			                	<option value="Multiple Choice"> Multiple Choice </option>
@@ -130,6 +131,19 @@ class Add extends Component{
 			                	<option value="Identification"> Identification </option>
 			                	<option value="Number"> Number </option>
 		                	</select>
+=======
+		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Category"/>
+		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Difficulty"/>
+		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Type"/>
+		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Question"/>
+		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Answer"/>
+		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Choice A"/>
+		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Choice B"/>
+		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Choice C"/>
+		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Choice D"/>
+											<input onClick={this.handleSubmit} type="button" className="submit" value="Submit"/>
+
+>>>>>>> 4feee16ecc3a9a320a7fc40395f1abd4786a510b
 		                	<input onChange={this.handleCategoryChange} className="inputField" type="text" id="name" name="name" placeholder="Category"/>
 		                	<input onChange={this.handleDifficultyChange} className="inputField" type="text" id="name" name="name" placeholder="Difficulty"/>
 		                	<input onChange={this.handleQuestionChange} className="inputField" type="text" id="name" name="name" placeholder="Question"/>
