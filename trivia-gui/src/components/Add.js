@@ -28,8 +28,6 @@ class Add extends Component{
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
-<<<<<<< HEAD
-=======
 	handleSubmit(e){
 		console.log("State: " + this.state.todelete);
 			fetch('http://www.localhost:3001/game/addQuestions',{
@@ -100,7 +98,6 @@ class Add extends Component{
 	}
 
 
->>>>>>> bd82bb45da131251c93113eec20a60a15755e58f
 	render(){
 		return(
 			<div className="App">
@@ -108,7 +105,6 @@ class Add extends Component{
 		           <h1>Add Questions</h1>
 		            <div class="quizArea">
 		                <div class="quizHeader">
-<<<<<<< HEAD
 		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Category"/>
 		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Difficulty"/>
 		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Type"/>
@@ -119,7 +115,7 @@ class Add extends Component{
 		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Choice C"/>
 		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Choice D"/>
 											<input onClick={this.handleSubmit} type="button" className="submit" value="Submit"/>
-=======
+
 		                	<input onChange={this.handleCategoryChange} className="inputField" type="text" id="name" name="name" placeholder="Category"/>
 		                	<input onChange={this.handleDifficultyChange} className="inputField" type="text" id="name" name="name" placeholder="Difficulty"/>
 		                	<input onChange={this.handleTypeChange} className="inputField" type="text" id="name" name="name" placeholder="Type"/>
@@ -130,7 +126,6 @@ class Add extends Component{
 		                	<input onChange={this.handleChoiceCChange} className="inputField" type="text" id="name" name="name" placeholder="Choice C"/>
 		                	<input onChange={this.handleChoiceDChange} className="inputField" type="text" id="name" name="name" placeholder="Choice D"/>
 							<input onClick={this.handleSubmit} type="button" className="submit" value="Submit"/>
->>>>>>> bd82bb45da131251c93113eec20a60a15755e58f
 		                </div>
 		            </div>
 		        </div>

@@ -18,7 +18,7 @@ class View extends Component{
     		}],
     		categories: []
     	}
-      
+
 	}
 
 
@@ -26,7 +26,6 @@ class View extends Component{
 	    fetch(`http://localhost:3001/game/showCategories`)
 	    .then((response) => { return response.json() })
 	    .then((result) => {
-	      console.log(result);
 	      this.setState({
 	        categories: result
 	      })
@@ -34,7 +33,6 @@ class View extends Component{
 	    fetch(`http://localhost:3001/game/showQuestions`)
 	    .then((response) => { return response.json() })
 	    .then((result) => {
-	      console.log(result);
 	      this.setState({
 	        questions: result
 	      })
@@ -46,43 +44,44 @@ class View extends Component{
 			<div className="App">
 		        <div className="container">
 		           <h1>Questions</h1>
-		             {this.state.categories.map((cmp)=>{
-		             	return(
-		             		<div>
-		             		<h1>{cmp}</h1>
-			             	{this.state.questions.map((item)=>{
-			             		console.log(item.Category);
-			    				if(item.Category===cmp){
-			    					return(
-			    						<div>
-
-			    						{this.state.questions.map((easy)=>{
-			    							console.log(easy.Difficulty);
-			    							if(easy.Difficulty=="Easy"){
-			    								<p>{easy.Question}</p>
-			    							}
-
-			    						})}
-			    						{this.state.questions.map((med)=>{
-			    							if(med.Difficulty=="Medium"){
-			    								<p>{med.Question}</p>
-			    							}
-
-			    						})}
-			    						{this.state.questions.map((hard)=>{
-			    							if(hard.Difficulty=="Difficult"){
-			    								<p>{hard.Question}</p>
-			    							}
-
-			    						})}
-			             				</div>
-			              			)
-			    				}
-			              	})}
-		              	</div>
-		              	)
-		              })}
-		            <a class="home-btn" href="/manage">Back</a>
+							{this.state.categories.map((cmp)=>{
+								return(
+									<div>
+										<h1>{cmp}</h1>
+										{this.state.questions.map((item)=>{
+											if(item.Category===cmp){
+												return(
+												<div>
+													{this.state.questions.map((easy)=>{
+														console.log(easy.Difficulty);
+														if(easy.Difficulty==="Easy"){
+															return(
+																<p>{easy.Question}</p>
+															)
+														}
+													})}
+													{this.state.questions.map((med)=>{
+														if(med.Difficulty==="Medium"){
+															return(
+																<p>{med.Question}</p>
+															)
+														}
+													})}
+													{this.state.questions.map((hard)=>{
+														if(hard.Difficulty==="Difficult"){
+															return(
+																<p>{hard.Question}</p>
+															)
+														}
+													})}
+												</div>
+											)
+										}
+									})}
+								</div>
+								)
+							})}
+		          <a className="home-btn" href="/manage">Back</a>
 		        </div>
 		    </div>
 		);
