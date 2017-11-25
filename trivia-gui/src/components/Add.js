@@ -1,5 +1,23 @@
 import React, { Component } from 'react';
 
+const showField = (type) => {
+	if (type === "Multiple Choice"){
+    	return <div>
+    				<input onChange={this.handleChoiceAChange} className="inputField" type="text" id="name" name="name" placeholder="Choice A"/>
+                	<input onChange={this.handleChoiceBChange} className="inputField" type="text" id="name" name="name" placeholder="Choice B"/>
+                	<input onChange={this.handleChoiceCChange} className="inputField" type="text" id="name" name="name" placeholder="Choice C"/>
+                	<input onChange={this.handleChoiceDChange} className="inputField" type="text" id="name" name="name" placeholder="Choice D"/>
+    			</div>
+	}else if (type === "True or False"){
+		return <div>
+    				<input onChange={this.handleChoiceAChange} className="inputField" type="text" id="name" name="name" placeholder="Choice A"/>
+                	<input onChange={this.handleChoiceBChange} className="inputField" type="text" id="name" name="name" placeholder="Choice B"/>
+    			</div>
+	}else{
+		return <div> </div>
+	}
+}
+
 class Add extends Component{
 	constructor(props){
 		super(props);
@@ -105,15 +123,18 @@ class Add extends Component{
 		           <h1>Add Questions</h1>
 		            <div class="quizArea">
 		                <div class="quizHeader">
+		                	<select className="dropdown" onChange={this.handleTypeChange}>
+			                	<option selected disabled> Type </option>
+			                	<option value="Multiple Choice"> Multiple Choice </option>
+			                	<option value="True or False"> True or False </option>
+			                	<option value="Identification"> Identification </option>
+			                	<option value="Number"> Number </option>
+		                	</select>
 		                	<input onChange={this.handleCategoryChange} className="inputField" type="text" id="name" name="name" placeholder="Category"/>
 		                	<input onChange={this.handleDifficultyChange} className="inputField" type="text" id="name" name="name" placeholder="Difficulty"/>
-		                	<input onChange={this.handleTypeChange} className="inputField" type="text" id="name" name="name" placeholder="Type"/>
 		                	<input onChange={this.handleQuestionChange} className="inputField" type="text" id="name" name="name" placeholder="Question"/>
 		                	<input onChange={this.handleAnswerChange} className="inputField" type="text" id="name" name="name" placeholder="Answer"/>
-		                	<input onChange={this.handleChoiceAChange} className="inputField" type="text" id="name" name="name" placeholder="Choice A"/>
-		                	<input onChange={this.handleChoiceBChange} className="inputField" type="text" id="name" name="name" placeholder="Choice B"/>
-		                	<input onChange={this.handleChoiceCChange} className="inputField" type="text" id="name" name="name" placeholder="Choice C"/>
-		                	<input onChange={this.handleChoiceDChange} className="inputField" type="text" id="name" name="name" placeholder="Choice D"/>
+		                	{showField(this.state.type)}
 							<input onClick={this.handleSubmit} type="button" className="submit" value="Submit"/>
 		                </div>
 		            </div>
