@@ -7,6 +7,7 @@ import Grade from './components/Grade';
 import Manage from './components/Manage';
 import Categories from './components/Categories'
 import View from './components/View'
+import Add from './components/Add'
 
 import  { BrowserRouter as Router, Route} from 'react-router-dom'
 
@@ -23,6 +24,7 @@ class App extends Component {
             <Route exact={true} path="/quiz/grade/:score/:total" component={Grade} />
             <Route exact={true} path="/manage" component={Manage} />
             <Route exact={true} path="/manage/view" component={View} />
+            <Route exact={true} path="/manage/add" component={Add} />
           </div>
         </Router>
       </div>
