@@ -7,11 +7,8 @@ import Grade from './components/Grade';
 import Manage from './components/Manage';
 import Categories from './components/Categories'
 import View from './components/View'
-<<<<<<< HEAD
 import Add from './components/Add'
-=======
 import Congrats from './components/Congrats'
->>>>>>> 4d4bba649c88a16f19ac7f1c2e8d1a065af9554b
 
 import  { BrowserRouter as Router, Route} from 'react-router-dom'
 
@@ -28,11 +25,8 @@ class App extends Component {
             <Route exact={true} path="/quiz/grade/:score/:total" component={Grade} />
             <Route exact={true} path="/manage" component={Manage} />
             <Route exact={true} path="/manage/view" component={View} />
-<<<<<<< HEAD
             <Route exact={true} path="/manage/add" component={Add} />
-=======
             <Route exact={true} path="/Congrats" component={Congrats} />
->>>>>>> 4d4bba649c88a16f19ac7f1c2e8d1a065af9554b
           </div>
         </Router>
       </div>
