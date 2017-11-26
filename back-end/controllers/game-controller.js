@@ -26,7 +26,7 @@ exports.showHighScores = (req, res) => {
 }
 
 exports.deleteCategories = (req,res) => {
-  Question.remove({ Category: req.body.category, multi: true }, (error, movie) => {
+  Question.remove({ Category: req.body.category, multi: true }, (error, catgry) => {
     if (!error) {
       res.send('Catogery Deleted');
     }else{
@@ -36,7 +36,7 @@ exports.deleteCategories = (req,res) => {
 }
 
 exports.deleteQuestions = (req,res) => {
-  Question.remove({ Question: req.body.question }, (error, movie) => {
+  Question.remove({ Question: req.body.question }, (error, ques) => {
     if (!error) {
       res.send('Question Deleted');
     }else{
@@ -69,6 +69,16 @@ exports.addQuestions = (req,res) => {
 
 exports.addCategories = (req, res) => {
   Question.insertMany([{Category: req.body.category, Difficulty: req.body.difficulty, Type: req.body.type, Question: req.body.question, Answer: req.body.answer, choiceA: req.body.choiceA, choiceB: req.body.choiceB, choiceC: req.body.choiceC, choiceD: req.body.choiceD}]);
+}
+
+exports.editQuestions = (req,res) => {
+  Question.update({ Question: req.body.question },{Question: req.body.newq, Difficulty: req.body.newdiff, Type: req.body.newtype, Answer:req.body.newans, choiceA:req.body.newa, choiceB:req.body.newb, choiceC:req.body.newc, choiceD:req.body.newq}, (error, movie) => {
+    if (!error) {
+      res.send('Question Edited');
+    }else{
+      res.send('Question Does not Exist');
+    }
+  });
 }
 
 exports.addMultipleQuestions = (req, res) => {
