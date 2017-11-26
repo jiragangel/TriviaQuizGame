@@ -8,11 +8,6 @@ const showField = (type) => {
                 	<input onChange={this.handleChoiceCChange} className="inputField" type="text" id="name" name="name" placeholder="Choice C"/>
                 	<input onChange={this.handleChoiceDChange} className="inputField" type="text" id="name" name="name" placeholder="Choice D"/>
     			</div>
-	}else if (type === "True or False"){
-		return <div>
-    				<input onChange={this.handleChoiceAChange} className="inputField" type="text" id="name" name="name" placeholder="Choice A"/>
-                	<input onChange={this.handleChoiceBChange} className="inputField" type="text" id="name" name="name" placeholder="Choice B"/>
-    			</div>
 	}else{
 		return <div> </div>
 	}
@@ -80,6 +75,13 @@ class Add extends Component{
 		this.setState({
 			type: e.target.value
 		})
+		if (e.target.value === "True or False"){
+			console.log("In here");
+			this.setState({
+				choiceA: "True",
+				choiceB: "False"
+			})
+		}
 	}
 
 	handleQuestionChange(e){
@@ -124,6 +126,7 @@ class Add extends Component{
 			<div className="App">
 		        <div className="container">
 		           <h1>Add Questions</h1>
+<<<<<<< HEAD
 		            <div class="quizArea">
 		                <div class="quizHeader">
 		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Category"/>
@@ -136,6 +139,10 @@ class Add extends Component{
 		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Choice C"/>
 		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Choice D"/>
 											<input onClick={this.handleSubmit} type="button" className="submit" value="Submit"/>
+=======
+		            <div className="quizArea">
+		                <div className="quizHeader">
+>>>>>>> a636e94c9f6c9869a699635fb741052e93c3ad94
 		                	<select className="dropdown" onChange={this.handleTypeChange}>
 			                	<option selected disabled> Type </option>
 			                	<option value="Multiple Choice"> Multiple Choice </option>
@@ -152,7 +159,7 @@ class Add extends Component{
 							<input onClick={this.handleSubmit} type="button" className="submit" value="Submit"/>
 
 							<p className="prompt">{this.state.prompt}</p>
-							<a href='/manage' className="back-btn">Back</a>
+							<a className="home-btn" href="/">Back</a>
 		                </div>
 		            </div>
 		        </div>
