@@ -21,7 +21,6 @@ class View extends Component{
 	    fetch(`http://localhost:3001/game/showCategories`)
 	    .then((response) => { return response.json() })
 	    .then((result) => {
-	      console.log(result);
 	      this.setState({
 	        categories: result
 	      })

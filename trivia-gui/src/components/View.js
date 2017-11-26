@@ -40,18 +40,13 @@ class View extends Component{
 	        questions: result
 	      })
 	    }).catch((e) => {console.log(e)});
-
-
-			console.log("Category: " + this.state.questions);
 	  }
 
 		getEasyQuestions(category){
-			console.log("easy");
 			return(
 				<div>
 				{
 					this.state.questions.map((ques) => {
-						console.log("Category: " + ques.Category);
 						if (ques.Category === category && ques.Difficulty === "Easy"){
 							return(
 								<p>{ques.Question}</p>
