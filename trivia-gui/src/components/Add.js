@@ -27,7 +27,8 @@ class Add extends Component{
 			choiceB: '',
 			choiceC: '',
 			choiceD: '',
-			prompt: ''
+			prompt: '',
+			categories: []
 		}
 
 		this.handleCategoryChange = this.handleCategoryChange.bind(this);
@@ -41,6 +42,17 @@ class Add extends Component{
 		this.handleChoiceDChange = this.handleChoiceDChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
+
+	componentDidMount = () => {
+	    fetch(`http://localhost:3001/game/showCategories`)
+	    .then((response) => { return response.json() })
+	    .then((result) => {
+	      console.log(result);
+	      this.setState({
+	        categories: result
+	      })
+	    }).catch((e) => {console.log(e)});
+	  }
 
 	handleSubmit(e){
 		fetch('http://www.localhost:3001/game/addQuestions',{
@@ -136,8 +148,20 @@ class Add extends Component{
 								<option value="Number"> Number </option>
 							</select>
 
-							<input onChange={this.handleCategoryChange} className="inputField" type="text" id="name" name="name" placeholder="Category"/>
-							<input onChange={this.handleDifficultyChange} className="inputField" type="text" id="name" name="name" placeholder="Difficulty"/>
+							<select className = "dropdown" id="dd1" onChange={this.handleCategoryChange} value={this.state.category}>
+								<option selected disabled >Categories</option>
+								{this.state.categories.map(
+									(item)=> {
+										return(<option value={item}>{item}</option>);
+									}
+				              )}
+							</select>
+							<select className="dropdown" id="dd1" onChange={this.handleDifficultyChange}>
+								<option selected disabled> Difficulty </option>
+								<option value="Easy"> Easy </option>
+								<option value="Medium"> Medium </option>
+								<option value="Difficult"> Difficult </option>
+							</select>
 							<input onChange={this.handleQuestionChange} className="inputField" type="text" id="name" name="name" placeholder="Question"/>
 							<input onChange={this.handleAnswerChange} className="inputField" type="text" id="name" name="name" placeholder="Answer"/>
 							{showField(this.state.type)}
