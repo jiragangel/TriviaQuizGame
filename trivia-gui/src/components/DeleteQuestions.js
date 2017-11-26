@@ -86,7 +86,7 @@ class View extends Component{
 		return(
 			<div className="App">
 		        <div className="container">
-		           <h2>DELETE QUESTIONS</h2>
+		           <h1>Delete Questions</h1>
 		           		<select className = "dropdown" onChange={this.handleChange} value={this.state.category}>
 							<option selected disabled value="Categories">Categories</option>
 							{this.state.categories.map(
@@ -101,7 +101,7 @@ class View extends Component{
 								if(qs.Category === this.state.category){
 									return(
 									<div>
-									<input type="button" onClick={this.handleQuesChange} value={qs.Question} className="submit"/>
+									<input type="button" onClick={this.handleQuesChange} value={qs.Question} className="delQuestion"/>
 									<br/>
 									</div>
 									);

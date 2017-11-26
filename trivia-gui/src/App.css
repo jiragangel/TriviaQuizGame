@@ -5,7 +5,9 @@ html {
 .container {
     height: 350px;
     width: 800px;
-    margin: 135px auto;
+    position: absolute;
+    top: 25%;
+    left: 20%;
     border: 2px dashed white;
     border-radius: 15px;
     background: #fff;
@@ -36,9 +38,7 @@ html {
 .manage {
     height: 200px;
     width: 350px;
-    border: 1px solid white;
     border-radius: 15px;
-    background: #fff;
     padding: 20px;
     font-family: monospace;
     font-size: 16px;
@@ -93,6 +93,19 @@ html {
     text-align: center;
 }
 
+.delQuestion {
+    width: auto;
+    margin-top: 50px;
+    padding: 10px 20px;
+    color:#fff;
+    background-color:#ADD0EE;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: 20px;
+    float: left;
+    font-family: monospace;
+}
+
 h1,h2,h3,h4,h5,h6 {font-weight: bold;}
 
 h1 {
@@ -110,9 +123,9 @@ h2 {
     text-align: left;
 }
 h3 {
-    font-size: 18px;
+    font-size: 24px;
     margin: 15px 0 10px;
-    color: #ADD0EE;
+    color: #fff;
     font-family: monospace;
     text-align: center;
 }
@@ -121,9 +134,10 @@ h4 {
     margin: 10px 0;
 }
 h5 {
-    font-size: 14px;
+    font-size: 22px;
     margin: 10px 0 5px;
     text-decoration: none;
+    color: #d7e8f7;
     margin: 15px 0 10px;
     text-align: center;
 }
@@ -251,10 +265,11 @@ input[type=text], select {
 }
 
 .dropdown {
-  background-color:white;
-  border: 1px solid #bdc7d8;
-  border-radius: 5px;
-  padding: 8px 10px 8px 10px;
+      background-color:white;
+      border: 1px solid #bdc7d8;
+      border-radius: 5px;
+      padding: 8px 10px 8px 10px;
+      font-family: monospace;
 }
 
 .prompt {
@@ -337,7 +352,7 @@ input[type=text], select {
 
 .answer {
   font-weight: bold;
-  color:red;
+  color:#fff;
   margin-left:10px
 }
 

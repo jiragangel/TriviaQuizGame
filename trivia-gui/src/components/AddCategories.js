@@ -271,8 +271,6 @@ class AddCategories extends Component{
 		ques[2].answer = e.target.value; //execute the manipulations
 		this.setState({questions: ques}) //set the new state
 	}
-<<<<<<< HEAD
-=======
 
 	handleDifficultChoiceAChange(e){
 		let ques = this.state.questions.slice(); //copy the array
@@ -297,7 +295,6 @@ class AddCategories extends Component{
 		ques[2].choiceD = e.target.value; //execute the manipulations
 		this.setState({questions: ques}) //set the new state
 	}
->>>>>>> 531fa4386abed57b635de100a3104160652d87b7
 
 	render(){
 		return(
