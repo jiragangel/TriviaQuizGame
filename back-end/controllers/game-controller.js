@@ -81,6 +81,16 @@ exports.editQuestions = (req,res) => {
   });
 }
 
+exports.editCategories = (req,res) => {
+  Question.update({ Category: req.body.category },{Category: req.body.newctgry}, (error, movie) => {
+    if (!error) {
+      res.send('Question Edited');
+    }else{
+      res.send('Question Does not Exist');
+    }
+  });
+}
+
 exports.addMultipleQuestions = (req, res) => {
   Question.insertMany([
     {

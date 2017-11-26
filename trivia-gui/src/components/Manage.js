@@ -17,7 +17,7 @@ class Manage extends Component{
 			            <h3>Categories</h3>
 		                <a className="manage-btn" href="/viewCategories">View</a>
 		                <a className="manage-btn" href="/addCategories">Add</a>
-		                <a className="manage-btn" href="/EditQuestions">Edit</a>
+		                <a className="manage-btn" href="/EditCategories">Edit</a>
 		                <a className="manage-btn" href="/DeleteCategories">Delete</a>
 		            </div>
 		            <a className="home-btn" id="home" href="/">Back</a>
