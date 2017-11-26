@@ -15,13 +15,22 @@ import DeleteCategories from './components/DeleteCategories'
 import DeleteQuestions from './components/DeleteQuestions'
 import EditQuestions from './components/EditQuestions'
 import EditCategories from './components/EditCategories'
+import ReactMusicPlayer from 'react-music-player'
+
 
 import  { BrowserRouter as Router, Route} from 'react-router-dom'
+
+var songs = [
+  {
+    url: '/bgm.mp3'
+  }
+];
 
 class App extends Component {
   render() {
     return (
       <div className="App">
+        <ReactMusicPlayer songs={songs} autoplay />
         <Router>
           <div>
             <Route exact={true} path="/" component={Home} />
