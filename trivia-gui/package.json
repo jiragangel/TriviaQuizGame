@@ -5,9 +5,11 @@
   "dependencies": {
     "auto-bind": "^1.1.0",
     "react": "^16.1.1",
+    "react-audioplayer": "^0.3.1",
     "react-autobind": "^1.0.6",
     "react-dom": "^16.1.1",
     "react-music-player": "^1.0.3",
+    "react-player": "^0.25.3",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.17",

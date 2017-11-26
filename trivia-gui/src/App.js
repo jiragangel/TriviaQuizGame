@@ -15,9 +15,8 @@ import DeleteCategories from './components/DeleteCategories'
 import DeleteQuestions from './components/DeleteQuestions'
 import EditQuestions from './components/EditQuestions'
 import EditCategories from './components/EditCategories'
+
 import  { BrowserRouter as Router, Route} from 'react-router-dom'
-
-
 class App extends Component {
   render() {
     return (
