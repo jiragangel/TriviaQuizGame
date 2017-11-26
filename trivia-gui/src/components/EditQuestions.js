@@ -93,7 +93,8 @@ class View extends Component{
 
 	handleQuesChange(e){
 		this.setState({
-			question: e.target.value
+			question: e.target.value,
+			newq: e.target.value
 		})
 	}
 
@@ -145,8 +146,8 @@ class View extends Component{
 		return(
 			<div className="App">
 		        <div className="container">
-		           <h2>EDIT QUESTIONS</h2>
-		           		<h1>Choose Catefory</h1>
+		           <h1>Edit Questions</h1>
+		           		<h4>Choose Category</h4>
 		           		<select className = "dropdown" onChange={this.handleChange} value={this.state.category}>
 							<option selected disabled value="Categories">Categories</option>
 							{this.state.categories.map(
@@ -155,7 +156,7 @@ class View extends Component{
 								}
 			              )}
 						</select>
-						<h1>Choose Question</h1>
+						<h4>Choose Question</h4>
 						<select className = "dropdown" onChange={this.handleQuesChange} value={this.state.question}>
 							<option selected disabled value="questions">Questions</option>
 							{this.state.questions.map(
@@ -174,32 +175,32 @@ class View extends Component{
 							if(check.Question===this.state.question){
 								return(
 									<div>
-										<h3>Question:</h3>
-										<input onChange={this.updateQues} className="inputField" type="text" id="name" name="name" placeholder={this.state.question}/>
-										<h3>Difficulty:</h3>
-										<select className="dropdown" onChange={this.updateDiff}>
+										<h4 id="top">Question:</h4>
+										<input onChange={this.updateQues} className="inputField" type="text" id="field2" name="name" value={this.state.newq}/>
+										<h4>Difficulty:</h4>
+										<select className="dropdown" id="dd1" onChange={this.updateDiff}>
 											<option selected disabled> Difficulty </option>
 											<option value="Easy"> Easy </option>
 											<option value="Medium"> Medium </option>
 											<option value="Difficult"> Difficult </option>
 										</select>
-										<h3>Type:</h3>
-										<select className="dropdown" onChange={this.updateType}>
+										<h4>Type:</h4>
+										<select className="dropdown" id="dd1" onChange={this.updateType}>
 											<option selected disabled> Type </option>
 											<option value="Multiple Choice"> Multiple Choice </option>
 											<option value="True or False"> True or False </option>
 											<option value="Identification"> Identification </option>
 											<option value="Number"> Number </option>
 										</select>
-										<h3>Answer:</h3>
-										<input onChange={this.updateAns} className="inputField" type="text" id="name" name="name" placeholder={check.Answer}/>
-										<h3>choice A:</h3>
-										<input onChange={this.updateA} className="inputField" type="text" id="name" name="name" placeholder={check.choiceA}/>
-										<h3>choice B:</h3>
+										<h4>Answer:</h4>
+										<input onChange={this.updateAns} className="field1" type="text" id="name" name="name" placeholder={check.Answer}/>
+										<h4>Choice A:</h4>
+										<input onChange={this.updateA} className="field1" type="text" id="name" name="name" placeholder={check.choiceA}/>
+										<h4>Choice B:</h4>
 										<input onChange={this.updateB} className="inputField" type="text" id="name" name="name" placeholder={check.choiceB}/>
-										<h3>choice C:</h3>
+										<h4>Choice C:</h4>
 										<input onChange={this.updateC} className="inputField" type="text" id="name" name="name" placeholder={check.choiceC}/>
-										<h3>choice D:</h3>
+										<h4>Choice D:</h4>
 										<input onChange={this.updateD} className="inputField" type="text" id="name" name="name" placeholder={check.choiceD}/>
 									</div>
 									)

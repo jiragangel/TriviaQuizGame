@@ -20,7 +20,7 @@ class Manage extends Component{
 		                <a className="manage-btn" href="/EditCategories">Edit</a>
 		                <a className="manage-btn" href="/DeleteCategories">Delete</a>
 		            </div>
-		            <a className="home-btn" href="/">Back</a>
+		            <a className="home-btn" id="home" href="/">Back</a>
 		        </div>
 		    </div>
 		);

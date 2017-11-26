@@ -132,6 +132,8 @@ h3 {
 h4 {
     font-size: 16px;
     margin: 10px 0;
+    text-align: center;
+    color: #d7e8f7;
 }
 h5 {
     font-size: 22px;
@@ -240,12 +242,25 @@ table {
     text-align: center;
 }
 
+#field2 {
+    width: 500px;
+    margin-top: -80px;
+    margin-left: 160px;
+    font-family: monospace;
+}
+
+.field1 {
+    width: 300px;
+    margin-top: 20px;
+    margin-left: 160px;
+    font-family: monospace;
+}
 
 input[type=text], select {
-    width: 24%;
+    width: 50%;
     padding: 12px 20px;
     margin-top: 10px;
-    margin-left: 300px;
+    margin-left: 200px;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -270,6 +285,12 @@ input[type=text], select {
       border-radius: 5px;
       padding: 8px 10px 8px 10px;
       font-family: monospace;
+      color: #353535;
+}
+
+#dd1 {
+    width: 150px;
+    margin-left: 320px;
 }
 
 .prompt {
@@ -316,6 +337,10 @@ input[type=text], select {
     text-decoration: none;
 }
 
+#home {
+    margin-top: -230px;
+}
+
 .home-btn {
     width: auto;
     margin-top: 50px;
@@ -354,6 +379,10 @@ input[type=text], select {
   font-weight: bold;
   color:#fff;
   margin-left:10px
+}
+
+#top {
+    margin-top: 30px;
 }
 
 ::-webkit-scrollbar {
