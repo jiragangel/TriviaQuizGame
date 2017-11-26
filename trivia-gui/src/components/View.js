@@ -18,7 +18,9 @@ class View extends Component{
     		}],
     		categories: []
     	}
-      
+			this.getEasyQuestions = this.getEasyQuestions.bind(this);
+			this.getMediumQuestions = this.getMediumQuestions.bind(this);
+			this.getDifficultQuestions = this.getDifficultQuestions.bind(this);
 	}
 
 
@@ -26,63 +28,151 @@ class View extends Component{
 	    fetch(`http://localhost:3001/game/showCategories`)
 	    .then((response) => { return response.json() })
 	    .then((result) => {
-	      console.log(result);
 	      this.setState({
 	        categories: result
 	      })
 	    }).catch((e) => {console.log(e)});
+
 	    fetch(`http://localhost:3001/game/showQuestions`)
 	    .then((response) => { return response.json() })
 	    .then((result) => {
-	      console.log(result);
 	      this.setState({
 	        questions: result
 	      })
 	    }).catch((e) => {console.log(e)});
+
+
+			console.log("Category: " + this.state.questions);
 	  }
+
+		getEasyQuestions(category){
+			console.log("easy");
+			return(
+				<div>
+				{
+					this.state.questions.map((ques) => {
+						console.log("Category: " + ques.Category);
+						if (ques.Category === category && ques.Difficulty === "Easy"){
+							return(
+								<p>{ques.Question}</p>
+							)
+						}else{
+							return(
+								<p></p>
+							)
+						}
+					})
+				}
+				</div>
+			)
+
+		}
+
+		getMediumQuestions(category){
+			return(
+				<div>
+				{
+					this.state.questions.map((ques) => {
+						if (ques.Category === category && ques.Difficulty === "Medium"){
+							return(
+								<p>{ques.Question}</p>
+							)
+						}else{
+							return(
+								<p></p>
+							)
+						}
+					})
+				}
+				</div>
+			)
+
+		}
+
+		getDifficultQuestions(category){
+			return(
+				<div>
+				{
+					this.state.questions.map((ques) => {
+						if (ques.Category === category && ques.Difficulty === "Difficult"){
+							return(
+								<p>{ques.Question}</p>
+							)
+						}else{
+							return(
+								<p></p>
+							)
+						}
+					})
+				}
+				</div>
+			)
+		}
 
 	render(){
 		return(
 			<div className="App">
 		        <div className="container">
-		           <h1>Questions</h1>
-		             {this.state.categories.map((cmp)=>{
-		             	return(
-		             		<div>
-		             		<h1>{cmp}</h1>
-			             	{this.state.questions.map((item)=>{
-			             		console.log(item.Category);
-			    				if(item.Category===cmp){
-			    					return(
-			    						<div>
-
-			    						{this.state.questions.map((easy)=>{
-			    							console.log(easy.Difficulty);
-			    							if(easy.Difficulty=="Easy"){
-			    								<p>{easy.Question}</p>
-			    							}
-
-			    						})}
-			    						{this.state.questions.map((med)=>{
-			    							if(med.Difficulty=="Medium"){
-			    								<p>{med.Question}</p>
-			    							}
-
-			    						})}
-			    						{this.state.questions.map((hard)=>{
-			    							if(hard.Difficulty=="Difficult"){
-			    								<p>{hard.Question}</p>
-			    							}
-
-			    						})}
-			             				</div>
-			              			)
-			    				}
-			              	})}
-		              	</div>
-		              	)
-		              })}
-		            <a class="home-btn" href="/manage">Back</a>
+		          <h1>Questions</h1>
+							{this.state.categories.map((cmp)=>{
+								return(
+									<div>
+										<h4>{cmp}</h4>
+										<h5>Easy</h5>
+										{
+											this.state.questions.map((ques) => {
+												if (ques.Category === cmp && ques.Difficulty === "Easy"){
+													return(
+														<div>
+															<p>{ques.Question}</p>
+															<p className="answer">Answer: {ques.Answer}</p>
+														</div>
+													)
+												}else{
+													return(
+														<p></p>
+													)
+												}
+											})
+										}
+										<h5>Medium</h5>
+										{
+											this.state.questions.map((ques) => {
+												if (ques.Category === cmp && ques.Difficulty === "Medium"){
+													return(
+														<div>
+															<p>{ques.Question}</p>
+															<p className="answer">Answer: {ques.Answer}</p>
+														</div>
+													)
+												}else{
+													return(
+														<p></p>
+													)
+												}
+											})
+										}
+										<h5>Difficult</h5>
+										{
+											this.state.questions.map((ques) => {
+												if (ques.Category === cmp && ques.Difficulty === "Difficult"){
+													return(
+														<div>
+															<p>Question: {ques.Question}</p>
+															<p className="answer">Answer: {ques.Answer}</p>
+														</div>
+													)
+												}else{
+													return(
+														<p></p>
+													)
+												}
+											})
+										}
+									</div>
+								)
+							})}
+		          <a className="home-btn" href="/manage">Back</a>
 		        </div>
 		    </div>
 		);

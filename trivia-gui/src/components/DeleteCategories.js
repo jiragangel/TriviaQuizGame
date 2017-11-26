@@ -22,14 +22,6 @@ class View extends Component{
 	        categories: result
 	      })
 	    }).catch((e) => {console.log(e)});
-	    fetch(`http://localhost:3001/game/showQuestions`)
-	    .then((response) => { return response.json() })
-	    .then((result) => {
-	      console.log(result);
-	      this.setState({
-	        questions: result
-	      })
-	    }).catch((e) => {console.log(e)});
 	  }
 
 	  handleButtonChange(e){

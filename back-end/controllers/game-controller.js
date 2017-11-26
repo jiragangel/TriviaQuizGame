@@ -41,16 +41,6 @@ exports.showCategories = (req,res) => {
   });
 }
 
-exports.showCategories = (req,res) => {
-  Question.aggregate([ {"$group" : {_id:"$Difficulty"}}]).exec(function(err, models){
-    let array = [];
-    for (let i = 0 ; i < models.length ; i++){
-      array.push (models[i]._id);
-    }
-    res.send(array);
-  });
-}
-
 
 exports.addhs = (req,res) => {
   console.log("TO DELETE: " + req.body.todelete);
@@ -63,5 +53,5 @@ exports.addhs = (req,res) => {
 }
 
 exports.addQuestions = (req,res) => {
-  questions.insertMany([{Category: req.body.category, Difficulty: req.body.difficulty, Type: req.body.type, Question: req.body.question, Answer: req.body.answer, choiceA: req.body.choiceA, choiceB: req.body.choiceB, choiceC: req.body.choiceC, choiceD: req.body.choiceD}]);
+  Question.insertMany([{Category: req.body.category, Difficulty: req.body.difficulty, Type: req.body.type, Question: req.body.question, Answer: req.body.answer, choiceA: req.body.choiceA, choiceB: req.body.choiceB, choiceC: req.body.choiceC, choiceD: req.body.choiceD}]);
 }
