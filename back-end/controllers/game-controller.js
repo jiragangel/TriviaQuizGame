@@ -70,3 +70,41 @@ exports.addQuestions = (req,res) => {
 exports.addCategories = (req, res) => {
   Question.insertMany([{Category: req.body.category, Difficulty: req.body.difficulty, Type: req.body.type, Question: req.body.question, Answer: req.body.answer, choiceA: req.body.choiceA, choiceB: req.body.choiceB, choiceC: req.body.choiceC, choiceD: req.body.choiceD}]);
 }
+
+exports.addMultipleQuestions = (req, res) => {
+  Question.insertMany([
+    {
+      Category: req.body.questions[0].category,
+      Difficulty: req.body.questions[0].difficulty,
+      Type: req.body.questions[0].type,
+      Question: req.body.questions[0].question,
+      Answer: req.body.questions[0].answer,
+      choiceA: req.body.questions[0].choiceA,
+      choiceB: req.body.questions[0].choiceB,
+      choiceC: req.body.questions[0].choiceC,
+      choiceD: req.body.questions[0].choiceD
+    },
+    {
+      Category: req.body.questions[1].category,
+      Difficulty: req.body.questions[1].difficulty,
+      Type: req.body.questions[1].type,
+      Question: req.body.questions[1].question,
+      Answer: req.body.questions[1].answer,
+      choiceA: req.body.questions[1].choiceA,
+      choiceB: req.body.questions[1].choiceB,
+      choiceC: req.body.questions[1].choiceC,
+      choiceD: req.body.questions[1].choiceD
+    },
+    {
+      Category: req.body.questions[2].category,
+      Difficulty: req.body.questions[2].difficulty,
+      Type: req.body.questions[2].type,
+      Question: req.body.questions[2].question,
+      Answer: req.body.questions[2].answer,
+      choiceA: req.body.questions[2].choiceA,
+      choiceB: req.body.questions[2].choiceB,
+      choiceC: req.body.questions[2].choiceC,
+      choiceD: req.body.questions[2].choiceD
+    }
+  ]);
+}
