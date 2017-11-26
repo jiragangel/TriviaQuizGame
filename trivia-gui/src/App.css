@@ -194,10 +194,11 @@ table {
     text-align: center;
 }
 
+
 input[type=text], select {
     width: 24%;
     padding: 12px 20px;
-    margin-top: 75px;
+    margin-top: 10px;
     margin-left: 300px;
     display: inline-block;
     border: 1px solid #ccc;
