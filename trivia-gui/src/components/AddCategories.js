@@ -147,19 +147,6 @@ class AddCategories extends Component{
 			choiceD: e.target.value
 		})
 	}
-    			Category: "",
-    			Difficulty:"",
-    			Qs:"",
-    			Answer:"",
-    			choiceA:"",
-    			choiceB:"",
-    			choiceC:"",
-    			choiceD:""
-    		}],
-    		categories: []
-    	}
-
-	}
 
 	render(){
 		return(
