@@ -123,32 +123,31 @@ class Add extends Component{
 	render(){
 		return(
 			<div className="App">
-		        <div className="container">
-		           <h1>Add Questions</h1>
+				<div className="container">
+					<h1>Add Questions</h1>
 
-		            <div className="quizArea">
-		                <div className="quizHeader">
-		                	<select className="dropdown" onChange={this.handleTypeChange}>
-			                	<option selected disabled> Type </option>
-			                	<option value="Multiple Choice"> Multiple Choice </option>
-			                	<option value="True or False"> True or False </option>
-			                	<option value="Identification"> Identification </option>
-			                	<option value="Number"> Number </option>
-		                	</select>
+					<div className="quizArea">
+						<div className="quizHeader">
+							<select className="dropdown" onChange={this.handleTypeChange}>
+								<option selected disabled> Type </option>
+								<option value="Multiple Choice"> Multiple Choice </option>
+								<option value="True or False"> True or False </option>
+								<option value="Identification"> Identification </option>
+								<option value="Number"> Number </option>
+							</select>
 
-		                	<input onChange={this.handleCategoryChange} className="inputField" type="text" id="name" name="name" placeholder="Category"/>
-		                	<input onChange={this.handleDifficultyChange} className="inputField" type="text" id="name" name="name" placeholder="Difficulty"/>
-		                	<input onChange={this.handleQuestionChange} className="inputField" type="text" id="name" name="name" placeholder="Question"/>
-		                	<input onChange={this.handleAnswerChange} className="inputField" type="text" id="name" name="name" placeholder="Answer"/>
-		                	{showField(this.state.type)}
+							<input onChange={this.handleCategoryChange} className="inputField" type="text" id="name" name="name" placeholder="Category"/>
+							<input onChange={this.handleDifficultyChange} className="inputField" type="text" id="name" name="name" placeholder="Difficulty"/>
+							<input onChange={this.handleQuestionChange} className="inputField" type="text" id="name" name="name" placeholder="Question"/>
+							<input onChange={this.handleAnswerChange} className="inputField" type="text" id="name" name="name" placeholder="Answer"/>
+							{showField(this.state.type)}
 							<input onClick={this.handleSubmit} type="button" className="submit" value="Submit"/>
-
 							<p className="prompt">{this.state.prompt}</p>
-							<a className="home-btn" href="/">Back</a>
-		                </div>
-		            </div>
-		        </div>
-		    </div>
+							<a className="home-btn" href="/manage">Back</a>
+						</div>
+					</div>
+				</div>
+			</div>
 		);
 	}
 }

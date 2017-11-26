@@ -50,7 +50,7 @@ class View extends Component{
 	    }).catch((e) => {console.log(e)});
 	  }
 
-	  
+
 
 	handleSubmit(e){
 		fetch('http://www.localhost:3001/game/deleteQuestions',{
@@ -98,12 +98,18 @@ class View extends Component{
 						<p className="prompt">{this.state.promptClick}</p>
 						{this.state.questions.map(
 							(qs)=>{
-								if(qs.Category === this.state.category){return(
+								if(qs.Category === this.state.category){
+									return(
 									<div>
 									<input type="button" onClick={this.handleQuesChange} value={qs.Question} className="submit"/>
 									<br/>
 									</div>
 									);
+								}else {
+									return(
+										<div>
+										</div>
+									)
 								}
 						})}
 						<input onClick={this.handleSubmit} type="button" className="submit" value="Submit"/>

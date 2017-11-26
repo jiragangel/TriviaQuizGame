@@ -19,7 +19,6 @@ class AddCategories extends Component{
 
     	this.state = {
     		questions: [{
-<<<<<<< HEAD
 				category: '',
 				difficulty: 'Easy',
 				type: '',
@@ -148,63 +147,51 @@ class AddCategories extends Component{
 			choiceD: e.target.value
 		})
 	}
-=======
-    			Category: "",
-    			Difficulty:"",
-    			Qs:"",
-    			Answer:"",
-    			choiceA:"",
-    			choiceB:"",
-    			choiceC:"",
-    			choiceD:""
-    		}],
-    		categories: []
-    	}
 
-	}
-
-
-	  componentDidMount = () => {
-	    fetch(`http://localhost:3001/game/showCategories`)
-	    .then((response) => { return response.json() })
-	    .then((result) => {
-	      this.setState({
-	        categories: result
-	      })
-	    }).catch((e) => {console.log(e)});
-	    fetch(`http://localhost:3001/game/showQuestions`)
-	    .then((response) => { return response.json() })
-	    .then((result) => {
-	      this.setState({
-	        questions: result
-	      })
-	    }).catch((e) => {console.log(e)});
-	  }
->>>>>>> a16e1f66d1393eba893ddfe35f5e78e4c92905a8
+  componentDidMount = () => {
+    fetch(`http://localhost:3001/game/showCategories`)
+    .then((response) => { return response.json() })
+    .then((result) => {
+      this.setState({
+        categories: result
+      })
+    }).catch((e) => {console.log(e)});
+    fetch(`http://localhost:3001/game/showQuestions`)
+    .then((response) => { return response.json() })
+    .then((result) => {
+      this.setState({
+        questions: result
+      })
+    }).catch((e) => {console.log(e)});
+  }
 
 	render(){
 		return(
 			<div className="App">
-		        <div className="container">
-		           <h1>Add Category</h1>
-					<h5>To add a new category, it is a must to add at least one question under it.</h5>
-					<input onChange={this.handleCategoryChange} className="inputField" type="text" id="name" name="name" placeholder="Category"/>
-					<h6>Easy</h6>
-					<select className="dropdown" onChange={this.handleTypeChange}>
-	                	<option selected disabled> Type </option>
-	                	<option value="Multiple Choice"> Multiple Choice </option>
-	                	<option value="True or False"> True or False </option>
-	                	<option value="Identification"> Identification </option>
-	                	<option value="Number"> Number </option>
-                	</select>
+				<div className="container">
+					<h1>Add Category</h1>
+					<div className="quizArea">
+						<div className="quizHeader">
+							<select className="dropdown" onChange={this.handleTypeChange}>
+								<option selected disabled> Type </option>
+								<option value="Multiple Choice"> Multiple Choice </option>
+								<option value="True or False"> True or False </option>
+								<option value="Identification"> Identification </option>
+								<option value="Number"> Number </option>
+							</select>
 
-					
-					<input onClick={this.handleSubmit} type="button" className="submit" value="Submit"/>
-					<p className="prompt">{this.state.prompt}</p>
-					<a className="home-btn" href="/">Back</a>
-					<a className="home-btn" href="/manage/">Back</a>
+							<input onChange={this.handleCategoryChange} className="inputField" type="text" id="name" name="name" placeholder="Category"/>
+							<input onChange={this.handleDifficultyChange} className="inputField" type="text" id="name" name="name" placeholder="Difficulty"/>
+							<input onChange={this.handleQuestionChange} className="inputField" type="text" id="name" name="name" placeholder="Question"/>
+							<input onChange={this.handleAnswerChange} className="inputField" type="text" id="name" name="name" placeholder="Answer"/>
+							{showField(this.state.type)}
+							<input onClick={this.handleSubmit} type="button" className="submit" value="Submit"/>
+							<p className="prompt">{this.state.prompt}</p>
+							<a className="home-btn" href="/manage">Back</a>
+						</div>
+					</div>
 				</div>
-		    </div>
+			</div>
 		);
 	}
 }
