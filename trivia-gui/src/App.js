@@ -15,12 +15,7 @@ import DeleteCategories from './components/DeleteCategories'
 import DeleteQuestions from './components/DeleteQuestions'
 import EditQuestions from './components/EditQuestions'
 import EditCategories from './components/EditCategories'
-<<<<<<< HEAD
-
-=======
->>>>>>> 1975a55232860aee1a0155b86be4d03f74ab6039
 import  { BrowserRouter as Router, Route} from 'react-router-dom'
-import Sound from 'react-sound';
 
 
 class App extends Component {
