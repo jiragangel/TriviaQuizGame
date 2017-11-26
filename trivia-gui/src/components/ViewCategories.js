@@ -43,11 +43,11 @@ class View extends Component{
 		return(
 			<div className="App">
 		        <div className="container">
-		           <h1>CATEGORIES</h1>
+		           <h1>Categories</h1>
 		             {this.state.categories.map((cmp)=>{
 			             	return(
 		 									<div key={this.state.categories.indexOf(cmp)}>
-				             		<h3>{cmp}</h3>
+				             		<h5>{cmp}</h5>
 											</div>
 										)
 								})}
