@@ -27,7 +27,7 @@ class App extends Component {
             <Route exact={true} path="/categories" component={Categories} />
             <Route exact={true} path="/quiz/:one/:two/:three/:noOfQuestions" component = {Quiz} />
             <Route exact={true} path="/highscore" component={Highscore} />
-            <Route exact={true} path="/quiz/grade/:score/:total" component={Grade} />
+            <Route exact={true} path="/quiz/grade/:score/:total/:one/:two/:three" component={Grade} />
             <Route exact={true} path="/manage" component={Manage} />
             <Route exact={true} path="/manage/view" component={View} />
             <Route exact={true} path="/manage/add" component={Add} />

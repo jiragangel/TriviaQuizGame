@@ -1,11 +1,11 @@
 db.highscores.insertMany([
   {
-    Category: "Science",
+    Categories: ["Science","History","Geography"],
     Name: "Jira Angel",
     Score: 25
   },
   {
-    Category: "Science",
+    Categories: ["Science","History","Geography"],
     Name: "Jira Angel",
     Score: 23
   },

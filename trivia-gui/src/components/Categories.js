@@ -89,8 +89,9 @@ class Categories extends Component {
             <div className="quizHeader">
               <form onSubmit={this.handleFormSubmit}>
                 <input className="button" type="number" onChange={this.handleNoChange} min="3" placeholder="Number of questions"/>
-                <input className="button" type="button" onClick={this.checkCategories} value="Start Game"/>
+                <input className="startButton" type="button" onClick={this.checkCategories} value="Start Game"/>
                 {this.createCheckboxes()}
+                <a className="home-btn" href="/">Back</a>
               </form>
 
             </div>

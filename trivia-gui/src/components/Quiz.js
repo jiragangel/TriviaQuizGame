@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import  { Redirect } from 'react-router-dom'
 
-const getRandom = (min, max) => {
-  let num = Math.floor(Math.random() * (max - min) + min);
+const getRandom = (max) => {
+  let num = Math.floor(Math.random() * (max));
   return num;
 }
 
@@ -108,7 +108,7 @@ class Quiz extends Component{
     }
     let randomNo;
     do {
-      randomNo = getRandom(0,this.state.easy.length);
+      randomNo = getRandom(this.state.curQuestions.length);
     }while(isInArray(randomNo,this.state.itemNos));
 
     this.state.itemNos.push(randomNo);
@@ -161,7 +161,7 @@ class Quiz extends Component{
     if (this.state.passed > this.state.noOfQuestions * 3){
       let total = 0;
       total = parseInt(this.state.noOfQuestions,10) + parseInt(this.state.noOfQuestions*2,10) + parseInt(this.state.noOfQuestions*3,10);
-      return (<Redirect to={`/quiz/grade/${this.state.score}/${total}`} />)
+      return (<Redirect to={`/quiz/grade/${this.state.score}/${total}/${this.state.one}/${this.state.two}/${this.state.three}`} />)
     };
     //MULTIPLE CHOICE
     if (this.state.curQuestions[this.state.itemNo].Type === 'Multiple Choice'){

@@ -6,7 +6,7 @@ class Highscore extends Component{
 
     this.state = {
       hs: [{
-				Category: "",
+				Categories: ["","",""],
 				Name: "",
 				Score: ""
 			}]
@@ -35,6 +35,9 @@ class Highscore extends Component{
 									<th>Rank</th>
 									<th>Name</th>
 									<th>Score</th>
+									<th>Category # 1</th>
+									<th>Category # 2</th>
+									<th>Category # 3</th>
 								</tr>
 									{
 										this.state.hs.map((scores) => {
@@ -43,6 +46,9 @@ class Highscore extends Component{
 												<td>{this.state.hs.indexOf(scores)+1}</td>
 												<td>{scores.Name}</td>
 												<td>{scores.Score}</td>
+												<td>{scores.Categories[0]}</td>
+												<td>{scores.Categories[1]}</td>
+												<td>{scores.Categories[2]}</td>
 												</tr>
 											)
 										})

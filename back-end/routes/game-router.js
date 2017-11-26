@@ -15,5 +15,9 @@ router.post('/addhs',GameController.addhs);
 router.post('/addQuestions',GameController.addQuestions);
 router.post('/deleteCategories',GameController.deleteCategories);
 router.post('/deleteQuestions',GameController.deleteQuestions);
+<<<<<<< HEAD
 router.post('/editQuestions',GameController.editQuestions);
+=======
+router.post('/addMultipleQuestions',GameController.addMultipleQuestions);
+>>>>>>> 10b999d694cf9e26c110d675115982c6324fdcbf
 module.exports = router;
