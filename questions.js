@@ -562,6 +562,24 @@ Question:"Who founded Playboy magazine?",Answer: "Hugh Hefner",choiceA: "Hugh He
 {
 Category:"History",
 Difficulty: "Easy",
+Type: "Number",
+Question:"What year did Jose Rizal die?",Answer: "1896",choiceA: "",choiceB: "",choiceC: "",choiceD: ""
+},
+{
+Category:"History",
+Difficulty: "Medium",
+Type: "Number",
+Question:"What year was Martial Law declared?",Answer: "1972",choiceA: "",choiceB: "",choiceC: "",choiceD: ""
+},
+{
+Category:"History",
+Difficulty: "Medium",
+Type: "Identification",
+Question:"To whom was Phillipines name after?",Answer: "King Phillip II",choiceA: "",choiceB: "",choiceC: "",choiceD: ""
+},
+{
+Category:"History",
+Difficulty: "Easy",
 Type: "Multiple Choice",
 Question:"Who held the famous I have a dream speech in 1963?",Answer: "Martin Luther King",choiceA: "Abraham Lincoln",choiceB: "Thomas Jefferson",choiceC: "Martin Luther King",choiceD: "Franklin Roosevelt"
 },
