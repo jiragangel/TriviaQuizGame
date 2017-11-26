@@ -126,7 +126,6 @@ class Add extends Component{
 		           <h1>Add Questions</h1>
 		            <div class="quizArea">
 		                <div class="quizHeader">
-<<<<<<< HEAD
 		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Category"/>
 		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Difficulty"/>
 		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Type"/>
@@ -137,7 +136,6 @@ class Add extends Component{
 		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Choice C"/>
 		                	<input onChange={this.handleNameChange} className="inputField" type="text" id="name" name="name" placeholder="Choice D"/>
 											<input onClick={this.handleSubmit} type="button" className="submit" value="Submit"/>
-=======
 		                	<select className="dropdown" onChange={this.handleTypeChange}>
 			                	<option selected disabled> Type </option>
 			                	<option value="Multiple Choice"> Multiple Choice </option>
@@ -145,19 +143,16 @@ class Add extends Component{
 			                	<option value="Identification"> Identification </option>
 			                	<option value="Number"> Number </option>
 		                	</select>
->>>>>>> e289a0b41e046d12bb40cbfa5bac3debcddb3369
+
 		                	<input onChange={this.handleCategoryChange} className="inputField" type="text" id="name" name="name" placeholder="Category"/>
 		                	<input onChange={this.handleDifficultyChange} className="inputField" type="text" id="name" name="name" placeholder="Difficulty"/>
 		                	<input onChange={this.handleQuestionChange} className="inputField" type="text" id="name" name="name" placeholder="Question"/>
 		                	<input onChange={this.handleAnswerChange} className="inputField" type="text" id="name" name="name" placeholder="Answer"/>
 		                	{showField(this.state.type)}
 							<input onClick={this.handleSubmit} type="button" className="submit" value="Submit"/>
-<<<<<<< HEAD
 
-=======
 							<p className="prompt">{this.state.prompt}</p>
 							<a href='/manage' className="back-btn">Back</a>
->>>>>>> e289a0b41e046d12bb40cbfa5bac3debcddb3369
 		                </div>
 		            </div>
 		        </div>

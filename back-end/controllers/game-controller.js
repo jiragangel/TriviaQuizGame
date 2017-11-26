@@ -26,8 +26,13 @@ exports.showHighScores = (req, res) => {
 }
 
 exports.deleteCategories = (req,res) => {
-  Question.remove({Category: req.body.todelete}).exec(function(err, models){
-    if (!err) res.send("Not error");
+  console.log("DELETE");
+  Question.remove({ Category: req.body.category }, (error, movie) => {
+    if (!error) {
+      res.send('Question Deleted');
+    }else{
+      res.send('Question Does not Exist');
+    }
   });
 }
 

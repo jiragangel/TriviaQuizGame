@@ -284,17 +284,16 @@ input[type=text], select {
     float: right;
 }
 
-<<<<<<< HEAD
+
 .dropdown {
   background-color:white;
   border: 1px solid #bdc7d8;
   border-radius: 5px;
   padding: 8px 10px 8px 10px;
 }
-=======
+
 .answer {
   font-weight: bold;
   color:red;
   margin-left:10px
 }
->>>>>>> e289a0b41e046d12bb40cbfa5bac3debcddb3369

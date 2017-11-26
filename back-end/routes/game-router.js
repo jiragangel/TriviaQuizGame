@@ -13,4 +13,5 @@ router.get('/showHighScores', GameController.showHighScores);
 router.get('/showCategories',GameController.showCategories);
 router.post('/addhs',GameController.addhs);
 router.post('/addQuestions',GameController.addQuestions);
+router.post('/deleteCategories',GameController.deleteCategories);
 module.exports = router;
