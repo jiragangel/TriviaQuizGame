@@ -6,6 +6,15 @@ const getRandom = (min, max) => {
   return num;
 }
 
+const isInArray = (value,array) => {
+  for (let i = 0 ; i < array.length ; i++){
+    if (array[i] === value){
+      return true;
+    }
+  }
+  return false;
+}
+
 class Quiz extends Component{
   constructor(props){
     super(props);
@@ -48,6 +57,7 @@ class Quiz extends Component{
         choiceD: ''
       }],
       itemNo: 0,
+      itemNos: [],
       passed: 1,
       selectedOption: '',
       score: 0,
@@ -57,6 +67,7 @@ class Quiz extends Component{
     this.handleAnswers = this.handleAnswers.bind(this);
     this.handleOptionChange = this.handleOptionChange.bind(this);
   }
+
   handleOptionChange(e) {
     this.setState({
       selectedOption: e.target.value
@@ -79,23 +90,35 @@ class Quiz extends Component{
         });
       }
     };
-    if (this.state.passed >= this.state.noOfQuestions * 2){//easy level
+    if (this.state.passed === this.state.noOfQuestions * 2){//easy level
       this.setState({
+        itemNos: [],
         curQuestions: this.state.hard
       })
-    }else if (this.state.passed >= this.state.noOfQuestions * 1){//medium
+    }else if (this.state.passed === this.state.noOfQuestions * 1){//medium
       this.setState({
+        itemNos: [],
         curQuestions: this.state.medium
       })
-    }else {//hard
+    }else if (this.state.passed === 0){//easy
       this.setState({
+        itemNos: [],
         curQuestions: this.state.easy
       })
     }
+    let randomNo;
+    do {
+      randomNo = getRandom(0,this.state.easy.length);
+    }while(isInArray(randomNo,this.state.itemNos));
+
+    console.log("Item Nos: " + this.state.itemNos + "\tCategory:"  + this.state.passed + "\tRandom No: " + randomNo);
+
+    this.state.itemNos.push(randomNo);
     this.setState({
-      itemNo: getRandom(0,this.state.curQuestions.length),
+      itemNo: randomNo,
       passed: this.state.passed + 1
-    });
+    })
+
     this.setState({
       selectedOption: ""
     })
@@ -125,9 +148,12 @@ class Quiz extends Component{
     			questions:result,
     		});
 
+        let randomNo = getRandom(0,this.state.easy.length);
+        this.state.itemNos.push(randomNo);
+
         this.setState({
           curQuestions: this.state.easy,
-          itemNo: getRandom(0,this.state.easy.length)
+          itemNo: randomNo
         })
   	})
   	.catch((e) => {console.log(e)});
