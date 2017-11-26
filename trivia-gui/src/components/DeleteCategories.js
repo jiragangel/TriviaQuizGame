@@ -45,7 +45,7 @@ class View extends Component{
 				console.log('Request failure: ',error);
 		});
 			this.setState({
-			prompt: 'Successfully added!'
+			prompt: 'Successfully deleted!'
 		})
 		this.forceUpdate();
 	}
@@ -60,7 +60,7 @@ class View extends Component{
 		return(
 			<div className="App">
 		        <div className="container">
-		           <h2>DELETE CATEGORIES</h2>
+		           <h1>Delete Categories</h1>
 		           		<select className = "dropdown" onChange={this.handleChange} value={this.state.category}>
 							<option selected disabled value="Categories">Categories</option>
 							{this.state.categories.map(

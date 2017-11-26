@@ -305,7 +305,7 @@ class AddCategories extends Component{
 					<input onChange={this.handleCategoryChange} className="inputField" type="text" id="name" name="name" placeholder="Category"/>
 					<h6>Easy</h6>
 
-					<select className="dropdown" onChange={this.handleEasyTypeChange}>
+					<select className="dropdown" id="dd1" onChange={this.handleEasyTypeChange}>
 						<option selected disabled> Type </option>
 						<option value="Multiple Choice"> Multiple Choice </option>
 						<option value="True or False"> True or False </option>
@@ -320,7 +320,7 @@ class AddCategories extends Component{
 
 					<h6>Medium</h6>
 
-					<select className="dropdown" onChange={this.handleAverageTypeChange}>
+					<select className="dropdown" id="dd1" onChange={this.handleAverageTypeChange}>
 						<option selected disabled> Type </option>
 						<option value="Multiple Choice"> Multiple Choice </option>
 						<option value="True or False"> True or False </option>
@@ -335,7 +335,7 @@ class AddCategories extends Component{
 
 					<h6>Difficult</h6>
 
-					<select className="dropdown" onChange={this.handleDifficultTypeChange}>
+					<select className="dropdown" id="dd1" onChange={this.handleDifficultTypeChange}>
 						<option selected disabled> Type </option>
 						<option value="Multiple Choice"> Multiple Choice </option>
 						<option value="True or False"> True or False </option>

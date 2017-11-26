@@ -83,7 +83,7 @@ class View extends Component{
 								if(cat === this.state.category){
 									return(
 										<div>
-										<h3>category:</h3>
+										<h4>Category:</h4>
 										<input onChange={this.updateCtgry} className="inputField" type="text" id="name" name="name" placeholder={this.state.category}/>
 										</div>
 									)

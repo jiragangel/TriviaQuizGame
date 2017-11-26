@@ -128,7 +128,7 @@ class Add extends Component{
 
 					<div className="quizArea">
 						<div className="quizHeader">
-							<select className="dropdown" onChange={this.handleTypeChange}>
+							<select className="dropdown" id="dd1" onChange={this.handleTypeChange}>
 								<option selected disabled> Type </option>
 								<option value="Multiple Choice"> Multiple Choice </option>
 								<option value="True or False"> True or False </option>
