@@ -8,6 +8,9 @@ class Grade extends Component{
 		this.state = {
 			score: this.props.match.params.score,
 			total: this.props.match.params.total,
+			one: this.props.match.params.one,
+			two: this.props.match.params.two,
+			three: this.props.match.params.three,
 			name: '',
 			redirect: false,
 			hs:[],

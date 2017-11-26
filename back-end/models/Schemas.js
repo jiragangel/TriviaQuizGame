@@ -15,7 +15,8 @@ const QuestionsSchema = new Schema({
 
 const HSSchema = new Schema({
   Name: {type: String, default: ''},
-  Score: {type: Number, default: 0}
+  Score: {type: Number, default: 0},
+  Categories: [String, String, String]
 });
 
 mongoose.model('Question', QuestionsSchema);
