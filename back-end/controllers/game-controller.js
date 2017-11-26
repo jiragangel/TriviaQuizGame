@@ -25,6 +25,12 @@ exports.showHighScores = (req, res) => {
   });
 }
 
+exports.deleteCategories = (req,res) => {
+  Question.remove({Category: req.body.todelete}).exec(function(err, models){
+    if (!err) res.send("Not error");
+  });
+}
+
 exports.showCategories = (req,res) => {
   Question.aggregate([ {"$group" : {_id:"$Category"}}]).exec(function(err, models){
     let array = [];
