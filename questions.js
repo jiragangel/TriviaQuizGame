@@ -282,13 +282,13 @@ choiceD: "Dannah Esperanza"
 {
 Category:"Entertainment",
 Difficulty: "Medium",
-Type: "Multiple Choice",
+Type: "Number",
 Question:	"What year did ‘Thriller’ come out?",
 Answer: "1982",
-choiceA: "1980",
-choiceB: "1981",
-choiceC: "1982",
-choiceD: "1983"
+choiceA: "",
+choiceB: "",
+choiceC: "",
+choiceD: ""
 },
 {
 Category:"Entertainment",
@@ -481,8 +481,8 @@ Question:"What country is famous for the maple tree?",Answer:"Canada",choiceA:"U
 {
 Category: "Geography",
 Difficulty: "Easy",
-Type: "Multiple Choice",
-Question:"What’s the meaning of D.C in Washington D.C?",Answer: "District of Columbia",choiceA:"District of Columbia",choiceB:"District of Cambodia",choiceC:"District of Canada",choiceD:"District of Caine"
+Type: "True or False",
+Question:"The D.C. in Washinton D.C. means District of Columbia.",Answer: "True",choiceA:"True",choiceB:"False",choiceC:"",choiceD:""
 },
 {
 Category: "Geography",
@@ -522,9 +522,9 @@ Question:"Which of the following countries does NOT have red in its flag?",Answe
 {
 Category: "Geography",
 Difficulty: "Medium",
-Type: "Multiple Choice",
-Question:"Which of these is NOT one of the ‘New Wonders of the World’?",
-Answer:"Eiffel Tower",choiceA:"Eiffel Tower",choiceB:"Christ the Redeemer Statue",choiceC:"Machu Picchu",choiceD:"Taj Majal"
+Type: "True or False",
+Question:"The Eiffel Tower is part of the New Wonders of the World",
+Answer:"False",choiceA:"True",choiceB:"False",choiceC:"",choiceD:""
 },
 {
 Category: "Geography",
@@ -562,6 +562,24 @@ Question:"Who founded Playboy magazine?",Answer: "Hugh Hefner",choiceA: "Hugh He
 {
 Category:"History",
 Difficulty: "Easy",
+Type: "Number",
+Question:"What year did Jose Rizal die?",Answer: "1896",choiceA: "",choiceB: "",choiceC: "",choiceD: ""
+},
+{
+Category:"History",
+Difficulty: "Medium",
+Type: "Number",
+Question:"What year was Martial Law declared?",Answer: "1972",choiceA: "",choiceB: "",choiceC: "",choiceD: ""
+},
+{
+Category:"History",
+Difficulty: "Medium",
+Type: "Identification",
+Question:"To whom was Phillipines name after?",Answer: "King Phillip II",choiceA: "",choiceB: "",choiceC: "",choiceD: ""
+},
+{
+Category:"History",
+Difficulty: "Easy",
 Type: "Multiple Choice",
 Question:"Who held the famous I have a dream speech in 1963?",Answer: "Martin Luther King",choiceA: "Abraham Lincoln",choiceB: "Thomas Jefferson",choiceC: "Martin Luther King",choiceD: "Franklin Roosevelt"
 },
@@ -592,8 +610,8 @@ Question:"What was Sally Ride the first American woman to do?",Answer: "Go into 
 {
 Category:"History",
 Difficulty: "Medium",
-Type: "Multiple Choice",
-Question:"What year did the Titanic sink?",Answer: "1912",choiceA: "1911",choiceB: "1910",choiceC: "1913",choiceD: "1912"
+Type: "Number",
+Question:"What year did Alexander Hamilton die",Answer: "1912",choiceA: "",choiceB: "",choiceC: "",choiceD: ""
 },
 {
 Category:"History",

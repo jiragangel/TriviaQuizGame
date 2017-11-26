@@ -19,7 +19,6 @@ import EditCategories from './components/EditCategories'
 import ReactPlayer from 'react-player'
 
 import  { BrowserRouter as Router, Route} from 'react-router-dom'
-
 class App extends Component {
   render() {
     return (
