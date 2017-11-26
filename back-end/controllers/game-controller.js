@@ -71,7 +71,6 @@ exports.addCategories = (req, res) => {
   Question.insertMany([{Category: req.body.category, Difficulty: req.body.difficulty, Type: req.body.type, Question: req.body.question, Answer: req.body.answer, choiceA: req.body.choiceA, choiceB: req.body.choiceB, choiceC: req.body.choiceC, choiceD: req.body.choiceD}]);
 }
 
-<<<<<<< HEAD
 exports.editQuestions = (req,res) => {
   Question.update({ Question: req.body.question },{Question: req.body.newq, Difficulty: req.body.newdiff, Type: req.body.newtype, Answer:req.body.newans, choiceA:req.body.newa, choiceB:req.body.newb, choiceC:req.body.newc, choiceD:req.body.newq}, (error, movie) => {
     if (!error) {
@@ -81,7 +80,7 @@ exports.editQuestions = (req,res) => {
     }
   });
 }
-=======
+
 exports.addMultipleQuestions = (req, res) => {
   Question.insertMany([
     {
@@ -119,4 +118,3 @@ exports.addMultipleQuestions = (req, res) => {
     }
   ]);
 }
->>>>>>> 10b999d694cf9e26c110d675115982c6324fdcbf
