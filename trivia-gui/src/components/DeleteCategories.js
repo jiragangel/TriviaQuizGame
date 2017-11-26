@@ -6,7 +6,7 @@ class View extends Component{
    		super(props);
 
     	this.state = {
-    		category: '',
+    		category: 'Math',
     		categories: [],
     		prompt: ''
     	}
@@ -62,7 +62,7 @@ class View extends Component{
 		        <div className="container">
 		           <h1>Delete Categories</h1>
 		           		<select className = "dropdown" onChange={this.handleChange} value={this.state.category}>
-							<option selected disabled value="Categories">Categories</option>
+									<option selected disabled value="Categories">Categories</option>
 							{this.state.categories.map(
 								(item)=> {
 									return(<option value={item}>{item}</option>);

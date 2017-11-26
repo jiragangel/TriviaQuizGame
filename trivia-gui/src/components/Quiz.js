@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import  { Redirect } from 'react-router-dom'
+import ReactPlayer from 'react-player'
 
 const getRandom = (max) => {
   let num = Math.floor(Math.random() * (max));
@@ -16,14 +17,25 @@ const isInArray = (value,array) => {
 }
 
 class Quiz extends Component{
+  render(){
+    return(
+      <div>
+        <ReactPlayer url='https://www.youtube.com/watch?v=i9qhMTJuIKg' width='0' height='0' loop={true} playing />
+        <Start items={this.props.match.params}/>
+      </div>
+    )
+  }
+}
+
+class Start extends Component{
   constructor(props){
     super(props);
 
     this.state = {
-      one: this.props.match.params.one,
-      two: this.props.match.params.two,
-      three: this.props.match.params.three,
-      noOfQuestions: this.props.match.params.noOfQuestions,
+      one: this.props.items.one,
+      two: this.props.items.two,
+      three: this.props.items.three,
+      noOfQuestions: this.props.items.noOfQuestions,
       easy: [{
         Question: '',
         Difficulty: '',
@@ -259,6 +271,7 @@ class Quiz extends Component{
       return(
         <form action="">
           <div className="App">
+            <ReactPlayer url='https://www.youtube.com/watch?v=i9qhMTJuIKg' width='0' height='0' loop={true} playing />
                 <div className="containerQuiz">
                     <div className="quizArea">
                         <div className="quizHeader">

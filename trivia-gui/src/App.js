@@ -16,14 +16,11 @@ import DeleteQuestions from './components/DeleteQuestions'
 import EditQuestions from './components/EditQuestions'
 import EditCategories from './components/EditCategories'
 
-import ReactPlayer from 'react-player'
-
 import  { BrowserRouter as Router, Route} from 'react-router-dom'
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <ReactPlayer url='https://www.youtube.com/watch?v=WaSftdhR_Sg' width='0' height='0' loop={true} playing />
         <Router>
           <div>
             <Route exact={true} path="/" component={Home} />

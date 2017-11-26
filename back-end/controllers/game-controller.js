@@ -26,7 +26,7 @@ exports.showHighScores = (req, res) => {
 }
 
 exports.deleteCategories = (req,res) => {
-  Question.remove({ Category: req.body.category, multi: true }, (error, catgry) => {
+  Question.remove({ Category: req.body.category}, (error, catgry) => {
     if (!error) {
       res.send('Catogery Deleted');
     }else{
