@@ -166,7 +166,7 @@ class View extends Component{
 										<option value={newitem.Question}>{newitem.Question}</option>
 										);
 									}else{
-										return 0;
+										return(<div></div>);
 									}
 								}
 			              )}
@@ -206,7 +206,7 @@ class View extends Component{
 									)
 
 							}else{
-								return 0;
+								return(<div></div>);
 							}
 						})}
 

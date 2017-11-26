@@ -77,7 +77,7 @@ class View extends Component{
 								}
 			              )}
 						</select>
-			
+
 						{this.state.categories.map(
 							(cat)=>{
 								if(cat === this.state.category){
@@ -88,7 +88,7 @@ class View extends Component{
 										</div>
 									)
 								}else{
-									return 0;
+									return(<div></div>);
 								}
 						})}
 
