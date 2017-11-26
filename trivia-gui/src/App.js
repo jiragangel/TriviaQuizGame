@@ -12,6 +12,7 @@ import Congrats from './components/Congrats'
 import ViewCategories from './components/ViewCategories'
 import AddCategories from './components/AddCategories'
 import DeleteCategories from './components/DeleteCategories'
+import DeleteQuestions from './components/DeleteQuestions'
 
 import  { BrowserRouter as Router, Route} from 'react-router-dom'
 
@@ -33,6 +34,7 @@ class App extends Component {
             <Route exact={true} path="/viewCategories" component={ViewCategories} />
             <Route exact={true} path="/addCategories" component={AddCategories} />
             <Route exact={true} path="/DeleteCategories" component={DeleteCategories} />
+            <Route exact={true} path="/DeleteQuestions" component={DeleteQuestions} />
           </div>
         </Router>
       </div>

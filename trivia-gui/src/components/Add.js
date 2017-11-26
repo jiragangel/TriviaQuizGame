@@ -76,7 +76,6 @@ class Add extends Component{
 			type: e.target.value
 		})
 		if (e.target.value === "True or False"){
-			console.log("In here");
 			this.setState({
 				choiceA: "True",
 				choiceB: "False"

@@ -24,7 +24,6 @@ class Grade extends Component{
 		.then((response) => { return response.json() })
 		.then((result) => {
 			if ( result[result.length-1].Score < this.state.percentile && result.length >= 10 ){
-				console.log("Lowest" + result[result.length-1]._id);
 					this.setState({
 						todelete: result[result.length-1]._id
 					})
@@ -37,7 +36,6 @@ class Grade extends Component{
 	}
 
 	handleSubmit(e){
-		console.log("State: " + this.state.todelete);
 			fetch('http://www.localhost:3001/game/addhs',{
 				method:'POST',
 				headers:{

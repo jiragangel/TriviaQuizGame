@@ -26,8 +26,23 @@ exports.showHighScores = (req, res) => {
 }
 
 exports.deleteCategories = (req,res) => {
+<<<<<<< HEAD
   console.log("DELETE");
+  Question.remove({ Category: req.body.category, multi: true }, (error, movie) => {
+    if (!error) {
+      res.send('Catogery Deleted');
+    }else{
+      res.send('Category Does not Exist');
+    }
+  });
+}
+
+exports.deleteQuestions = (req,res) => {
+  console.log("DELETE");
+  Question.remove({ Questions: req.body.question }, (error, movie) => {
+=======
   Question.remove({ Category: req.body.category }, (error, movie) => {
+>>>>>>> c62fb7e9dfa7e0bb820b40ef4c65cb973a473a9e
     if (!error) {
       res.send('Question Deleted');
     }else{
@@ -48,9 +63,6 @@ exports.showCategories = (req,res) => {
 
 
 exports.addhs = (req,res) => {
-  console.log("TO DELETE: " + req.body.todelete);
-  console.log("NAME: " + req.body.name);
-  console.log("PERCENTILE: " + req.body.percentile);
   HighScore.insertMany([{Name: req.body.name, Score: req.body.percentile}]);
   HighScore.remove({_id: req.body.todelete}).exec(function(err, models){
     if (!err) res.send("Not error");

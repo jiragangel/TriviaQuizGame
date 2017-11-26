@@ -19,6 +19,7 @@ class AddCategories extends Component{
 
     	this.state = {
     		questions: [{
+<<<<<<< HEAD
 				category: '',
 				difficulty: 'Easy',
 				type: '',
@@ -147,6 +148,39 @@ class AddCategories extends Component{
 			choiceD: e.target.value
 		})
 	}
+=======
+    			Category: "",
+    			Difficulty:"",
+    			Qs:"",
+    			Answer:"",
+    			choiceA:"",
+    			choiceB:"",
+    			choiceC:"",
+    			choiceD:""
+    		}],
+    		categories: []
+    	}
+
+	}
+
+
+	  componentDidMount = () => {
+	    fetch(`http://localhost:3001/game/showCategories`)
+	    .then((response) => { return response.json() })
+	    .then((result) => {
+	      this.setState({
+	        categories: result
+	      })
+	    }).catch((e) => {console.log(e)});
+	    fetch(`http://localhost:3001/game/showQuestions`)
+	    .then((response) => { return response.json() })
+	    .then((result) => {
+	      this.setState({
+	        questions: result
+	      })
+	    }).catch((e) => {console.log(e)});
+	  }
+>>>>>>> a16e1f66d1393eba893ddfe35f5e78e4c92905a8
 
 	render(){
 		return(
