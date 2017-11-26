@@ -55,3 +55,7 @@ exports.addhs = (req,res) => {
     if (!err) res.send("Not error");
   });
 }
+
+exports.addQuestions = (req,res) => {
+  questions.insertMany([{Category: req.body.category, Difficulty: req.body.difficulty, Type: req.body.type, Question: req.body.question, Answer: req.body.answer, choiceA: req.body.choiceA, choiceB: req.body.choiceB, choiceC: req.body.choiceC, choiceD: req.body.choiceD}]);
+}
