@@ -67,8 +67,8 @@ class View extends Component{
 		return(
 			<div className="App">
 		        <div className="container">
-		           <h2>EDIT QUESTIONS</h2>
-		           		<h1>Choose Catefory</h1>
+		           <h1>Edit Categories</h1>
+		           		<h4>Choose Category</h4>
 		           		<select className = "dropdown" onChange={this.handleChange} value={this.state.category}>
 							<option selected disabled value="Categories">Categories</option>
 							{this.state.categories.map(
