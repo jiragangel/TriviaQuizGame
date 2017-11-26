@@ -35,6 +35,17 @@ exports.showCategories = (req,res) => {
   });
 }
 
+exports.showCategories = (req,res) => {
+  Question.aggregate([ {"$group" : {_id:"$Difficulty"}}]).exec(function(err, models){
+    let array = [];
+    for (let i = 0 ; i < models.length ; i++){
+      array.push (models[i]._id);
+    }
+    res.send(array);
+  });
+}
+
+
 exports.addhs = (req,res) => {
   console.log("TO DELETE: " + req.body.todelete);
   console.log("NAME: " + req.body.name);
