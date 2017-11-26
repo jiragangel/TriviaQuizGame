@@ -1,14 +1,15 @@
 html {
-    background: #E87177;
+    background-image: url("background.png")
 }
 
 .container {
     height: 350px;
     width: 800px;
     margin: 135px auto;
-    border: 2px solid white;
+    border: 2px dashed white;
     border-radius: 15px;
     background: #fff;
+    background-color: rgba(0, 0, 0, 0.1);
     padding: 20px;
     font-family: monospace;
     font-size: 16px;
@@ -22,10 +23,9 @@ html {
     margin-right: 30px;
     height: 15px;
     width: 500px;
-    background-color: red;
-    border: 2px solid #E87177;
+    border: 2px solid #fff;
     border-radius: 10px;
-    background: #fff;
+    background-color: #ADD0EE;
     padding: 12px;
     font-family: monospace;
     font-size: 16px;
@@ -60,9 +60,9 @@ html {
     height: 700px;
     width: 800px;
     margin: 135px auto;
-    border: 2px solid white;
+    border: 2px dashed white;
     border-radius: 15px;
-    background: #fff;
+    background-color: rgba(0, 0, 0, 0.1);
     padding: 20px;
     font-family: monospace;
     font-size: 16px;
@@ -74,10 +74,10 @@ html {
 .containerQuiz {
     height: 500px;
     width: 800px;
-    margin: 135px auto;
-    border: 2px solid white;
+    margin: 100px auto;
+    border: 2px dashed white;
     border-radius: 15px;
-    background: #fff;
+    background-color: rgba(0, 0, 0, 0.1);
     padding: 20px;
     font-family: monospace;
     font-size: 16px;
@@ -85,26 +85,34 @@ html {
     line-height: 1.5em;
 }
 
+.thanks {
+    font-size: 40px;
+    margin-top: 100px;
+    color: #fff;
+    font-family: monospace;
+    text-align: center;
+}
+
 h1,h2,h3,h4,h5,h6 {font-weight: bold;}
 
 h1 {
     font-size: 26px;
     margin: 0 0 20px;
-    color: #E87177;
+    color: #fff;
     font-family: monospace;
     text-align: center;
 }
 h2 {
     font-size: 50px;
     margin: 0 0 20px;
-    color: #E87177;
+    color: #fff;
     font-family: monospace;
     text-align: left;
 }
 h3 {
     font-size: 18px;
     margin: 15px 0 10px;
-    color: #E87177;
+    color: #ADD0EE;
     font-family: monospace;
     text-align: center;
 }
@@ -120,8 +128,7 @@ h5 {
     text-align: center;
 }
 h6 {
-    font-size: 12px;
-    margin: 10px 0 5px;
+    font-size: 18px;
     text-decoration: none;
     margin: 15px 0 10px;
     text-align: center;
@@ -145,21 +152,40 @@ h6 {
 }
 
 .button {
-    width: 150px;
+    width: 200px;
     margin-top: 50px;
     padding: 10px 20px;
-    color:#ffffff;
-    text-align: center;
-    background-color:#E87177;
+    color:#fff;
+    background-color:#ADD0EE;
     border-radius: 5px;
     text-decoration: none;
-    margin-left: 300px;
+    margin-left: 280px;
     float: left;
+    font-family: monospace;
 }
+
+.startButton {
+    width: 240px;
+    margin-top: 50px;
+    padding: 10px 20px;
+    color:#fff;
+    background-color:#9bbbd6;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: 280px;
+    float: left;
+    font-size: 16px;
+    font-family: monospace;
+}
+
 .button:hover, .submit:hover,
 .manage-btn:hover, .home-btn:hover,
-.next-btn:hover{
-    background-color: #e34f57;
+.next-btn:hover, .startButton:hover{
+    background-color: #c5def3;
+}
+
+#center {
+    text-align: center;
 }
 
 .button::placeholder {
@@ -167,8 +193,8 @@ h6 {
 }
 
 .choices:hover {
-    background-color: #e34f57;
-    color: #ffffff;
+    background-color: #c5def3;
+    color: #353535;
 }
 
 th, td {
@@ -179,7 +205,7 @@ th, td {
 }
 
 th {
-    background-color: #E87177;
+    background-color: #ADD0EE;
     color: white;
 }
 
@@ -195,7 +221,7 @@ table {
 .grade {
     margin-top: 100px;
     font-size: 80px;
-    color: #E87177;
+    color: #d7e8f7;
     font-family: monospace;
     text-align: center;
 }
@@ -210,6 +236,18 @@ input[type=text], select {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+}
+
+#name {
+    width: 24%;
+    padding: 12px 20px;
+    margin-top: 50px;
+    margin-left: 300px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: monospace;
 }
 
 .dropdown {
@@ -231,11 +269,12 @@ input[type=text], select {
     padding: 10px 20px;
     color:#ffffff;
     text-align: center;
-    background-color:#E87177;
+    background-color:#ADD0EE;
     border-radius: 5px;
     text-decoration: none;
-    margin-left: 300px;
+    margin-left: 320px;
     float: left;
+    font-family: monospace;
 }
 
 .manage-btn {
@@ -244,7 +283,7 @@ input[type=text], select {
     padding: 10px 20px;
     color:#ffffff;
     text-align: center;
-    background-color:#E87177;
+    background-color:#ADD0EE;
     border-radius: 5px;
     text-decoration: none;
     margin-left: 75px;
@@ -257,36 +296,35 @@ input[type=text], select {
     padding: 10px 20px;
     color:#ffffff;
     text-align: center;
-    background-color:#E87177;
+    background-color:#9bbbd6;
     border-radius: 5px;
     text-decoration: none;
-    float: left;
 }
 
 .home-btn {
     width: auto;
-    margin-top: 80px;
+    margin-top: 50px;
     padding: 10px 20px;
     color:#ffffff;
     text-align: center;
-    background-color:#E87177;
+    background-color:#ADD0EE;
     border-radius: 5px;
     text-decoration: none;
-    margin-left: 10px;
-    float: left;
+    float: right;
 }
 
 .next-btn {
     width: auto;
     margin-top: 20px;
     padding: 10px 20px;
-    color:#ffffff;
+    color:black;
     text-align: center;
-    background-color:#E87177;
+    background-color:#b5d4ef;
     border-radius: 5px;
     text-decoration: none;
     margin-left: 10px;
     float: right;
+    font-family: monospace;
 }
 
 

@@ -5,8 +5,8 @@ class CONGRATS extends Component{
 		return(
 			<div className="App">
 				<div className="container">
-					<h1>THANK YOU FOR PLAYING!</h1>
-          <a href='/HighScore' className="submit">SEE HIGH SCORES</a>
+					<h1 className="thanks">THANK YOU FOR PLAYING!</h1>
+          			<a href='/HighScore' className="submit">SEE HIGH SCORES</a>
 				</div>
 			</div>
 		)
