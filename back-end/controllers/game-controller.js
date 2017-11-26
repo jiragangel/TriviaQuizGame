@@ -26,7 +26,6 @@ exports.showHighScores = (req, res) => {
 }
 
 exports.deleteCategories = (req,res) => {
-  console.log("DELETE");
   Question.remove({ Category: req.body.category }, (error, movie) => {
     if (!error) {
       res.send('Question Deleted');
@@ -48,9 +47,6 @@ exports.showCategories = (req,res) => {
 
 
 exports.addhs = (req,res) => {
-  console.log("TO DELETE: " + req.body.todelete);
-  console.log("NAME: " + req.body.name);
-  console.log("PERCENTILE: " + req.body.percentile);
   HighScore.insertMany([{Name: req.body.name, Score: req.body.percentile}]);
   HighScore.remove({_id: req.body.todelete}).exec(function(err, models){
     if (!err) res.send("Not error");

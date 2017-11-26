@@ -5,7 +5,6 @@ import  { Redirect } from 'react-router-dom'
 const getQueryString = (selectedCheckboxes) => {
   let query = '';
   for (const checkbox of selectedCheckboxes) {
-    console.log(checkbox);
     query = query + checkbox + '/';
   }
 
@@ -35,7 +34,6 @@ class Categories extends Component {
     fetch(`http://localhost:3001/game/showCategories`)
     .then((response) => { return response.json() })
     .then((result) => {
-      console.log(result);
       this.setState({
         categories: result
       })
@@ -72,8 +70,6 @@ class Categories extends Component {
   )
 
   checkCategories(e){
-    console.log(this.selectedCheckboxes.size);
-    console.log(this.state.noOfQuestions);
     if (this.selectedCheckboxes.size === 3 && this.state.noOfQuestions >= 3) {
       this.setState({
         redirect: true

@@ -111,8 +111,6 @@ class Quiz extends Component{
       randomNo = getRandom(0,this.state.easy.length);
     }while(isInArray(randomNo,this.state.itemNos));
 
-    console.log("Item Nos: " + this.state.itemNos + "\tCategory:"  + this.state.passed + "\tRandom No: " + randomNo);
-
     this.state.itemNos.push(randomNo);
     this.setState({
       itemNo: randomNo,
