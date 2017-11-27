@@ -5,7 +5,7 @@ class Home extends Component{
 		return(
 			<div className="App">
 		        <body className="container">
-		           <h1>Trivia Quiz</h1>
+		           <h1>Fact Hunt</h1>
 		            <div className="quizArea">
 		                <div className="quizHeader">
 		                    <a className="button" id="center" href="/categories">Start Game</a>
