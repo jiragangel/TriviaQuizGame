@@ -160,11 +160,13 @@ class View extends Component{
 							<option selected disabled value="questions">Questions</option>
 							{this.state.questions.map(
 								(newitem)=> {
-									if(this.state.category==newitem.Category){
+									if(this.state.category===newitem.Category){
 									return(
 										<option value={newitem.Question}>{newitem.Question}</option>
 										);
-								}
+									}else{
+										return 0;
+									}
 								}
 			              )}
 						</select>
@@ -202,6 +204,8 @@ class View extends Component{
 									</div>
 									)
 
+							}else{
+								return 0;
 							}
 						})}
 

@@ -16,5 +16,6 @@ router.post('/addQuestions',GameController.addQuestions);
 router.post('/deleteCategories',GameController.deleteCategories);
 router.post('/deleteQuestions',GameController.deleteQuestions);
 router.post('/editQuestions',GameController.editQuestions);
+router.post('/editCategories',GameController.editCategories);
 router.post('/addMultipleQuestions',GameController.addMultipleQuestions);
 module.exports = router;

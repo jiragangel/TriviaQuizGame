@@ -6,27 +6,9 @@ class View extends Component{
    		super(props);
 
     	this.state = {
-    		newq: '',
-    		newdiff:'',
-    		newtype:'',
-    		newans:'',
-    		newa:'',
-    		newb:'',
-    		newc:'',
-    		newd:'',
     		category: '',
-    		question:'',
+    		newctgry:'',
     		categories: [],
-    		questions: [{
-    			Category: "",
-    			Difficulty:"",
-    			Question:"",
-    			Answer:"",
-    			choiceA:"",
-    			choiceB:"",
-    			choiceC:"",
-    			choiceD:""
-    		}],
     		prompt: '',
     		choice: '',
     		promptClick: ''
@@ -34,16 +16,8 @@ class View extends Component{
     	}
 
     	this.handleChange = this.handleChange.bind(this);
-    	this.handleQuesChange = this.handleQuesChange.bind(this);
     	this.handleSubmit = this.handleSubmit.bind(this);
-    	this.updateQues = this.updateQues.bind(this);
-    	this.updateAns = this.updateAns.bind(this);
-    	this.updateA= this.updateA.bind(this);
-    	this.updateB= this.updateB.bind(this);
-    	this.updateC= this.updateC.bind(this);
-    	this.updateD= this.updateD.bind(this);
-			this.updateDiff= this.updateDiff.bind(this);
-			this.updateType= this.updateType.bind(this);
+    	this.updateCtgry = this.updateCtgry.bind(this);
 	}
 
 
@@ -56,20 +30,12 @@ class View extends Component{
 	        categories: result
 	      })
 	    }).catch((e) => {console.log(e)});
-	    fetch(`http://localhost:3001/game/showQuestions`)
-	    .then((response) => { return response.json() })
-	    .then((result) => {
-	      console.log(result);
-	      this.setState({
-	        questions: result
-	      })
-	    }).catch((e) => {console.log(e)});
 	  }
 
 
 
 	handleSubmit(e){
-		fetch('http://www.localhost:3001/game/editQuestions',{
+		fetch('http://www.localhost:3001/game/editCategories',{
 			method:'POST',
 			headers:{
 				"Content-Type":"application/json"
@@ -91,53 +57,9 @@ class View extends Component{
 		})
 	}
 
-	handleQuesChange(e){
+	updateCtgry(e){
 		this.setState({
-			question: e.target.value
-		})
-	}
-
-	updateQues(e){
-		this.setState({
-			newq: e.target.value
-		})
-	}
-	updateAns(e){
-		this.setState({
-			newans: e.target.value
-		})
-	}
-	updateA(e){
-		this.setState({
-			newa: e.target.value
-		})
-	}
-	updateB(e){
-		this.setState({
-			newb: e.target.value
-		})
-	}
-	updateC(e){
-		this.setState({
-			newc: e.target.value
-		})
-	}
-	updateD(e){
-		this.setState({
-			newd: e.target.value
-		})
-	}
-
-	updateDiff(e){
-		this.setState({
-			newdiff: e.target.value
-		})
-	}
-
-
-	updateType(e){
-		this.setState({
-			newtype: e.target.value
+			newctgry: e.target.value
 		})
 	}
 
@@ -155,54 +77,19 @@ class View extends Component{
 								}
 			              )}
 						</select>
-						<h1>Choose Question</h1>
-						<select className = "dropdown" onChange={this.handleQuesChange} value={this.state.question}>
-							<option selected disabled value="questions">Questions</option>
-							{this.state.questions.map(
-								(newitem)=> {
-									if(this.state.category==newitem.Category){
+			
+						{this.state.categories.map(
+							(cat)=>{
+								if(cat === this.state.category){
 									return(
-										<option value={newitem.Question}>{newitem.Question}</option>
-										);
-								}
-								}
-			              )}
-						</select>
-						{this.state.questions.map((check)=>{
-							if(check.Question===this.state.question){
-								return(
-									<div>
-										<h3>Question:</h3>
-										<input onChange={this.updateQues} className="inputField" type="text" id="name" name="name" placeholder={this.state.question}/>
-										<h3>Difficulty:</h3>
-										<select className="dropdown" onChange={this.updateDiff}>
-											<option selected disabled> Difficulty </option>
-											<option value="Easy"> Easy </option>
-											<option value="Medium"> Medium </option>
-											<option value="Difficult"> Difficult </option>
-										</select>
-										<h3>Type:</h3>
-										<select className="dropdown" onChange={this.updateType}>
-											<option selected disabled> Type </option>
-											<option value="Multiple Choice"> Multiple Choice </option>
-											<option value="True or False"> True or False </option>
-											<option value="Identification"> Identification </option>
-											<option value="Number"> Number </option>
-										</select>
-										<h3>Answer:</h3>
-										<input onChange={this.updateAns} className="inputField" type="text" id="name" name="name" placeholder={check.Answer}/>
-										<h3>choice A:</h3>
-										<input onChange={this.updateA} className="inputField" type="text" id="name" name="name" placeholder={check.choiceA}/>
-										<h3>choice B:</h3>
-										<input onChange={this.updateB} className="inputField" type="text" id="name" name="name" placeholder={check.choiceB}/>
-										<h3>choice C:</h3>
-										<input onChange={this.updateC} className="inputField" type="text" id="name" name="name" placeholder={check.choiceC}/>
-										<h3>choice D:</h3>
-										<input onChange={this.updateD} className="inputField" type="text" id="name" name="name" placeholder={check.choiceD}/>
-									</div>
+										<div>
+										<h3>category:</h3>
+										<input onChange={this.updateCtgry} className="inputField" type="text" id="name" name="name" placeholder={this.state.category}/>
+										</div>
 									)
-
-							}
+								}else{
+									return 0;
+								}
 						})}
 
 						<input onClick={this.handleSubmit} type="button" className="submit" value="Submit"/>
